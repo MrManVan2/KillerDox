@@ -37,7 +37,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
   return (
     <>
       <div
-        className={`${className} bg-gray-800 border-2 border-gray-700 rounded-lg flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-colors relative`}
+        className={`${className} bg-gray-800 border-4 border-gray-700 rounded-xl flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-all duration-200 relative shadow-lg hover:shadow-xl hover:scale-105 active:scale-95`}
         onClick={handleClick}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
@@ -54,20 +54,14 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
         <img
           src={asset ? asset.img : placeholderImg}
           alt={asset ? asset.name : `${type.slice(0, -1)} placeholder`}
-          className={`${
-            className.includes("w-24 h-24 sm:w-32 sm:h-32") 
-              ? "w-20 h-20 sm:w-28 sm:h-28" 
-              : className.includes("w-16 h-16 sm:w-20 sm:h-20")
-              ? "w-12 h-12 sm:w-16 sm:h-16"
-              : "w-16 h-16"
-          } object-cover rounded ${
+          className={`w-full h-full object-cover rounded-lg ${
             asset ? 'opacity-100' : 'opacity-50'
           }`}
         />
 
         {/* Tooltip */}
         {showTooltip && asset && (
-          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded whitespace-nowrap z-10">
+          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-sm md:text-base rounded-lg whitespace-nowrap z-10 shadow-lg">
             {asset.name}
           </div>
         )}
