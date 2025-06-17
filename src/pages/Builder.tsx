@@ -34,7 +34,12 @@ const Builder: React.FC = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-900 p-2 md:p-4 lg:p-6 overflow-hidden">
+    <div className="h-screen p-2 md:p-4 lg:p-6 overflow-hidden" style={{
+      backgroundImage: 'url(/assets/Templates/Backdrop.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className="w-full h-full flex flex-col">
         <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 md:mb-6 text-center flex-shrink-0">KillerDox Builder</h1>
         

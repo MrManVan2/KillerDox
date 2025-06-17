@@ -146,9 +146,9 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
       />
       
       {/* Modal */}
-      <div className="relative bg-gray-800 rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[80vh] flex flex-col">
+      <div className="relative bg-black bg-opacity-80 backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[80vh] flex flex-col border border-gray-600">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-700">
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-600">
           <h2 className="text-xl font-bold text-white capitalize">
             Select {type.slice(0, -1)} {limit > 1 && `(${selectedItems.length}/${limit})`}
             {type === 'addons' && selectedKiller && (
@@ -166,7 +166,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
         </div>
 
         {/* Search */}
-        <div className="p-4 sm:p-6 border-b border-gray-700">
+        <div className="p-4 sm:p-6 border-b border-gray-600">
           <div className="relative">
             <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
@@ -174,7 +174,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
               placeholder={`Search ${type}...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-10 pr-4 py-2 bg-black bg-opacity-60 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               autoFocus
             />
           </div>
@@ -199,7 +199,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                   className={`relative p-3 rounded-lg cursor-pointer transition-colors flex flex-col ${
                     isSelected(asset.id)
                       ? 'bg-blue-600 border-2 border-blue-400'
-                      : 'bg-gray-700 hover:bg-gray-600 border-2 border-transparent'
+                      : 'bg-black bg-opacity-40 hover:bg-black hover:bg-opacity-60 border-2 border-transparent'
                   }`}
                 >
                   <div className="aspect-square mb-2">

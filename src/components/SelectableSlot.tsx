@@ -37,7 +37,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
   return (
     <>
       <div
-        className={`${className} bg-gray-800 border-4 border-gray-700 rounded-xl flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-all duration-200 relative shadow-lg hover:shadow-xl hover:scale-105 active:scale-95`}
+        className={`${className} flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-all duration-200 relative hover:scale-105 active:scale-95`}
         onClick={handleClick}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
@@ -54,8 +54,8 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
         <img
           src={asset ? asset.img : placeholderImg}
           alt={asset ? asset.name : `${type.slice(0, -1)} placeholder`}
-          className={`w-full h-full object-cover rounded-lg ${
-            asset ? 'opacity-100' : 'opacity-50'
+          className={`w-full h-full object-cover ${
+            asset ? 'opacity-100' : 'opacity-70'
           }`}
         />
 

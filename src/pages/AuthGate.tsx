@@ -25,7 +25,12 @@ const AuthGate: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{
+      backgroundImage: 'url(/assets/Templates/Backdrop.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className="w-full max-w-md space-y-8">
         {/* Skull Logo */}
         <div className="flex justify-center">
