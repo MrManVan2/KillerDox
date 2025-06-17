@@ -60,7 +60,7 @@ export default defineConfig({
           if (req.url?.startsWith('/api/assets/offerings/')) {
             const url = new URL(req.url, `http://${req.headers.host}`)
             const pathSegments = url.pathname.split('/')
-            const rarity = pathSegments[4]
+            const rarity = decodeURIComponent(pathSegments[4]) // Decode URL-encoded spaces
             
             res.setHeader('Content-Type', 'application/json')
             res.end(JSON.stringify(readDirectory(`assets/offerings/${rarity}`)))

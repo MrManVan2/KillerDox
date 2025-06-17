@@ -93,12 +93,11 @@ const sortAddonsByRarity = (addons: Addon[]): Addon[] => {
   return sorted;
 };
 
-// Function to extract killer name from filename, handling parentheses
+// Function to extract killer name from filename, preserving parenthetical names
 const extractKillerName = (filename: string): string => {
   const nameWithoutExtension = filename.replace('.png', '');
-  // If there's a parenthesis, take the name before it and trim
-  const baseName = nameWithoutExtension.split('(')[0].trim();
-  return baseName;
+  // Keep the full name including parenthetical information for searchability
+  return nameWithoutExtension;
 };
 
 // Load killers from file system
@@ -319,17 +318,17 @@ export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[
   }
 };
 
-// Load offerings from file system
+// Load offerings from file system, sorted by rarity (most rare to common)
 export const loadOfferings = async (): Promise<Offering[]> => {
   try {
     const allOfferings: Offering[] = [];
     
-    // Load offerings from each rarity folder
-    const rarities = ['Common', 'Uncommon', 'Rare', 'Very Rare', 'Event', 'Visceral'];
+    // Load offerings from each rarity folder in order from most rare to common
+    const rarities = ['Event', 'Visceral', 'Very Rare', 'Rare', 'Uncommon', 'Common'];
     
     for (const rarity of rarities) {
       try {
-        const response = await fetch(`/api/assets/offerings/${rarity}`);
+        const response = await fetch(`/api/assets/offerings/${encodeURIComponent(rarity)}`);
         if (response.ok) {
           const files = await response.json();
           const rarityOfferings = files
@@ -337,12 +336,14 @@ export const loadOfferings = async (): Promise<Offering[]> => {
             .map((filename: string) => {
               const name = filename.replace('.png', '');
               return {
-                id: `${rarity.toLowerCase()}_${name.toLowerCase().replace(/\s+/g, '-')}`,
+                id: `${rarity.toLowerCase().replace(/\s+/g, '-')}_${name.toLowerCase().replace(/\s+/g, '-')}`,
                 name,
                 img: `/assets/offerings/${rarity}/${filename}`,
                 rarity: rarity as any
               };
             });
+          // Sort alphabetically within the same rarity
+          rarityOfferings.sort((a: Offering, b: Offering) => a.name.localeCompare(b.name));
           allOfferings.push(...rarityOfferings);
         }
       } catch (error) {

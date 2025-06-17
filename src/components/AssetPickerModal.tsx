@@ -196,7 +196,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                 <div
                   key={asset.id}
                   onClick={() => handleSelect(asset)}
-                  className={`relative p-3 rounded-lg cursor-pointer transition-colors ${
+                  className={`relative p-3 rounded-lg cursor-pointer transition-colors flex flex-col ${
                     isSelected(asset.id)
                       ? 'bg-blue-600 border-2 border-blue-400'
                       : 'bg-gray-700 hover:bg-gray-600 border-2 border-transparent'
@@ -214,13 +214,20 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                        }}
                     />
                   </div>
-                  <p className="text-sm text-white text-center truncate">
-                    {asset.name}
-                  </p>
+                  <div className="text-sm text-white text-center leading-tight min-h-[2.5rem] flex flex-col items-center justify-center">
+                    {asset.name.includes('(') ? (
+                      <>
+                        <span>{asset.name.split('(')[0].trim()}</span>
+                        <span>({asset.name.split('(')[1]}</span>
+                      </>
+                    ) : (
+                      <span>{asset.name}</span>
+                    )}
+                  </div>
                                      {type === 'addons' && (
                      <div className="text-xs text-center">
                        {asset.rarity && (
-                         <p className={`truncate font-medium ${
+                         <p className={`break-words font-medium leading-tight ${
                            asset.rarity === 'Iridescent' ? 'text-pink-400' :
                            asset.rarity === 'Very Rare' ? 'text-purple-400' :
                            asset.rarity === 'Rare' ? 'text-blue-400' :
@@ -231,14 +238,14 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                          </p>
                        )}
                        {asset.killer && (
-                         <p className="text-gray-500 truncate text-xs">
+                         <p className="text-gray-500 break-words text-xs leading-tight">
                            {asset.killer}
                          </p>
                        )}
                      </div>
                    )}
                    {asset.rarity && type !== 'addons' && (
-                     <p className="text-xs text-gray-400 text-center truncate">
+                     <p className="text-xs text-gray-400 text-center break-words leading-tight">
                        {asset.rarity}
                      </p>
                    )}
