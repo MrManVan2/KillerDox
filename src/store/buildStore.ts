@@ -33,7 +33,10 @@ const initialState = {
 export const useBuildStore = create<BuildState>((set, get) => ({
   ...initialState,
 
-  setKiller: (killer) => set({ selectedKiller: killer }),
+  setKiller: (killer) => {
+    // Clear addons when killer changes since they may not be compatible
+    set({ selectedKiller: killer, selectedAddons: [] });
+  },
 
   addPerk: (perk) => {
     const { selectedPerks } = get();

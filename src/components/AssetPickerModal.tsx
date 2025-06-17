@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import type { AssetType } from '../types';
+import type { AssetType, Killer, Perk, Addon, Offering, Platform } from '../types';
+import { assetService } from '../services/assetService';
+import { useBuildStore } from '../store/buildStore';
 
 interface AssetPickerModalProps {
   isOpen: boolean;
@@ -21,40 +23,64 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredAssets, setFilteredAssets] = useState<any[]>([]);
-
-  // Mock data - in a real app, this would come from an API or data service
-  const mockData = {
-    killers: [
-      { id: 'trapper', name: 'The Trapper', img: '/assets/placeholders/killer.png' },
-      { id: 'wraith', name: 'The Wraith', img: '/assets/placeholders/killer.png' },
-    ],
-    perks: [
-      { id: 'brutal-strength', name: 'Brutal Strength', img: '/assets/placeholders/perk.png' },
-      { id: 'enduring', name: 'Enduring', img: '/assets/placeholders/perk.png' },
-      { id: 'hex-ruin', name: 'Hex: Ruin', img: '/assets/placeholders/perk.png' },
-      { id: 'noed', name: 'No One Escapes Death', img: '/assets/placeholders/perk.png' },
-    ],
-    addons: [
-      { id: 'tar-bottle', name: 'Tar Bottle', img: '/assets/placeholders/addon.png', killer: 'The Trapper' },
-      { id: 'padded-jaws', name: 'Padded Jaws', img: '/assets/placeholders/addon.png', killer: 'The Trapper' },
-    ],
-    offerings: [
-      { id: 'bloody-party', name: 'Bloody Party Streamers', img: '/assets/placeholders/offering.png' },
-      { id: 'macmillan', name: 'MacMillan Estate', img: '/assets/placeholders/offering.png' },
-    ],
-    platforms: [
-      { id: 'steam', name: 'Steam', img: '/assets/placeholders/platform.png' },
-      { id: 'epic', name: 'Epic Games', img: '/assets/placeholders/platform.png' },
-    ]
-  };
+  const [loading, setLoading] = useState(false);
+  const { selectedKiller } = useBuildStore();
 
   useEffect(() => {
-    const assets = mockData[type] || [];
-    const filtered = assets.filter(asset =>
-      asset.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredAssets(filtered);
-  }, [type, searchTerm]);
+    if (!isOpen) return;
+
+    const loadAssets = async () => {
+      setLoading(true);
+      try {
+        let assets: any[] = [];
+        
+        switch (type) {
+          case 'killers':
+            assets = await assetService.loadKillers();
+            break;
+          case 'perks':
+            assets = await assetService.loadPerks();
+            break;
+          case 'addons':
+            // Load addons specific to selected killer, or all addons if no killer selected
+            if (selectedKiller) {
+              assets = await assetService.loadAddons(selectedKiller.name);
+            } else {
+              assets = await assetService.loadAddons();
+            }
+            break;
+          case 'offerings':
+            assets = await assetService.loadOfferings();
+            break;
+          case 'platforms':
+            assets = await assetService.loadPlatforms();
+            break;
+        }
+
+        // Filter assets based on search term
+        const filtered = assets.filter(asset =>
+          asset.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        // For addons, further filter by selected killer compatibility
+        if (type === 'addons' && selectedKiller) {
+          const killerFiltered = filtered.filter(addon => 
+            !addon.killer || addon.killer === selectedKiller.name
+          );
+          setFilteredAssets(killerFiltered);
+        } else {
+          setFilteredAssets(filtered);
+        }
+      } catch (error) {
+        console.error(`Error loading ${type}:`, error);
+        setFilteredAssets([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadAssets();
+  }, [type, searchTerm, isOpen, selectedKiller]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -93,7 +119,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-75"
+        className="absolute inset-0"
         onClick={onClose}
       />
       
@@ -129,35 +155,78 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
 
         {/* Asset Grid */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-            {filteredAssets.map((asset) => (
-              <div
-                key={asset.id}
-                onClick={() => handleSelect(asset)}
-                className={`relative p-3 rounded-lg cursor-pointer transition-colors ${
-                  isSelected(asset.id)
-                    ? 'bg-blue-600 border-2 border-blue-400'
-                    : 'bg-gray-700 hover:bg-gray-600 border-2 border-transparent'
-                }`}
-              >
-                <div className="aspect-square mb-2">
-                  <img
-                    src={asset.img}
-                    alt={asset.name}
-                    className="w-full h-full object-cover rounded"
-                  />
-                </div>
-                <p className="text-sm text-white text-center truncate">
-                  {asset.name}
-                </p>
-                {isSelected(asset.id) && (
-                  <div className="absolute top-1 right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
+          {loading ? (
+            <div className="flex items-center justify-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+          ) : filteredAssets.length === 0 ? (
+            <div className="flex flex-col items-center justify-center h-64 text-gray-400">
+              <p className="text-lg mb-2">No {type} found</p>
+              {type === 'addons' && selectedKiller && (
+                <p className="text-sm">No addons available for {selectedKiller.name}</p>
+              )}
+              {searchTerm && (
+                <p className="text-sm">Try adjusting your search term</p>
+              )}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {filteredAssets.map((asset) => (
+                <div
+                  key={asset.id}
+                  onClick={() => handleSelect(asset)}
+                  className={`relative p-3 rounded-lg cursor-pointer transition-colors ${
+                    isSelected(asset.id)
+                      ? 'bg-blue-600 border-2 border-blue-400'
+                      : 'bg-gray-700 hover:bg-gray-600 border-2 border-transparent'
+                  }`}
+                >
+                  <div className="aspect-square mb-2">
+                    <img
+                      src={asset.img}
+                      alt={asset.name}
+                      className="w-full h-full object-cover rounded"
+                      onError={(e) => {
+                        // Fallback to placeholder if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        const assetType = type.slice(0, -1); // Remove 's' from end
+                        const capitalizedType = assetType.charAt(0).toUpperCase() + assetType.slice(1);
+                        
+                        // Map asset types to available placeholders
+                        const placeholderMap: { [key: string]: string } = {
+                          'killer': 'Blank Killer.png',
+                          'perk': 'Blank Perk.png', 
+                          'addon': 'Blank Addon.png',
+                          'offering': 'Blank Offering.png',
+                          'platform': 'Blank Killer.png', // Use killer placeholder for platforms
+                        };
+                        
+                        const placeholder = placeholderMap[assetType] || 'Blank Killer.png';
+                        target.src = `/assets/placeholders/${placeholder}`;
+                      }}
+                    />
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                  <p className="text-sm text-white text-center truncate" title={asset.name}>
+                    {asset.name}
+                  </p>
+                  {asset.rarity && (
+                    <div className={`absolute top-1 left-1 w-3 h-3 rounded-full ${
+                      asset.rarity === 'Ultra Rare' ? 'bg-red-500' :
+                      asset.rarity === 'Very Rare' ? 'bg-purple-500' :
+                      asset.rarity === 'Rare' ? 'bg-green-500' :
+                      asset.rarity === 'Uncommon' ? 'bg-yellow-500' :
+                      'bg-gray-500'
+                    }`} title={asset.rarity}></div>
+                  )}
+                  {isSelected(asset.id) && (
+                    <div className="absolute top-1 right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
