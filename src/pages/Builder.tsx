@@ -49,7 +49,7 @@ const Builder: React.FC = () => {
                 type="offerings"
                 limit={1}
                 asset={selectedOffering}
-                placeholderImg="/assets/placeholders/Blank Offering.png"
+                placeholderImg="/src/assets/Templates/Blank Offering.png"
                 className="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 xl:w-36 xl:h-36"
                 borderColorHover="border-yellow-500"
                 onSelect={setOffering}
@@ -62,7 +62,7 @@ const Builder: React.FC = () => {
                 type="killers"
                 limit={1}
                 asset={selectedKiller}
-                placeholderImg="/assets/placeholders/Blank Killer.png"
+                placeholderImg="/src/assets/Templates/Blank Killer.png"
                 className="w-24 h-24 md:w-32 md:h-32 lg:w-44 lg:h-44 xl:w-56 xl:h-56"
                 borderColorHover="border-red-500"
                 onSelect={setKiller}
@@ -75,7 +75,7 @@ const Builder: React.FC = () => {
                 type="platforms"
                 limit={1}
                 asset={selectedPlatform}
-                placeholderImg="/assets/placeholders/Blank Killer.png"
+                placeholderImg="/src/assets/Platforms/Steam.png"
                 className="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 xl:w-36 xl:h-36"
                 borderColorHover="border-green-500"
                 onSelect={setPlatform}
@@ -89,7 +89,7 @@ const Builder: React.FC = () => {
               type="addons"
               limit={2}
               asset={selectedAddons[0]}
-              placeholderImg="/assets/placeholders/Blank Addon.png"
+              placeholderImg="/src/assets/Templates/Blank Addon.png"
               className="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40"
               borderColorHover="border-purple-500"
               onSelect={addAddon}
@@ -99,7 +99,7 @@ const Builder: React.FC = () => {
               type="addons"
               limit={2}
               asset={selectedAddons[1]}
-              placeholderImg="/assets/placeholders/Blank Addon.png"
+              placeholderImg="/src/assets/Templates/Blank Addon.png"
               className="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40"
               borderColorHover="border-purple-500"
               onSelect={addAddon}
@@ -115,7 +115,7 @@ const Builder: React.FC = () => {
                 type="perks"
                 limit={4}
                 asset={selectedPerks[index]}
-                placeholderImg="/assets/placeholders/Blank Perk.png"
+                placeholderImg="/src/assets/Templates/Blank Perk.png"
                 className="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 xl:w-36 xl:h-36"
                 borderColorHover="border-blue-500"
                 onSelect={addPerk}

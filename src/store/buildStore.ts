@@ -34,7 +34,7 @@ export const useBuildStore = create<BuildState>((set, get) => ({
   ...initialState,
 
   setKiller: (killer) => {
-    // Clear addons when killer changes since they may not be compatible
+    // Clear selected addons when killer changes since addons are killer-specific
     set({ selectedKiller: killer, selectedAddons: [] });
   },
 
