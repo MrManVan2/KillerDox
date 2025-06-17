@@ -1,5 +1,26 @@
 import type { Killer, Perk, Addon, Offering, Platform } from '../types';
 
+// Import the generated rarity mapping
+let rarityMapping: Record<string, { rarity: string; colorCategory: string; path: string }> = {};
+
+// Load the rarity mapping on module initialization
+const loadRarityMapping = async () => {
+  try {
+    const response = await fetch('/data/addonRarityMapping.json');
+    if (response.ok) {
+      rarityMapping = await response.json();
+      console.log('✅ Rarity mapping loaded successfully:', Object.keys(rarityMapping).length, 'entries');
+    } else {
+      console.error('❌ Failed to load rarity mapping, status:', response.status);
+    }
+  } catch (error) {
+    console.warn('❌ Could not load rarity mapping, falling back to default rarity detection:', error);
+  }
+};
+
+// Initialize the mapping
+loadRarityMapping();
+
 // Mapping of addon folder codenames to killer names
 const KILLER_ADDON_MAPPING: Record<string, string> = {
   'Applepie': 'The Unknown',
@@ -39,6 +60,47 @@ const KILLER_ADDON_MAPPING: Record<string, string> = {
   'Yemen': 'The Blight',
   'Yerkes': 'The Good Guy',
   'Zambia': 'The Unknown', // Fallback for mid-patch
+};
+
+// Rarity order for sorting (0 = most rare, 4 = least rare)
+const RARITY_ORDER: Record<string, number> = {
+  'Iridescent': 0,
+  'Very Rare': 1,
+  'Rare': 2,
+  'Uncommon': 3,
+  'Common': 4
+};
+
+// Function to get rarity from the mapping or fallback to Common
+const getAddonRarity = (filename: string, killerFolder?: string): string => {
+  const key = killerFolder ? `${killerFolder}/${filename}` : filename;
+  const rarity = rarityMapping[key]?.rarity || 'Common';
+  if (killerFolder === 'Gemini') {
+    console.log(`🔍 Rarity lookup for ${key}: ${rarity}`);
+  }
+  return rarity;
+};
+
+// Function to sort addons by rarity (most rare first)
+const sortAddonsByRarity = (addons: Addon[]): Addon[] => {
+  const sorted = addons.sort((a, b) => {
+    const orderA = RARITY_ORDER[a.rarity || 'Common'];
+    const orderB = RARITY_ORDER[b.rarity || 'Common'];
+    
+    // If same rarity, sort alphabetically by name
+    if (orderA === orderB) {
+      return a.name.localeCompare(b.name);
+    }
+    
+    return orderA - orderB; // Most rare (0) comes first
+  });
+  
+  // Debug logging for Cenobite
+  if (addons.length > 0 && addons[0].killer === 'The Cenobite') {
+    console.log('🔸 Sorted Cenobite addons:', sorted.map(a => `${a.name} (${a.rarity})`));
+  }
+  
+  return sorted;
 };
 
 // Function to extract killer name from filename, handling parentheses
@@ -162,9 +224,15 @@ export const loadPerks = async (): Promise<Perk[]> => {
   }
 };
 
-// Load addons from file system with killer-specific filtering
+// Load addons from file system with killer-specific filtering and rarity sorting
 export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[]> => {
   try {
+    // Ensure rarity mapping is loaded before processing addons
+    if (Object.keys(rarityMapping).length === 0) {
+      console.log('🔄 Rarity mapping not loaded yet, loading now...');
+      await loadRarityMapping();
+    }
+    
     const allAddons: Addon[] = [];
     
     // Load general addons (files directly in addons folder)
@@ -178,11 +246,13 @@ export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[
             const name = filename.replace('iconAddon_', '').replace('.png', '');
             // Convert camelCase to Title Case
             const displayName = name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+            const rarity = getAddonRarity(filename);
             return {
               id: filename.replace('.png', ''),
               name: displayName,
               img: `/assets/addons/${filename}`,
-              killer: null // General addon
+              killer: null, // General addon
+              rarity
             };
           });
         allAddons.push(...generalAddons);
@@ -208,11 +278,13 @@ export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[
               .map((filename: string) => {
                 const name = filename.replace('iconAddon_', '').replace('T_UI_iconAddon_', '').replace('.png', '');
                 const displayName = name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                const rarity = getAddonRarity(filename, addonFolderCode);
                 return {
                   id: `${addonFolderCode}_${filename.replace('.png', '')}`,
                   name: displayName,
                   img: `/assets/addons/${addonFolderCode}/${filename}`,
-                  killer: selectedKiller.name
+                  killer: selectedKiller.name,
+                  rarity
                 };
               });
             allAddons.push(...killerAddons);
@@ -233,11 +305,13 @@ export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[
               .map((filename: string) => {
                 const name = filename.replace('iconAddon_', '').replace('T_UI_iconAddon_', '').replace('.png', '');
                 const displayName = name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                const rarity = getAddonRarity(filename, addonFolderCode);
                 return {
                   id: `${addonFolderCode}_${filename.replace('.png', '')}`,
                   name: displayName,
                   img: `/assets/addons/${addonFolderCode}/${filename}`,
-                  killer: killerName
+                  killer: killerName,
+                  rarity
                 };
               });
             allAddons.push(...killerAddons);
@@ -248,7 +322,8 @@ export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[
       }
     }
     
-    return allAddons;
+    // Sort addons by rarity (most rare first)
+    return sortAddonsByRarity(allAddons);
   } catch (error) {
     console.error('Error loading addons:', error);
     return [];

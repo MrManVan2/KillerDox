@@ -194,16 +194,31 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                   <p className="text-sm text-white text-center truncate">
                     {asset.name}
                   </p>
-                  {asset.killer && type === 'addons' && (
-                    <p className="text-xs text-gray-400 text-center truncate">
-                      {asset.killer}
-                    </p>
-                  )}
-                  {asset.rarity && (
-                    <p className="text-xs text-gray-400 text-center truncate">
-                      {asset.rarity}
-                    </p>
-                  )}
+                                     {type === 'addons' && (
+                     <div className="text-xs text-center">
+                       {asset.rarity && (
+                         <p className={`truncate font-medium ${
+                           asset.rarity === 'Iridescent' ? 'text-pink-400' :
+                           asset.rarity === 'Very Rare' ? 'text-purple-400' :
+                           asset.rarity === 'Rare' ? 'text-blue-400' :
+                           asset.rarity === 'Uncommon' ? 'text-yellow-400' :
+                           'text-amber-600'
+                         }`}>
+                           {asset.rarity}
+                         </p>
+                       )}
+                       {asset.killer && (
+                         <p className="text-gray-500 truncate text-xs">
+                           {asset.killer}
+                         </p>
+                       )}
+                     </div>
+                   )}
+                   {asset.rarity && type !== 'addons' && (
+                     <p className="text-xs text-gray-400 text-center truncate">
+                       {asset.rarity}
+                     </p>
+                   )}
                   {isSelected(asset.id) && (
                     <div className="absolute top-1 right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
                       <span className="text-white text-xs">✓</span>

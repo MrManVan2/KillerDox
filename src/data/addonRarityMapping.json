@@ -1,0 +1,3632 @@
+{
+  "Applepie/iconAddon_b-moviePoster.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_b-moviePoster.png"
+  },
+  "Applepie/iconAddon_blurryPhoto.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_blurryPhoto.png"
+  },
+  "Applepie/iconAddon_capturedByTheDark.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_capturedByTheDark.png"
+  },
+  "Applepie/iconAddon_deviceOfUndisclosedOrigin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_deviceOfUndisclosedOrigin.png"
+  },
+  "Applepie/iconAddon_discardedMilkCarton.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_discardedMilkCarton.png"
+  },
+  "Applepie/iconAddon_footprintCast.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Applepie/iconAddon_footprintCast.png"
+  },
+  "Applepie/iconAddon_frontPageArticle.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Applepie/iconAddon_frontPageArticle.png"
+  },
+  "Applepie/iconAddon_homemadeMask.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_homemadeMask.png"
+  },
+  "Applepie/iconAddon_hypnotistsWatch.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Applepie/iconAddon_hypnotistsWatch.png"
+  },
+  "Applepie/iconAddon_iridescentOSSReport.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_iridescentOSSReport.png"
+  },
+  "Applepie/iconAddon_lastKnownRecording.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_lastKnownRecording.png"
+  },
+  "Applepie/iconAddon_notebookOfTheories.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_notebookOfTheories.png"
+  },
+  "Applepie/iconAddon_obscureGameCartridge.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_obscureGameCartridge.png"
+  },
+  "Applepie/iconAddon_puncturedEyeball.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_puncturedEyeball.png"
+  },
+  "Applepie/iconAddon_rabbitsFoot.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_rabbitsFoot.png"
+  },
+  "Applepie/iconAddon_serumVial.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_serumVial.png"
+  },
+  "Applepie/iconAddon_sketchAttempt.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_sketchAttempt.png"
+  },
+  "Applepie/iconAddon_slashedBackpack.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_slashedBackpack.png"
+  },
+  "Applepie/iconAddon_vanishingBox.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Applepie/iconAddon_vanishingBox.png"
+  },
+  "Applepie/iconAddon_victimsMap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Applepie/iconAddon_victimsMap.png"
+  },
+  "Aurora/iconAddon_babyTeeth.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_babyTeeth.png"
+  },
+  "Aurora/iconAddon_bloodiedBlackHood.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_bloodiedBlackHood.png"
+  },
+  "Aurora/iconAddon_catFigurine.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_catFigurine.png"
+  },
+  "Aurora/iconAddon_catsEye.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_catsEye.png"
+  },
+  "Aurora/iconAddon_ceremonialCandelabrum.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_ceremonialCandelabrum.png"
+  },
+  "Aurora/iconAddon_dropOfPerfume.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_dropOfPerfume.png"
+  },
+  "Aurora/iconAddon_forestStew.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Aurora/iconAddon_forestStew.png"
+  },
+  "Aurora/iconAddon_iridescentPendant.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_iridescentPendant.png"
+  },
+  "Aurora/iconAddon_madeleinesGlove.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_madeleinesGlove.png"
+  },
+  "Aurora/iconAddon_madeleinesScarf.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Aurora/iconAddon_madeleinesScarf.png"
+  },
+  "Aurora/iconAddon_rustedNeedle.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Aurora/iconAddon_rustedNeedle.png"
+  },
+  "Aurora/iconAddon_sewerSludge.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Aurora/iconAddon_sewerSludge.png"
+  },
+  "Aurora/iconAddon_silencingCloth.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_silencingCloth.png"
+  },
+  "Aurora/iconAddon_souredMilk.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_souredMilk.png"
+  },
+  "Aurora/iconAddon_spinningTop.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Aurora/iconAddon_spinningTop.png"
+  },
+  "Aurora/iconAddon_staleBiscuit.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Aurora/iconAddon_staleBiscuit.png"
+  },
+  "Aurora/iconAddon_tinyFingernail.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_tinyFingernail.png"
+  },
+  "Aurora/iconAddon_toySword.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Aurora/iconAddon_toySword.png"
+  },
+  "Aurora/iconAddon_victorsSoldier.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Aurora/iconAddon_victorsSoldier.png"
+  },
+  "Aurora/iconAddon_weightyRattle.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Aurora/iconAddon_weightyRattle.png"
+  },
+  "Cannibal/iconAddon_awardwinningChili.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Cannibal/iconAddon_awardwinningChili.png"
+  },
+  "Cannibal/iconAddon_chili.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Cannibal/iconAddon_chili.png"
+  },
+  "Cannibal/iconAddon_iridescentFlesh.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Cannibal/iconAddon_iridescentFlesh.png"
+  },
+  "Cannibal/iconAddon_knifeScratches.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Cannibal/iconAddon_knifeScratches.png"
+  },
+  "Cannibal/iconAddon_theBeastsMark.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Cannibal/iconAddon_theBeastsMark.png"
+  },
+  "Cannibal/iconAddon_theGrease.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Cannibal/iconAddon_theGrease.png"
+  },
+  "Churros/iconAddon_BagOfHolding.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_BagOfHolding.png"
+  },
+  "Churros/iconAddon_BootsOfSpeed.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Churros/iconAddon_BootsOfSpeed.png"
+  },
+  "Churros/iconAddon_CloakOfElvenkind.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Churros/iconAddon_CloakOfElvenkind.png"
+  },
+  "Churros/iconAddon_CloakOfInvisibility.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Churros/iconAddon_CloakOfInvisibility.png"
+  },
+  "Churros/iconAddon_CrystalBall.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_CrystalBall.png"
+  },
+  "Churros/iconAddon_DragontoothDagger.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_DragontoothDagger.png"
+  },
+  "Churros/iconAddon_GlassEye.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_GlassEye.png"
+  },
+  "Churros/iconAddon_IridescentBookOfVileDarkness.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_IridescentBookOfVileDarkness.png"
+  },
+  "Churros/iconAddon_LanternOfRevealing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_LanternOfRevealing.png"
+  },
+  "Churros/iconAddon_OrnateHorn.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_OrnateHorn.png"
+  },
+  "Churros/iconAddon_PearlOfPower.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Churros/iconAddon_PearlOfPower.png"
+  },
+  "Churros/iconAddon_PotionOfSpeed.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_PotionOfSpeed.png"
+  },
+  "Churros/iconAddon_RavensFeather.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_RavensFeather.png"
+  },
+  "Churros/iconAddon_RingOfSpellStoring.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_RingOfSpellStoring.png"
+  },
+  "Churros/iconAddon_RingOfTelekinesis.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_RingOfTelekinesis.png"
+  },
+  "Churros/iconAddon_RobeOfEyes.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Churros/iconAddon_RobeOfEyes.png"
+  },
+  "Churros/iconAddon_StaffOfWithering.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_StaffOfWithering.png"
+  },
+  "Churros/iconAddon_SwordOfKass.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_SwordOfKass.png"
+  },
+  "Churros/iconAddon_TatteredHeadband.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_TatteredHeadband.png"
+  },
+  "Churros/iconAddon_TrickstersGlove.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Churros/iconAddon_TrickstersGlove.png"
+  },
+  "Comet/icons_Addon_BloodyBoa.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_BloodyBoa.png"
+  },
+  "Comet/icons_Addon_CagedHeartShoes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_CagedHeartShoes.png"
+  },
+  "Comet/icons_Addon_CutThruUsingle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_CutThruUsingle.png"
+  },
+  "Comet/icons_Addon_DeathThroesCompilation.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_DeathThroesCompilation.png"
+  },
+  "Comet/icons_Addon_DiamondCufflinks.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_DiamondCufflinks.png"
+  },
+  "Comet/icons_Addon_EdgeOfRevivalAlbum.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_EdgeOfRevivalAlbum.png"
+  },
+  "Comet/icons_Addon_FizzSpinSoda.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_FizzSpinSoda.png"
+  },
+  "Comet/icons_Addon_InfernoWires.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_InfernoWires.png"
+  },
+  "Comet/icons_Addon_IridescentPhotocard.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_IridescentPhotocard.png"
+  },
+  "Comet/icons_Addon_JiWoonsAutograph.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_JiWoonsAutograph.png"
+  },
+  "Comet/icons_Addon_KillingPartChords.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_KillingPartChords.png"
+  },
+  "Comet/icons_Addon_LuckyBlade.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_LuckyBlade.png"
+  },
+  "Comet/icons_Addon_MementoBlades.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_MementoBlades.png"
+  },
+  "Comet/icons_Addon_OnTargetSingle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_OnTargetSingle.png"
+  },
+  "Comet/icons_Addon_RipperBrace.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_RipperBrace.png"
+  },
+  "Comet/icons_Addon_TequilaMoonrock.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_TequilaMoonrock.png"
+  },
+  "Comet/icons_Addon_TrickBlades.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_TrickBlades.png"
+  },
+  "Comet/icons_Addon_TrickPouch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_TrickPouch.png"
+  },
+  "Comet/icons_Addon_WaitingForYouWatch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Comet/icons_Addon_WaitingForYouWatch.png"
+  },
+  "Comet/icons_Addon_YumisMurder.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Comet/icons_Addon_YumisMurder.png"
+  },
+  "DLC2/iconAddon_blondeHair.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_blondeHair.png"
+  },
+  "DLC2/iconAddon_boyfriendsMemo.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_boyfriendsMemo.png"
+  },
+  "DLC2/iconAddon_deadRabbit.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_deadRabbit.png"
+  },
+  "DLC2/iconAddon_glassFragment.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_glassFragment.png"
+  },
+  "DLC2/iconAddon_hairBow.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC2/iconAddon_hairBow.png"
+  },
+  "DLC2/iconAddon_hairBrush.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_hairBrush.png"
+  },
+  "DLC2/iconAddon_jMyersMemorial.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC2/iconAddon_jMyersMemorial.png"
+  },
+  "DLC2/iconAddon_jewelry.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_jewelry.png"
+  },
+  "DLC2/iconAddon_jewelryBox.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_jewelryBox.png"
+  },
+  "DLC2/iconAddon_judithsJournal.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC2/iconAddon_judithsJournal.png"
+  },
+  "DLC2/iconAddon_judithsTombstone.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_judithsTombstone.png"
+  },
+  "DLC2/iconAddon_lockOfHair.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_lockOfHair.png"
+  },
+  "DLC2/iconAddon_memorialFlower.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_memorialFlower.png"
+  },
+  "DLC2/iconAddon_mirrorShard.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC2/iconAddon_mirrorShard.png"
+  },
+  "DLC2/iconAddon_reflectiveFragment.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_reflectiveFragment.png"
+  },
+  "DLC2/iconAddon_scratchedMirror.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_scratchedMirror.png"
+  },
+  "DLC2/iconAddon_tackyEarrings.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_tackyEarrings.png"
+  },
+  "DLC2/iconAddon_tombstonePiece.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/DLC2/iconAddon_tombstonePiece.png"
+  },
+  "DLC2/iconAddon_tuftOfHair.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_tuftOfHair.png"
+  },
+  "DLC2/iconAddon_vanityMirror.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC2/iconAddon_vanityMirror.png"
+  },
+  "DLC3/iconAddon_bloodiedMud.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC3/iconAddon_bloodiedMud.png"
+  },
+  "DLC3/iconAddon_bloodiedWater.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_bloodiedWater.png"
+  },
+  "DLC3/iconAddon_bogWater.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_bogWater.png"
+  },
+  "DLC3/iconAddon_crackedTurtleEgg.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC3/iconAddon_crackedTurtleEgg.png"
+  },
+  "DLC3/iconAddon_cypressNecklet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_cypressNecklet.png"
+  },
+  "DLC3/iconAddon_deadFlyMud.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_deadFlyMud.png"
+  },
+  "DLC3/iconAddon_disfiguredEar.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/DLC3/iconAddon_disfiguredEar.png"
+  },
+  "DLC3/iconAddon_dragonflyWings.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_dragonflyWings.png"
+  },
+  "DLC3/iconAddon_driedCicada.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC3/iconAddon_driedCicada.png"
+  },
+  "DLC3/iconAddon_granmasHeart.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_granmasHeart.png"
+  },
+  "DLC3/iconAddon_halfEggshell.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_halfEggshell.png"
+  },
+  "DLC3/iconAddon_mintRag.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_mintRag.png"
+  },
+  "DLC3/iconAddon_powderedEggshell.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_powderedEggshell.png"
+  },
+  "DLC3/iconAddon_pussyWillowCatkins.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_pussyWillowCatkins.png"
+  },
+  "DLC3/iconAddon_ropeNecklet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_ropeNecklet.png"
+  },
+  "DLC3/iconAddon_rustyShackles.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_rustyShackles.png"
+  },
+  "DLC3/iconAddon_scarredHand.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/DLC3/iconAddon_scarredHand.png"
+  },
+  "DLC3/iconAddon_swampOrchidNecklet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_swampOrchidNecklet.png"
+  },
+  "DLC3/iconAddon_waterloggedShoe.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC3/iconAddon_waterloggedShoe.png"
+  },
+  "DLC3/iconAddon_willowWreath.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC3/iconAddon_willowWreath.png"
+  },
+  "DLC4/iconAddon_calmCartersNotes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_calmCartersNotes.png"
+  },
+  "DLC4/iconAddon_calmClassI.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_calmClassI.png"
+  },
+  "DLC4/iconAddon_calmClassII.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_calmClassII.png"
+  },
+  "DLC4/iconAddon_diciplineCartersNotes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_diciplineCartersNotes.png"
+  },
+  "DLC4/iconAddon_diciplineClassII.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_diciplineClassII.png"
+  },
+  "DLC4/iconAddon_diciplineClassIII.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC4/iconAddon_diciplineClassIII.png"
+  },
+  "DLC4/iconAddon_highStimulusElectrode.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC4/iconAddon_highStimulusElectrode.png"
+  },
+  "DLC4/iconAddon_interviewTape.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC4/iconAddon_interviewTape.png"
+  },
+  "DLC4/iconAddon_iridescentKing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_iridescentKing.png"
+  },
+  "DLC4/iconAddon_iridescentQueen.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_iridescentQueen.png"
+  },
+  "DLC4/iconAddon_mapleKnight.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_mapleKnight.png"
+  },
+  "DLC4/iconAddon_moldyElectrode.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_moldyElectrode.png"
+  },
+  "DLC4/iconAddon_orderCartersNotes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_orderCartersNotes.png"
+  },
+  "DLC4/iconAddon_orderClassI.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_orderClassI.png"
+  },
+  "DLC4/iconAddon_orderClassII.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_orderClassII.png"
+  },
+  "DLC4/iconAddon_polishedElectrode.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_polishedElectrode.png"
+  },
+  "DLC4/iconAddon_restraintCartersNotes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_restraintCartersNotes.png"
+  },
+  "DLC4/iconAddon_restraintClassII.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_restraintClassII.png"
+  },
+  "DLC4/iconAddon_restraintClassIII.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_restraintClassIII.png"
+  },
+  "DLC4/iconAddon_scrappedTape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC4/iconAddon_scrappedTape.png"
+  },
+  "DLC5/iconAddon_amanitaToxin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_amanitaToxin.png"
+  },
+  "DLC5/iconAddon_bandagedHaft.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_bandagedHaft.png"
+  },
+  "DLC5/iconAddon_begrimedHead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_begrimedHead.png"
+  },
+  "DLC5/iconAddon_coarseStone.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_coarseStone.png"
+  },
+  "DLC5/iconAddon_deerskinGloves.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC5/iconAddon_deerskinGloves.png"
+  },
+  "DLC5/iconAddon_flowerBabushka.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC5/iconAddon_flowerBabushka.png"
+  },
+  "DLC5/iconAddon_glowingConcoction.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_glowingConcoction.png"
+  },
+  "DLC5/iconAddon_infantryBelt.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_infantryBelt.png"
+  },
+  "DLC5/iconAddon_iridescentHead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_iridescentHead.png"
+  },
+  "DLC5/iconAddon_leatherLoop.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_leatherLoop.png"
+  },
+  "DLC5/iconAddon_mannaGrassBraid.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_mannaGrassBraid.png"
+  },
+  "DLC5/iconAddon_oakHaft.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_oakHaft.png"
+  },
+  "DLC5/iconAddon_roseRoot.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC5/iconAddon_roseRoot.png"
+  },
+  "DLC5/iconAddon_rustyHead.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC5/iconAddon_rustyHead.png"
+  },
+  "DLC5/iconAddon_shinyPin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_shinyPin.png"
+  },
+  "DLC5/iconAddon_soldiersPuttee.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_soldiersPuttee.png"
+  },
+  "DLC5/iconAddon_venomousConcoction.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/DLC5/iconAddon_venomousConcoction.png"
+  },
+  "DLC5/iconAddon_weightedHead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_weightedHead.png"
+  },
+  "DLC5/iconAddon_woodenFox.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/DLC5/iconAddon_woodenFox.png"
+  },
+  "DLC5/iconAddon_yellowedCloth.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/DLC5/iconAddon_yellowedCloth.png"
+  },
+  "Donut/iconAddon_JailersChimes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Donut/iconAddon_JailersChimes.png"
+  },
+  "Donut/iconAddon_SharpenedMount.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Donut/iconAddon_SharpenedMount.png"
+  },
+  "Eclair/iconAddon_AlucardsShield.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_AlucardsShield.png"
+  },
+  "Eclair/iconAddon_BloodFilledGoblet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_BloodFilledGoblet.png"
+  },
+  "Eclair/iconAddon_CerberusTalon.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_CerberusTalon.png"
+  },
+  "Eclair/iconAddon_ClockTowerGear.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_ClockTowerGear.png"
+  },
+  "Eclair/iconAddon_CubeOfZoe.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_CubeOfZoe.png"
+  },
+  "Eclair/iconAddon_ForceOfEcho.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Eclair/iconAddon_ForceOfEcho.png"
+  },
+  "Eclair/iconAddon_IridescentRingOfVlad.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_IridescentRingOfVlad.png"
+  },
+  "Eclair/iconAddon_KillerDoll.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_KillerDoll.png"
+  },
+  "Eclair/iconAddon_LapisLazuli.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_LapisLazuli.png"
+  },
+  "Eclair/iconAddon_MagicalTicket.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_MagicalTicket.png"
+  },
+  "Eclair/iconAddon_MedusasHair.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_MedusasHair.png"
+  },
+  "Eclair/iconAddon_MoonstoneNecklace.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_MoonstoneNecklace.png"
+  },
+  "Eclair/iconAddon_PocketWatch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_PocketWatch.png"
+  },
+  "Eclair/iconAddon_RubyCirclet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_RubyCirclet.png"
+  },
+  "Eclair/iconAddon_Sunglasses.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_Sunglasses.png"
+  },
+  "Eclair/iconAddon_SylphFeather.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Eclair/iconAddon_SylphFeather.png"
+  },
+  "Eclair/iconAddon_TravelersHat.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_TravelersHat.png"
+  },
+  "Eclair/iconAddon_WargsFang.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_WargsFang.png"
+  },
+  "Eclair/iconAddon_WhiteWolfMedallion.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_WhiteWolfMedallion.png"
+  },
+  "Eclair/iconAddon_WingedBoots.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclair/iconAddon_WingedBoots.png"
+  },
+  "Eclipse/iconAddon_TVirusSample.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Eclipse/iconAddon_TVirusSample.png"
+  },
+  "Eclipse/iconAddon_adminWristband.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_adminWristband.png"
+  },
+  "Eclipse/iconAddon_adrenalineInjector.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_adrenalineInjector.png"
+  },
+  "Eclipse/iconAddon_briansIntestines.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_briansIntestines.png"
+  },
+  "Eclipse/iconAddon_brokenRecoveryCoin.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Eclipse/iconAddon_brokenRecoveryCoin.png"
+  },
+  "Eclipse/iconAddon_damagedSyringe.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_damagedSyringe.png"
+  },
+  "Eclipse/iconAddon_depletedInkRibbon.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Eclipse/iconAddon_depletedInkRibbon.png"
+  },
+  "Eclipse/iconAddon_iridescentUmbrellaBadge.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_iridescentUmbrellaBadge.png"
+  },
+  "Eclipse/iconAddon_jillSandwich.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_jillSandwich.png"
+  },
+  "Eclipse/iconAddon_lickerTongue.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_lickerTongue.png"
+  },
+  "Eclipse/iconAddon_marvinsBlood.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_marvinsBlood.png"
+  },
+  "Eclipse/iconAddon_mikhailsEye.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_mikhailsEye.png"
+  },
+  "Eclipse/iconAddon_neaParasite.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_neaParasite.png"
+  },
+  "Eclipse/iconAddon_plant43Vines.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_plant43Vines.png"
+  },
+  "Eclipse/iconAddon_serotoninInjector.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Eclipse/iconAddon_serotoninInjector.png"
+  },
+  "Eclipse/iconAddon_shatteredStarsBadge.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_shatteredStarsBadge.png"
+  },
+  "Eclipse/iconAddon_starsFieldCombatManual.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_starsFieldCombatManual.png"
+  },
+  "Eclipse/iconAddon_tyrantGore.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Eclipse/iconAddon_tyrantGore.png"
+  },
+  "Eclipse/iconAddon_visitorWristband.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_visitorWristband.png"
+  },
+  "Eclipse/iconAddon_zombieHeart.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Eclipse/iconAddon_zombieHeart.png"
+  },
+  "England/iconAddon_blackBox.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_blackBox.png"
+  },
+  "England/iconAddon_blueDress.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/England/iconAddon_blueDress.png"
+  },
+  "England/iconAddon_catBlock.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_catBlock.png"
+  },
+  "England/iconAddon_classPhoto.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_classPhoto.png"
+  },
+  "England/iconAddon_gardenRake.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_gardenRake.png"
+  },
+  "England/iconAddon_greenDress.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_greenDress.png"
+  },
+  "England/iconAddon_jumpRope.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/England/iconAddon_jumpRope.png"
+  },
+  "England/iconAddon_kidsDrawing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_kidsDrawing.png"
+  },
+  "England/iconAddon_nancysMasterpiece.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/England/iconAddon_nancysMasterpiece.png"
+  },
+  "England/iconAddon_nancysSketch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_nancysSketch.png"
+  },
+  "England/iconAddon_outdoorRope.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_outdoorRope.png"
+  },
+  "England/iconAddon_paintThinner.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/England/iconAddon_paintThinner.png"
+  },
+  "England/iconAddon_pillBottle.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/England/iconAddon_pillBottle.png"
+  },
+  "England/iconAddon_prototypeClaw.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_prototypeClaw.png"
+  },
+  "England/iconAddon_redPaintBrush.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_redPaintBrush.png"
+  },
+  "England/iconAddon_sheepBlock.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_sheepBlock.png"
+  },
+  "England/iconAddon_swingChains.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_swingChains.png"
+  },
+  "England/iconAddon_unicornBlock.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/England/iconAddon_unicornBlock.png"
+  },
+  "England/iconAddon_woolShirt.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/England/iconAddon_woolShirt.png"
+  },
+  "England/iconAddon_zBlock.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/England/iconAddon_zBlock.png"
+  },
+  "Finland/iconAddon_amandasLetter.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_amandasLetter.png"
+  },
+  "Finland/iconAddon_amandasSecret.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_amandasSecret.png"
+  },
+  "Finland/iconAddon_bagOfGears.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Finland/iconAddon_bagOfGears.png"
+  },
+  "Finland/iconAddon_combatStraps.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_combatStraps.png"
+  },
+  "Finland/iconAddon_crateOfGears.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Finland/iconAddon_crateOfGears.png"
+  },
+  "Finland/iconAddon_faceMask.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_faceMask.png"
+  },
+  "Finland/iconAddon_interlockingRazor.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_interlockingRazor.png"
+  },
+  "Finland/iconAddon_jigsawsAnnotatedPlan.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Finland/iconAddon_jigsawsAnnotatedPlan.png"
+  },
+  "Finland/iconAddon_jigsawsSketch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_jigsawsSketch.png"
+  },
+  "Finland/iconAddon_johnsMedicalFile.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_johnsMedicalFile.png"
+  },
+  "Finland/iconAddon_lastWill.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_lastWill.png"
+  },
+  "Finland/iconAddon_razerWire.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_razerWire.png"
+  },
+  "Finland/iconAddon_rulesSetN2.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Finland/iconAddon_rulesSetN2.png"
+  },
+  "Finland/iconAddon_rustyAttachments.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Finland/iconAddon_rustyAttachments.png"
+  },
+  "Finland/iconAddon_shatteredSyringe.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_shatteredSyringe.png"
+  },
+  "Finland/iconAddon_slowReleaseToxin.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Finland/iconAddon_slowReleaseToxin.png"
+  },
+  "Finland/iconAddon_tamperedTimer.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_tamperedTimer.png"
+  },
+  "Finland/iconAddon_utilityBlades.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_utilityBlades.png"
+  },
+  "Finland/iconAddon_videoTape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_videoTape.png"
+  },
+  "Finland/iconAddon_workshopGrease.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Finland/iconAddon_workshopGrease.png"
+  },
+  "Gelato/T_UI_iconAddon_BarleyMeal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_BarleyMeal.png"
+  },
+  "Gelato/T_UI_iconAddon_BelayingPins.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_BelayingPins.png"
+  },
+  "Gelato/T_UI_iconAddon_CreaturesBone.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_CreaturesBone.png"
+  },
+  "Gelato/T_UI_iconAddon_FattyMeat.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_FattyMeat.png"
+  },
+  "Gelato/T_UI_iconAddon_GunpowderTin.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_GunpowderTin.png"
+  },
+  "Gelato/T_UI_iconAddon_IridescentWheelHandle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_IridescentWheelHandle.png"
+  },
+  "Gelato/T_UI_iconAddon_KnottedRope.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_KnottedRope.png"
+  },
+  "Gelato/T_UI_iconAddon_LeatherHarness.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_LeatherHarness.png"
+  },
+  "Gelato/T_UI_iconAddon_Marlinspike.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_Marlinspike.png"
+  },
+  "Gelato/T_UI_iconAddon_ShipFigurehead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_ShipFigurehead.png"
+  },
+  "Gelato/T_UI_iconAddon_SmokedSnapper.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_SmokedSnapper.png"
+  },
+  "Gelato/T_UI_iconAddon_SpikedCollar.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_SpikedCollar.png"
+  },
+  "Gelato/T_UI_iconAddon_Spyglass.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_Spyglass.png"
+  },
+  "Gelato/T_UI_iconAddon_StickyPitch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_StickyPitch.png"
+  },
+  "Gelato/T_UI_iconAddon_TornNovel.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_TornNovel.png"
+  },
+  "Gelato/T_UI_iconAddon_TrainersBook.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_TrainersBook.png"
+  },
+  "Gelato/T_UI_iconAddon_TrainingBell.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_TrainingBell.png"
+  },
+  "Gelato/T_UI_iconAddon_UnfinishedMap.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_UnfinishedMap.png"
+  },
+  "Gelato/T_UI_iconAddon_Waterskin.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_Waterskin.png"
+  },
+  "Gelato/T_UI_iconAddon_YoungCoconut.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gelato/T_UI_iconAddon_YoungCoconut.png"
+  },
+  "Gemini/iconAddon_bentNail.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_bentNail.png"
+  },
+  "Gemini/iconAddon_burningCandle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_burningCandle.png"
+  },
+  "Gemini/iconAddon_chatterersTooth.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Gemini/iconAddon_chatterersTooth.png"
+  },
+  "Gemini/iconAddon_engineersFang.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_engineersFang.png"
+  },
+  "Gemini/iconAddon_flickeringTelevision.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_flickeringTelevision.png"
+  },
+  "Gemini/iconAddon_franksHeart.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gemini/iconAddon_franksHeart.png"
+  },
+  "Gemini/iconAddon_greasyBlackLens.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Gemini/iconAddon_greasyBlackLens.png"
+  },
+  "Gemini/iconAddon_impalingWire.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_impalingWire.png"
+  },
+  "Gemini/iconAddon_iridescentLamentConfiguration.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_iridescentLamentConfiguration.png"
+  },
+  "Gemini/iconAddon_larrysBlood.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gemini/iconAddon_larrysBlood.png"
+  },
+  "Gemini/iconAddon_larrysRemains.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gemini/iconAddon_larrysRemains.png"
+  },
+  "Gemini/iconAddon_leatherStrip.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_leatherStrip.png"
+  },
+  "Gemini/iconAddon_liquifiedGore.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_liquifiedGore.png"
+  },
+  "Gemini/iconAddon_livelyCrickets.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_livelyCrickets.png"
+  },
+  "Gemini/iconAddon_originalPain.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_originalPain.png"
+  },
+  "Gemini/iconAddon_skeweredRat.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_skeweredRat.png"
+  },
+  "Gemini/iconAddon_sliceofFrank.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Gemini/iconAddon_sliceofFrank.png"
+  },
+  "Gemini/iconAddon_spoiledMeal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_spoiledMeal.png"
+  },
+  "Gemini/iconAddon_torturePillar.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_torturePillar.png"
+  },
+  "Gemini/iconAddon_wrigglingMaggots.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Gemini/iconAddon_wrigglingMaggots.png"
+  },
+  "Guam/iconAddon_bottleOfChloroform.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Guam/iconAddon_bottleOfChloroform.png"
+  },
+  "Guam/iconAddon_cheapGinBottle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_cheapGinBottle.png"
+  },
+  "Guam/iconAddon_cigarBox.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_cigarBox.png"
+  },
+  "Guam/iconAddon_ether15.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Guam/iconAddon_ether15.png"
+  },
+  "Guam/iconAddon_fingerlessParadeGloves.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_fingerlessParadeGloves.png"
+  },
+  "Guam/iconAddon_flaskOfBleach.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Guam/iconAddon_flaskOfBleach.png"
+  },
+  "Guam/iconAddon_garishMakeupKit.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Guam/iconAddon_garishMakeupKit.png"
+  },
+  "Guam/iconAddon_keroseneCan.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_keroseneCan.png"
+  },
+  "Guam/iconAddon_partyBottle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_partyBottle.png"
+  },
+  "Guam/iconAddon_redheadsPinkyFinger.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_redheadsPinkyFinger.png"
+  },
+  "Guam/iconAddon_robinFeather.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_robinFeather.png"
+  },
+  "Guam/iconAddon_smellyInnerSoles.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_smellyInnerSoles.png"
+  },
+  "Guam/iconAddon_solventJug.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_solventJug.png"
+  },
+  "Guam/iconAddon_spiritOfHartshorn.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Guam/iconAddon_spiritOfHartshorn.png"
+  },
+  "Guam/iconAddon_starlingFeather.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_starlingFeather.png"
+  },
+  "Guam/iconAddon_stickySodaBottle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_stickySodaBottle.png"
+  },
+  "Guam/iconAddon_sulfuricAcidVial.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Guam/iconAddon_sulfuricAcidVial.png"
+  },
+  "Guam/iconAddon_tattoosMiddleFinger.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_tattoosMiddleFinger.png"
+  },
+  "Guam/iconAddon_thickCorkStopper.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_thickCorkStopper.png"
+  },
+  "Guam/iconAddon_vhsPorn.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Guam/iconAddon_vhsPorn.png"
+  },
+  "Haiti/iconAddon_ShiawaseAmulet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_ShiawaseAmulet.png"
+  },
+  "Haiti/iconAddon_driedCherryBlossom.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_driedCherryBlossom.png"
+  },
+  "Haiti/iconAddon_giftedBambooComb.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_giftedBambooComb.png"
+  },
+  "Haiti/iconAddon_juniperBonzai.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_juniperBonzai.png"
+  },
+  "Haiti/iconAddon_kaiunTalisman.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_kaiunTalisman.png"
+  },
+  "Haiti/iconAddon_katanaTsuba.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Haiti/iconAddon_katanaTsuba.png"
+  },
+  "Haiti/iconAddon_motherDaughterRing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_motherDaughterRing.png"
+  },
+  "Haiti/iconAddon_muddySportCap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_muddySportCap.png"
+  },
+  "Haiti/iconAddon_origamiCrane.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_origamiCrane.png"
+  },
+  "Haiti/iconAddon_rinsBrokenWatch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_rinsBrokenWatch.png"
+  },
+  "Haiti/iconAddon_rustyFlute.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_rustyFlute.png"
+  },
+  "Haiti/iconAddon_wakizashiSaya.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_wakizashiSaya.png"
+  },
+  "Haiti/iconAddon_whiteHairRibbon.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_whiteHairRibbon.png"
+  },
+  "Haiti/iconAddon_yakuyokeAmulet.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Haiti/iconAddon_yakuyokeAmulet.png"
+  },
+  "Haiti/iconAddon_zori.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Haiti/iconAddon_zori.png"
+  },
+  "Hubble/iconAddon_furin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Hubble/iconAddon_furin.png"
+  },
+  "Hubble/iconAddon_kintsugiTeacup.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Hubble/iconAddon_kintsugiTeacup.png"
+  },
+  "Hubble/iconAddon_mothersGlasses.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Hubble/iconAddon_mothersGlasses.png"
+  },
+  "Hubble/iconAddon_senkoHanabi.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Hubble/iconAddon_senkoHanabi.png"
+  },
+  "Hubble/iconAddon_uchiwa.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Hubble/iconAddon_uchiwa.png"
+  },
+  "Icecream/T_UI_iconAddon_AmonsNecktie.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_AmonsNecktie.png"
+  },
+  "Icecream/T_UI_iconAddon_AnteikuApron.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_AnteikuApron.png"
+  },
+  "Icecream/T_UI_iconAddon_AogiriTreeRobe.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_AogiriTreeRobe.png"
+  },
+  "Icecream/T_UI_iconAddon_CCGIDCard.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_CCGIDCard.png"
+  },
+  "Icecream/T_UI_iconAddon_HidesHeadphones.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_HidesHeadphones.png"
+  },
+  "Icecream/T_UI_iconAddon_HinamisUmbrella.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_HinamisUmbrella.png"
+  },
+  "Icecream/T_UI_iconAddon_KanekisWallet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_KanekisWallet.png"
+  },
+  "Icecream/T_UI_iconAddon_MadosGlove.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_MadosGlove.png"
+  },
+  "Icecream/T_UI_iconAddon_RizesGlasses.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_RizesGlasses.png"
+  },
+  "Icecream/T_UI_iconAddon_TheBlackGoatsEgg.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_TheBlackGoatsEgg.png"
+  },
+  "Icecream/T_UI_iconAddon_YamorisMask.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_YamorisMask.png"
+  },
+  "Icecream/T_UI_iconAddon_bloodStainedHandkerchief.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_bloodStainedHandkerchief.png"
+  },
+  "Icecream/T_UI_iconAddon_brokenChain.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_brokenChain.png"
+  },
+  "Icecream/T_UI_iconAddon_freshCoffee.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_freshCoffee.png"
+  },
+  "Icecream/T_UI_iconAddon_iridescentEyePatch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_iridescentEyePatch.png"
+  },
+  "Icecream/T_UI_iconAddon_medicalApparatus.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_medicalApparatus.png"
+  },
+  "Icecream/T_UI_iconAddon_redHeadedCentipede.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_redHeadedCentipede.png"
+  },
+  "Icecream/T_UI_iconAddon_redSpiderLily.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_redSpiderLily.png"
+  },
+  "Icecream/T_UI_iconAddon_satchel.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_satchel.png"
+  },
+  "Icecream/T_UI_iconAddon_taiyaki.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Icecream/T_UI_iconAddon_taiyaki.png"
+  },
+  "Ion/iconAddon_AutomaticDrawing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_AutomaticDrawing.png"
+  },
+  "Ion/iconAddon_CharcoalStick.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_CharcoalStick.png"
+  },
+  "Ion/iconAddon_ChocloCorn.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_ChocloCorn.png"
+  },
+  "Ion/iconAddon_DarkestInk.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_DarkestInk.png"
+  },
+  "Ion/iconAddon_FesteringCarrion.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_FesteringCarrion.png"
+  },
+  "Ion/iconAddon_GardenofRot.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_GardenofRot.png"
+  },
+  "Ion/iconAddon_InkEgg.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_InkEgg.png"
+  },
+  "Ion/iconAddon_IridescentFeather.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_IridescentFeather.png"
+  },
+  "Ion/iconAddon_JacobsBabyShoes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_JacobsBabyShoes.png"
+  },
+  "Ion/iconAddon_OGriefOLover.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_OGriefOLover.png"
+  },
+  "Ion/iconAddon_OilPaints.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_OilPaints.png"
+  },
+  "Ion/iconAddon_SeveredHands.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_SeveredHands.png"
+  },
+  "Ion/iconAddon_SeveredTongue.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_SeveredTongue.png"
+  },
+  "Ion/iconAddon_SilverBell.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_SilverBell.png"
+  },
+  "Ion/iconAddon_StillLifeCrow.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_StillLifeCrow.png"
+  },
+  "Ion/iconAddon_ThickTar.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_ThickTar.png"
+  },
+  "Ion/iconAddon_ThornyNest.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_ThornyNest.png"
+  },
+  "Ion/iconAddon_UntitledAgony.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_UntitledAgony.png"
+  },
+  "Ion/iconAddon_VelvetFabric.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_VelvetFabric.png"
+  },
+  "Ion/iconAddon_VibrantObituary.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ion/iconAddon_VibrantObituary.png"
+  },
+  "Kenya/iconAddon_coldDirt.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_coldDirt.png"
+  },
+  "Kenya/iconAddon_defacedSmileyButton.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_defacedSmileyButton.png"
+  },
+  "Kenya/iconAddon_etchedRuler.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_etchedRuler.png"
+  },
+  "Kenya/iconAddon_filthyBlade.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_filthyBlade.png"
+  },
+  "Kenya/iconAddon_franksMixtape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_franksMixtape.png"
+  },
+  "Kenya/iconAddon_friendshipBracelet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_friendshipBracelet.png"
+  },
+  "Kenya/iconAddon_fumingMixtape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_fumingMixtape.png"
+  },
+  "Kenya/iconAddon_iridescentButton.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_iridescentButton.png"
+  },
+  "Kenya/iconAddon_joeysMixtape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_joeysMixtape.png"
+  },
+  "Kenya/iconAddon_juliesMixtape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_juliesMixtape.png"
+  },
+  "Kenya/iconAddon_mischiefList.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_mischiefList.png"
+  },
+  "Kenya/iconAddon_muralSketch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_muralSketch.png"
+  },
+  "Kenya/iconAddon_nastyBlade.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kenya/iconAddon_nastyBlade.png"
+  },
+  "Kenya/iconAddon_neverSleepPills.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_neverSleepPills.png"
+  },
+  "Kenya/iconAddon_scratchedRuler.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_scratchedRuler.png"
+  },
+  "Kenya/iconAddon_smileyFaceButton.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_smileyFaceButton.png"
+  },
+  "Kenya/iconAddon_stabWoundsStudy.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_stabWoundsStudy.png"
+  },
+  "Kenya/iconAddon_stolenSketchbook.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kenya/iconAddon_stolenSketchbook.png"
+  },
+  "Kenya/iconAddon_suziesMixtape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kenya/iconAddon_suziesMixtape.png"
+  },
+  "Kenya/iconAddon_theLegionButton.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kenya/iconAddon_theLegionButton.png"
+  },
+  "Kepler/iconAddon_BloodyFingernail.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kepler/iconAddon_BloodyFingernail.png"
+  },
+  "Kepler/iconAddon_CabinSign.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_CabinSign.png"
+  },
+  "Kepler/iconAddon_ClumpOfHair.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_ClumpOfHair.png"
+  },
+  "Kepler/iconAddon_DisortedPhoto.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_DisortedPhoto.png"
+  },
+  "Kepler/iconAddon_IridescentVHStape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_IridescentVHStape.png"
+  },
+  "Kepler/iconAddon_MothersComb.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_MothersComb.png"
+  },
+  "Kepler/iconAddon_MothersMirror.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_MothersMirror.png"
+  },
+  "Kepler/iconAddon_OldNewspaper.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_OldNewspaper.png"
+  },
+  "Kepler/iconAddon_ReikosWatch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_ReikosWatch.png"
+  },
+  "Kepler/iconAddon_RemoteControl.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_RemoteControl.png"
+  },
+  "Kepler/iconAddon_RicketyPinwheel.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kepler/iconAddon_RicketyPinwheel.png"
+  },
+  "Kepler/iconAddon_RingDrawing.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kepler/iconAddon_RingDrawing.png"
+  },
+  "Kepler/iconAddon_SeaSoakedCloth.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_SeaSoakedCloth.png"
+  },
+  "Kepler/iconAddon_TapeEditingDeck.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_TapeEditingDeck.png"
+  },
+  "Kepler/iconAddon_Telephone.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_Telephone.png"
+  },
+  "Kepler/iconAddon_VCR.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_VCR.png"
+  },
+  "Kepler/iconAddon_VhsCopy.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_VhsCopy.png"
+  },
+  "Kepler/iconAddon_WellStone.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_WellStone.png"
+  },
+  "Kepler/iconAddon_WellWater.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Kepler/iconAddon_WellWater.png"
+  },
+  "Kepler/iconAddon_YoichisFishingNet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Kepler/iconAddon_YoichisFishingNet.png"
+  },
+  "Ketchup/T_UI_iconAddon_AccessPanel.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_AccessPanel.png"
+  },
+  "Ketchup/T_UI_iconAddon_BonniesGuitarStrings.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_BonniesGuitarStrings.png"
+  },
+  "Ketchup/T_UI_iconAddon_CelebratePoster.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_CelebratePoster.png"
+  },
+  "Ketchup/T_UI_iconAddon_ChicasBib.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_ChicasBib.png"
+  },
+  "Ketchup/T_UI_iconAddon_EndoCPU.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_EndoCPU.png"
+  },
+  "Ketchup/T_UI_iconAddon_FazCoin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_FazCoin.png"
+  },
+  "Ketchup/T_UI_iconAddon_FoxyHook.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_FoxyHook.png"
+  },
+  "Ketchup/T_UI_iconAddon_FreddysHat.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_FreddysHat.png"
+  },
+  "Ketchup/T_UI_iconAddon_GreasyPaperPlate.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_GreasyPaperPlate.png"
+  },
+  "Ketchup/T_UI_iconAddon_HelpWantedAd.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_HelpWantedAd.png"
+  },
+  "Ketchup/T_UI_iconAddon_IridescentRemnant.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_IridescentRemnant.png"
+  },
+  "Ketchup/T_UI_iconAddon_LootBag.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_LootBag.png"
+  },
+  "Ketchup/T_UI_iconAddon_OfficePhone.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_OfficePhone.png"
+  },
+  "Ketchup/T_UI_iconAddon_PartyHat.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_PartyHat.png"
+  },
+  "Ketchup/T_UI_iconAddon_PurpleGuyDrawing.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_PurpleGuyDrawing.png"
+  },
+  "Ketchup/T_UI_iconAddon_RestaurantMenu.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_RestaurantMenu.png"
+  },
+  "Ketchup/T_UI_iconAddon_RippedCurtain.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_RippedCurtain.png"
+  },
+  "Ketchup/T_UI_iconAddon_RottenPizza.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_RottenPizza.png"
+  },
+  "Ketchup/T_UI_iconAddon_SecurityGuardsBadge.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_SecurityGuardsBadge.png"
+  },
+  "Ketchup/T_UI_iconAddon_Streamers.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ketchup/T_UI_iconAddon_Streamers.png"
+  },
+  "Mali/iconAddon_IridescentSeal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_IridescentSeal.png"
+  },
+  "Mali/iconAddon_ashenApple.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Mali/iconAddon_ashenApple.png"
+  },
+  "Mali/iconAddon_blackIncense.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_blackIncense.png"
+  },
+  "Mali/iconAddon_devoteesAmulet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_devoteesAmulet.png"
+  },
+  "Mali/iconAddon_emeticPotion.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_emeticPotion.png"
+  },
+  "Mali/iconAddon_exorcismAmulet.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Mali/iconAddon_exorcismAmulet.png"
+  },
+  "Mali/iconAddon_healingSalve.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_healingSalve.png"
+  },
+  "Mali/iconAddon_hematiteSeal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_hematiteSeal.png"
+  },
+  "Mali/iconAddon_incensedOintment.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Mali/iconAddon_incensedOintment.png"
+  },
+  "Mali/iconAddon_infectedEmetic.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Mali/iconAddon_infectedEmetic.png"
+  },
+  "Mali/iconAddon_limestoneSeal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_limestoneSeal.png"
+  },
+  "Mali/iconAddon_olibanumIncense.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_olibanumIncense.png"
+  },
+  "Mali/iconAddon_potentTincture.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_potentTincture.png"
+  },
+  "Mali/iconAddon_prayerApple.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_prayerApple.png"
+  },
+  "Mali/iconAddon_prayerTabletFragment.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_prayerTabletFragment.png"
+  },
+  "Mali/iconAddon_prophylacticAmulet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Mali/iconAddon_prophylacticAmulet.png"
+  },
+  "Mali/iconAddon_rubbingOil.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Mali/iconAddon_rubbingOil.png"
+  },
+  "Mali/iconAddon_severedToe.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Mali/iconAddon_severedToe.png"
+  },
+  "Mali/iconAddon_vileEmetic.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Mali/iconAddon_vileEmetic.png"
+  },
+  "Mali/iconAddon_worshipTablet.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Mali/iconAddon_worshipTablet.png"
+  },
+  "Meteor/iconAddon_AirFreshner.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_AirFreshner.png"
+  },
+  "Meteor/iconAddon_BoatKey.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Meteor/iconAddon_BoatKey.png"
+  },
+  "Meteor/iconAddon_BrokenDoll.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Meteor/iconAddon_BrokenDoll.png"
+  },
+  "Meteor/iconAddon_BurntLetters.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_BurntLetters.png"
+  },
+  "Meteor/iconAddon_CaffeineTablets.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_CaffeineTablets.png"
+  },
+  "Meteor/iconAddon_DestroyedPillow.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Meteor/iconAddon_DestroyedPillow.png"
+  },
+  "Meteor/iconAddon_FallenShingle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_FallenShingle.png"
+  },
+  "Meteor/iconAddon_FieldRecorder.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_FieldRecorder.png"
+  },
+  "Meteor/iconAddon_FollowersCowl.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_FollowersCowl.png"
+  },
+  "Meteor/iconAddon_HaddiesCalendar.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_HaddiesCalendar.png"
+  },
+  "Meteor/iconAddon_IridescentWoodenPlank.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_IridescentWoodenPlank.png"
+  },
+  "Meteor/iconAddon_LavalierMicrophone.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Meteor/iconAddon_LavalierMicrophone.png"
+  },
+  "Meteor/iconAddon_MalthinkersSkull.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_MalthinkersSkull.png"
+  },
+  "Meteor/iconAddon_MortarAndPestle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_MortarAndPestle.png"
+  },
+  "Meteor/iconAddon_OttomarianWriting.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Meteor/iconAddon_OttomarianWriting.png"
+  },
+  "Meteor/iconAddon_SacrificialKnife.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_SacrificialKnife.png"
+  },
+  "Meteor/iconAddon_TilingBlade.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Meteor/iconAddon_TilingBlade.png"
+  },
+  "Meteor/iconAddon_WarHelmet.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Meteor/iconAddon_WarHelmet.png"
+  },
+  "Meteor/iconAddon_WoodenPlank.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Meteor/iconAddon_WoodenPlank.png"
+  },
+  "Meteor/iconAddon_WorryStones.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Meteor/iconAddon_WorryStones.png"
+  },
+  "Oman/iconAddon_caughtOnTape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_caughtOnTape.png"
+  },
+  "Oman/iconAddon_cheapCologne.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_cheapCologne.png"
+  },
+  "Oman/iconAddon_chewedPen.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Oman/iconAddon_chewedPen.png"
+  },
+  "Oman/iconAddon_driversLicense.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_driversLicense.png"
+  },
+  "Oman/iconAddon_dropLegKnifeSheath.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Oman/iconAddon_dropLegKnifeSheath.png"
+  },
+  "Oman/iconAddon_headlinesCutouts.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_headlinesCutouts.png"
+  },
+  "Oman/iconAddon_knifeBeltClip.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Oman/iconAddon_knifeBeltClip.png"
+  },
+  "Oman/iconAddon_lastingPerfume.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Oman/iconAddon_lastingPerfume.png"
+  },
+  "Oman/iconAddon_leatherKnifeSheath.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Oman/iconAddon_leatherKnifeSheath.png"
+  },
+  "Oman/iconAddon_markedMap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_markedMap.png"
+  },
+  "Oman/iconAddon_nightvisionMoncular.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Oman/iconAddon_nightvisionMoncular.png"
+  },
+  "Oman/iconAddon_olsensAddressBook.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_olsensAddressBook.png"
+  },
+  "Oman/iconAddon_olsensJournal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_olsensJournal.png"
+  },
+  "Oman/iconAddon_olsensWallet.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Oman/iconAddon_olsensWallet.png"
+  },
+  "Oman/iconAddon_outdoorSecurityCamera.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_outdoorSecurityCamera.png"
+  },
+  "Oman/iconAddon_philly.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_philly.png"
+  },
+  "Oman/iconAddon_reusuableCinchStraps.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_reusuableCinchStraps.png"
+  },
+  "Oman/iconAddon_telephotoLens.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_telephotoLens.png"
+  },
+  "Oman/iconAddon_victimsDetailedRoutine.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_victimsDetailedRoutine.png"
+  },
+  "Oman/iconAddon_walleyesMatchbook.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Oman/iconAddon_walleyesMatchbook.png"
+  },
+  "Orion/iconAddon_RPDShoulderWalkie.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_RPDShoulderWalkie.png"
+  },
+  "Orion/iconAddon_bullhorn.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_bullhorn.png"
+  },
+  "Orion/iconAddon_darkSunglasses.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_darkSunglasses.png"
+  },
+  "Orion/iconAddon_goldChalice.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_goldChalice.png"
+  },
+  "Orion/iconAddon_goldenEgg.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Orion/iconAddon_goldenEgg.png"
+  },
+  "Orion/iconAddon_greenHerb.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Orion/iconAddon_greenHerb.png"
+  },
+  "Orion/iconAddon_helicopterStick.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Orion/iconAddon_helicopterStick.png"
+  },
+  "Orion/iconAddon_iridescentUroborosVial.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_iridescentUroborosVial.png"
+  },
+  "Orion/iconAddon_jewelBeetle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_jewelBeetle.png"
+  },
+  "Orion/iconAddon_labPhoto.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_labPhoto.png"
+  },
+  "Orion/iconAddon_lasPlagasVariant.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_lasPlagasVariant.png"
+  },
+  "Orion/iconAddon_leatherGloves.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_leatherGloves.png"
+  },
+  "Orion/iconAddon_lionMedallion.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_lionMedallion.png"
+  },
+  "Orion/iconAddon_looseCrank.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_looseCrank.png"
+  },
+  "Orion/iconAddon_maidenMedalliom.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Orion/iconAddon_maidenMedalliom.png"
+  },
+  "Orion/iconAddon_portableSafe.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Orion/iconAddon_portableSafe.png"
+  },
+  "Orion/iconAddon_redHerb.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Orion/iconAddon_redHerb.png"
+  },
+  "Orion/iconAddon_unicornMedallion.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_unicornMedallion.png"
+  },
+  "Orion/iconAddon_uroborosTendril.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_uroborosTendril.png"
+  },
+  "Orion/iconAddon_videoConferenceDevice.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Orion/iconAddon_videoConferenceDevice.png"
+  },
+  "Qatar/iconAddon_barbsGlasses.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_barbsGlasses.png"
+  },
+  "Qatar/iconAddon_blackHeart.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_blackHeart.png"
+  },
+  "Qatar/iconAddon_brassCaseLighter.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Qatar/iconAddon_brassCaseLighter.png"
+  },
+  "Qatar/iconAddon_deerLung.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Qatar/iconAddon_deerLung.png"
+  },
+  "Qatar/iconAddon_elevensSoda.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Qatar/iconAddon_elevensSoda.png"
+  },
+  "Qatar/iconAddon_leproseLichen.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_leproseLichen.png"
+  },
+  "Qatar/iconAddon_lifeguardWhistle.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Qatar/iconAddon_lifeguardWhistle.png"
+  },
+  "Qatar/iconAddon_mewsGuts.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_mewsGuts.png"
+  },
+  "Qatar/iconAddon_ratLiver.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_ratLiver.png"
+  },
+  "Qatar/iconAddon_ratTail.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_ratTail.png"
+  },
+  "Qatar/iconAddon_redMoss.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_redMoss.png"
+  },
+  "Qatar/iconAddon_rottenGreenTripe.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_rottenGreenTripe.png"
+  },
+  "Qatar/iconAddon_rottenPumpkin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_rottenPumpkin.png"
+  },
+  "Qatar/iconAddon_stickyLining.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_stickyLining.png"
+  },
+  "Qatar/iconAddon_thornyVines.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_thornyVines.png"
+  },
+  "Qatar/iconAddon_unknownEgg.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Qatar/iconAddon_unknownEgg.png"
+  },
+  "Qatar/iconAddon_upsidedownResin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_upsidedownResin.png"
+  },
+  "Qatar/iconAddon_vermillionWebcap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_vermillionWebcap.png"
+  },
+  "Qatar/iconAddon_violetWaxcap.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Qatar/iconAddon_violetWaxcap.png"
+  },
+  "Qatar/iconAddon_viscousWebbing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Qatar/iconAddon_viscousWebbing.png"
+  },
+  "Quantum/iconAddon_BattleaxeHead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_BattleaxeHead.png"
+  },
+  "Quantum/iconAddon_BlacksmithHammer.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_BlacksmithHammer.png"
+  },
+  "Quantum/iconAddon_BrokenHilt.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Quantum/iconAddon_BrokenHilt.png"
+  },
+  "Quantum/iconAddon_CallToArms.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_CallToArms.png"
+  },
+  "Quantum/iconAddon_ColdSteelManacles.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_ColdSteelManacles.png"
+  },
+  "Quantum/iconAddon_DriedHorsemeat.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_DriedHorsemeat.png"
+  },
+  "Quantum/iconAddon_FlintandSteel.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Quantum/iconAddon_FlintandSteel.png"
+  },
+  "Quantum/iconAddon_GrimIronMask.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Quantum/iconAddon_GrimIronMask.png"
+  },
+  "Quantum/iconAddon_GrittyLump.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_GrittyLump.png"
+  },
+  "Quantum/iconAddon_HealingPoultice.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_HealingPoultice.png"
+  },
+  "Quantum/iconAddon_IridescentCompanyBanner.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_IridescentCompanyBanner.png"
+  },
+  "Quantum/iconAddon_IronworkerTongs.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Quantum/iconAddon_IronworkerTongs.png"
+  },
+  "Quantum/iconAddon_KnightContract.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_KnightContract.png"
+  },
+  "Quantum/iconAddon_MapoftheRealms.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_MapoftheRealms.png"
+  },
+  "Quantum/iconAddon_PillagedMead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_PillagedMead.png"
+  },
+  "Quantum/iconAddon_TatteredTabard.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_TatteredTabard.png"
+  },
+  "Quantum/iconAddon_TownWatctTorch.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Quantum/iconAddon_TownWatctTorch.png"
+  },
+  "Quantum/iconAddon_TreatedBlade.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Quantum/iconAddon_TreatedBlade.png"
+  },
+  "Saturn/iconAddon_AdaptiveLighting.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_AdaptiveLighting.png"
+  },
+  "Saturn/iconAddon_AdiValente1.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_AdiValente1.png"
+  },
+  "Saturn/iconAddon_AdvancedMovementPrediction.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Saturn/iconAddon_AdvancedMovementPrediction.png"
+  },
+  "Saturn/iconAddon_BrownNoiseGenerator.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Saturn/iconAddon_BrownNoiseGenerator.png"
+  },
+  "Saturn/iconAddon_ExpiredBatteries.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_ExpiredBatteries.png"
+  },
+  "Saturn/iconAddon_GeographicalReadout.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Saturn/iconAddon_GeographicalReadout.png"
+  },
+  "Saturn/iconAddon_HighCurrentUpgrade.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_HighCurrentUpgrade.png"
+  },
+  "Saturn/iconAddon_HighPowerFloodlight.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_HighPowerFloodlight.png"
+  },
+  "Saturn/iconAddon_InfaredUpgrade.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Saturn/iconAddon_InfaredUpgrade.png"
+  },
+  "Saturn/iconAddon_IridescentUnpublishedManuscript.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_IridescentUnpublishedManuscript.png"
+  },
+  "Saturn/iconAddon_LooseScrew.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Saturn/iconAddon_LooseScrew.png"
+  },
+  "Saturn/iconAddon_LowPowerMode.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_LowPowerMode.png"
+  },
+  "Saturn/iconAddon_Overcharge.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_Overcharge.png"
+  },
+  "Saturn/iconAddon_PowderedGlass.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Saturn/iconAddon_PowderedGlass.png"
+  },
+  "Saturn/iconAddon_PrototypeRotor.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Saturn/iconAddon_PrototypeRotor.png"
+  },
+  "Saturn/iconAddon_RandomizedStrobes.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Saturn/iconAddon_RandomizedStrobes.png"
+  },
+  "Saturn/iconAddon_ShotgunSpeakers.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_ShotgunSpeakers.png"
+  },
+  "Saturn/iconAddon_StereoRemoteMic.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_StereoRemoteMic.png"
+  },
+  "Saturn/iconAddon_UltrasonicTrapSpeaker.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Saturn/iconAddon_UltrasonicTrapSpeaker.png"
+  },
+  "Saturn/iconAddon_VitalTargetingProcessor.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Saturn/iconAddon_VitalTargetingProcessor.png"
+  },
+  "Sweden/iconAddon_IridescentFamilyCrest.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_IridescentFamilyCrest.png"
+  },
+  "Sweden/iconAddon_akitosCrutch.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Sweden/iconAddon_akitosCrutch.png"
+  },
+  "Sweden/iconAddon_blackenedToenail.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_blackenedToenail.png"
+  },
+  "Sweden/iconAddon_bloodySash.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_bloodySash.png"
+  },
+  "Sweden/iconAddon_childsWoodenSword.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_childsWoodenSword.png"
+  },
+  "Sweden/iconAddon_chippedSaihai.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_chippedSaihai.png"
+  },
+  "Sweden/iconAddon_crackedSakazuki.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_crackedSakazuki.png"
+  },
+  "Sweden/iconAddon_inkLion.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_inkLion.png"
+  },
+  "Sweden/iconAddon_kanaianzenTalisman.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Sweden/iconAddon_kanaianzenTalisman.png"
+  },
+  "Sweden/iconAddon_lionFang.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_lionFang.png"
+  },
+  "Sweden/iconAddon_paperLantern.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_paperLantern.png"
+  },
+  "Sweden/iconAddon_polishedMaedate.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_polishedMaedate.png"
+  },
+  "Sweden/iconAddon_renirosBloodyGlove.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_renirosBloodyGlove.png"
+  },
+  "Sweden/iconAddon_rottingRope.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_rottingRope.png"
+  },
+  "Sweden/iconAddon_scalpedTopknot.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_scalpedTopknot.png"
+  },
+  "Sweden/iconAddon_shatteredWakizashi.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Sweden/iconAddon_shatteredWakizashi.png"
+  },
+  "Sweden/iconAddon_splinteredHull.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_splinteredHull.png"
+  },
+  "Sweden/iconAddon_tearSoakedTenugui.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Sweden/iconAddon_tearSoakedTenugui.png"
+  },
+  "Sweden/iconAddon_woodenOniMask.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Sweden/iconAddon_woodenOniMask.png"
+  },
+  "Sweden/iconAddon_yamaokaSashimono.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Sweden/iconAddon_yamaokaSashimono.png"
+  },
+  "Ukraine/iconAddon_barbedWire.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_barbedWire.png"
+  },
+  "Ukraine/iconAddon_bayshoresCigar.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_bayshoresCigar.png"
+  },
+  "Ukraine/iconAddon_bayshoresGoldTooth.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ukraine/iconAddon_bayshoresGoldTooth.png"
+  },
+  "Ukraine/iconAddon_chewingTobacco.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_chewingTobacco.png"
+  },
+  "Ukraine/iconAddon_clearCreekWhiskey.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_clearCreekWhiskey.png"
+  },
+  "Ukraine/iconAddon_hellshireIron.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_hellshireIron.png"
+  },
+  "Ukraine/iconAddon_honeyLocustThorns.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ukraine/iconAddon_honeyLocustThorns.png"
+  },
+  "Ukraine/iconAddon_iridescentCoin.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_iridescentCoin.png"
+  },
+  "Ukraine/iconAddon_jawSmasher.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_jawSmasher.png"
+  },
+  "Ukraine/iconAddon_marshalsBadge.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_marshalsBadge.png"
+  },
+  "Ukraine/iconAddon_modifiedAmmoBelt.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_modifiedAmmoBelt.png"
+  },
+  "Ukraine/iconAddon_poisonOakLeaves.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_poisonOakLeaves.png"
+  },
+  "Ukraine/iconAddon_prisonChain.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_prisonChain.png"
+  },
+  "Ukraine/iconAddon_ricketyChain.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_ricketyChain.png"
+  },
+  "Ukraine/iconAddon_rustedSpike.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_rustedSpike.png"
+  },
+  "Ukraine/iconAddon_snakeOil.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_snakeOil.png"
+  },
+  "Ukraine/iconAddon_spitPolishRag.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_spitPolishRag.png"
+  },
+  "Ukraine/iconAddon_tinOilCan.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Ukraine/iconAddon_tinOilCan.png"
+  },
+  "Ukraine/iconAddon_wantedPoster.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ukraine/iconAddon_wantedPoster.png"
+  },
+  "Ukraine/iconAddon_wardensKeys.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Ukraine/iconAddon_wardensKeys.png"
+  },
+  "Umbra/iconAddon_androidArm.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_androidArm.png"
+  },
+  "Umbra/iconAddon_brokenSecurityKey.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_brokenSecurityKey.png"
+  },
+  "Umbra/iconAddon_crematedRemains.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_crematedRemains.png"
+  },
+  "Umbra/iconAddon_crewManifest.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_crewManifest.png"
+  },
+  "Umbra/iconAddon_cryoGel.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_cryoGel.png"
+  },
+  "Umbra/iconAddon_deniedRequisitionForm.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_deniedRequisitionForm.png"
+  },
+  "Umbra/iconAddon_diagnosticToolConstruction.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Umbra/iconAddon_diagnosticToolConstruction.png"
+  },
+  "Umbra/iconAddon_diagnosticToolRepair.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_diagnosticToolRepair.png"
+  },
+  "Umbra/iconAddon_foreignPlantFibers.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_foreignPlantFibers.png"
+  },
+  "Umbra/iconAddon_heavyWater.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_heavyWater.png"
+  },
+  "Umbra/iconAddon_hologramGenerator.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Umbra/iconAddon_hologramGenerator.png"
+  },
+  "Umbra/iconAddon_hyperawarenessSpray.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_hyperawarenessSpray.png"
+  },
+  "Umbra/iconAddon_iridiscentCrystalShard.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_iridiscentCrystalShard.png"
+  },
+  "Umbra/iconAddon_kidsBallGlove.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_kidsBallGlove.png"
+  },
+  "Umbra/iconAddon_liveWires.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Umbra/iconAddon_liveWires.png"
+  },
+  "Umbra/iconAddon_nanomachineGel.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_nanomachineGel.png"
+  },
+  "Umbra/iconAddon_nutritionalSlurry.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_nutritionalSlurry.png"
+  },
+  "Umbra/iconAddon_somaFamilyPhoto.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_somaFamilyPhoto.png"
+  },
+  "Umbra/iconAddon_spentOxygenTank.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Umbra/iconAddon_spentOxygenTank.png"
+  },
+  "Umbra/iconAddon_ultrasonicSensor.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Umbra/iconAddon_ultrasonicSensor.png"
+  },
+  "Wales/iconAddon_blackStrap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_blackStrap.png"
+  },
+  "Wales/iconAddon_burningManPainting.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_burningManPainting.png"
+  },
+  "Wales/iconAddon_cinderellaMusicBox.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_cinderellaMusicBox.png"
+  },
+  "Wales/iconAddon_copperRing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_copperRing.png"
+  },
+  "Wales/iconAddon_crimsonCeremonyBook.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_crimsonCeremonyBook.png"
+  },
+  "Wales/iconAddon_deadButterfly.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_deadButterfly.png"
+  },
+  "Wales/iconAddon_forgottenVideoTape.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_forgottenVideoTape.png"
+  },
+  "Wales/iconAddon_iridescentSeal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_iridescentSeal.png"
+  },
+  "Wales/iconAddon_leadRing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_leadRing.png"
+  },
+  "Wales/iconAddon_leopardPrintFabric.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_leopardPrintFabric.png"
+  },
+  "Wales/iconAddon_lostMemoriesBook.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Wales/iconAddon_lostMemoriesBook.png"
+  },
+  "Wales/iconAddon_mannequinFoot.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Wales/iconAddon_mannequinFoot.png"
+  },
+  "Wales/iconAddon_mistyDay.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_mistyDay.png"
+  },
+  "Wales/iconAddon_obsidianGoblet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_obsidianGoblet.png"
+  },
+  "Wales/iconAddon_rustColoredEgg.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Wales/iconAddon_rustColoredEgg.png"
+  },
+  "Wales/iconAddon_scarletEgg.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Wales/iconAddon_scarletEgg.png"
+  },
+  "Wales/iconAddon_spearhead.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_spearhead.png"
+  },
+  "Wales/iconAddon_tabletOfTheOppressor.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_tabletOfTheOppressor.png"
+  },
+  "Wales/iconAddon_valtielSectPhotograph.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_valtielSectPhotograph.png"
+  },
+  "Wales/iconAddon_waxDoll.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wales/iconAddon_waxDoll.png"
+  },
+  "Wormhole/iconAddon_CerealRations.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_CerealRations.png"
+  },
+  "Wormhole/iconAddon_acidicBlood.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_acidicBlood.png"
+  },
+  "Wormhole/iconAddon_ashsInnards.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_ashsInnards.png"
+  },
+  "Wormhole/iconAddon_brettsCap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_brettsCap.png"
+  },
+  "Wormhole/iconAddon_catCarrier.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_catCarrier.png"
+  },
+  "Wormhole/iconAddon_crewHeadset.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_crewHeadset.png"
+  },
+  "Wormhole/iconAddon_drinkingBird.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_drinkingBird.png"
+  },
+  "Wormhole/iconAddon_emergencyHelmet.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Wormhole/iconAddon_emergencyHelmet.png"
+  },
+  "Wormhole/iconAddon_harpoonGun.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_harpoonGun.png"
+  },
+  "Wormhole/iconAddon_improvisedCattleProd.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_improvisedCattleProd.png"
+  },
+  "Wormhole/iconAddon_kanesHelmet.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Wormhole/iconAddon_kanesHelmet.png"
+  },
+  "Wormhole/iconAddon_lambertsStarMap.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_lambertsStarMap.png"
+  },
+  "Wormhole/iconAddon_lightWand.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_lightWand.png"
+  },
+  "Wormhole/iconAddon_moltedSkin.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Wormhole/iconAddon_moltedSkin.png"
+  },
+  "Wormhole/iconAddon_multipurposeHatchet.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Wormhole/iconAddon_multipurposeHatchet.png"
+  },
+  "Wormhole/iconAddon_ovomorph.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_ovomorph.png"
+  },
+  "Wormhole/iconAddon_parkersHeadband.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_parkersHeadband.png"
+  },
+  "Wormhole/iconAddon_ripleysWatch.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_ripleysWatch.png"
+  },
+  "Wormhole/iconAddon_selfDestructBolt.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Wormhole/iconAddon_selfDestructBolt.png"
+  },
+  "Wormhole/iconAddon_semioticKeyboard.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Wormhole/iconAddon_semioticKeyboard.png"
+  },
+  "Xipre/iconAddon_apexMuffler.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Xipre/iconAddon_apexMuffler.png"
+  },
+  "Xipre/iconAddon_dadsBoots.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Xipre/iconAddon_dadsBoots.png"
+  },
+  "Xipre/iconAddon_lowKickbackChains.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Xipre/iconAddon_lowKickbackChains.png"
+  },
+  "Xipre/iconAddon_lowProChains.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Xipre/iconAddon_lowProChains.png"
+  },
+  "Xipre/iconAddon_offBrandMotorOil.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Xipre/iconAddon_offBrandMotorOil.png"
+  },
+  "Xipre/iconAddon_steelToeBoots.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Xipre/iconAddon_steelToeBoots.png"
+  },
+  "Xipre/iconAddon_tunedCarburetor.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Xipre/iconAddon_tunedCarburetor.png"
+  },
+  "Yemen/iconAddon_adrenalineVial.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yemen/iconAddon_adrenalineVial.png"
+  },
+  "Yemen/iconAddon_alchemistsRing.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Yemen/iconAddon_alchemistsRing.png"
+  },
+  "Yemen/iconAddon_blightedCrow.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yemen/iconAddon_blightedCrow.png"
+  },
+  "Yemen/iconAddon_blightedRat.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_blightedRat.png"
+  },
+  "Yemen/iconAddon_cankerThorn.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_cankerThorn.png"
+  },
+  "Yemen/iconAddon_chippedMonocle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_chippedMonocle.png"
+  },
+  "Yemen/iconAddon_compoundSeven.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_compoundSeven.png"
+  },
+  "Yemen/iconAddon_compoundThirtyThree.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_compoundThirtyThree.png"
+  },
+  "Yemen/iconAddon_compoundTwentyOne.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yemen/iconAddon_compoundTwentyOne.png"
+  },
+  "Yemen/iconAddon_foxglove.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_foxglove.png"
+  },
+  "Yemen/iconAddon_iridescentBlightTag.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_iridescentBlightTag.png"
+  },
+  "Yemen/iconAddon_placeboTablet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_placeboTablet.png"
+  },
+  "Yemen/iconAddon_plagueBile.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_plagueBile.png"
+  },
+  "Yemen/iconAddon_pustulaDust.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_pustulaDust.png"
+  },
+  "Yemen/iconAddon_roseTonic.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yemen/iconAddon_roseTonic.png"
+  },
+  "Yemen/iconAddon_shreddedNotes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_shreddedNotes.png"
+  },
+  "Yemen/iconAddon_soulChemical.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Yemen/iconAddon_soulChemical.png"
+  },
+  "Yemen/iconAddon_summoningStone.png": {
+    "rarity": "Iridescent",
+    "colorCategory": "PINK",
+    "path": "/assets/addons/Yemen/iconAddon_summoningStone.png"
+  },
+  "Yemen/iconAddon_umbraSalts.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yemen/iconAddon_umbraSalts.png"
+  },
+  "Yemen/iconAddon_vigosJournal.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yemen/iconAddon_vigosJournal.png"
+  },
+  "Yerkes/iconAddon_automaticScrewdriver.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_automaticScrewdriver.png"
+  },
+  "Yerkes/iconAddon_dollEyes.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_dollEyes.png"
+  },
+  "Yerkes/iconAddon_electricCarvingKnife.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_electricCarvingKnife.png"
+  },
+  "Yerkes/iconAddon_flamingHairSpray.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_flamingHairSpray.png"
+  },
+  "Yerkes/iconAddon_goodGuyBox.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_goodGuyBox.png"
+  },
+  "Yerkes/iconAddon_hardHat.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_hardHat.png"
+  },
+  "Yerkes/iconAddon_iridescentAmulet.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_iridescentAmulet.png"
+  },
+  "Yerkes/iconAddon_jumpRope.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_jumpRope.png"
+  },
+  "Yerkes/iconAddon_mirrorShards.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_mirrorShards.png"
+  },
+  "Yerkes/iconAddon_pileOfNails.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_pileOfNails.png"
+  },
+  "Yerkes/iconAddon_plasticBag.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_plasticBag.png"
+  },
+  "Yerkes/iconAddon_portableTV.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yerkes/iconAddon_portableTV.png"
+  },
+  "Yerkes/iconAddon_powerDrill.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_powerDrill.png"
+  },
+  "Yerkes/iconAddon_ratPoison.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_ratPoison.png"
+  },
+  "Yerkes/iconAddon_runningShoes.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yerkes/iconAddon_runningShoes.png"
+  },
+  "Yerkes/iconAddon_silkPillow.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_silkPillow.png"
+  },
+  "Yerkes/iconAddon_straightRazor.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_straightRazor.png"
+  },
+  "Yerkes/iconAddon_strobingLight.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_strobingLight.png"
+  },
+  "Yerkes/iconAddon_tinyScalpel.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Yerkes/iconAddon_tinyScalpel.png"
+  },
+  "Yerkes/iconAddon_yardstick.png": {
+    "rarity": "Rare",
+    "colorCategory": "BLUE",
+    "path": "/assets/addons/Yerkes/iconAddon_yardstick.png"
+  },
+  "Zambia/iconAddon_blightedSerum.png": {
+    "rarity": "Uncommon",
+    "colorCategory": "YELLOW",
+    "path": "/assets/addons/Zambia/iconAddon_blightedSerum.png"
+  },
+  "Zambia/iconAddon_blightedSyringe.png": {
+    "rarity": "Uncommon",
+    "colorCategory": "YELLOW",
+    "path": "/assets/addons/Zambia/iconAddon_blightedSyringe.png"
+  },
+  "Zambia/iconAddon_brokenFlashlightBulb.png": {
+    "rarity": "Uncommon",
+    "colorCategory": "YELLOW",
+    "path": "/assets/addons/Zambia/iconAddon_brokenFlashlightBulb.png"
+  },
+  "Zodiac/iconAddon_cloggedIntake.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_cloggedIntake.png"
+  },
+  "Zodiac/iconAddon_counterweight.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_counterweight.png"
+  },
+  "Zodiac/iconAddon_crackedPrimerBulb.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_crackedPrimerBulb.png"
+  },
+  "Zodiac/iconAddon_discardedAirFilter.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_discardedAirFilter.png"
+  },
+  "Zodiac/iconAddon_filthySlippers.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_filthySlippers.png"
+  },
+  "Zodiac/iconAddon_greasedThrottle.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_greasedThrottle.png"
+  },
+  "Zodiac/iconAddon_highSpeedIdlerScrew.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_highSpeedIdlerScrew.png"
+  },
+  "Zodiac/iconAddon_iridescentEngravings.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_iridescentEngravings.png"
+  },
+  "Zodiac/iconAddon_raggedEngine.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_raggedEngine.png"
+  },
+  "Zodiac/iconAddon_thermalCasing.png": {
+    "rarity": "Common",
+    "colorCategory": "BROWN",
+    "path": "/assets/addons/Zodiac/iconAddon_thermalCasing.png"
+  }
+}
