@@ -53,10 +53,33 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
           assets = [];
       }
       
-      // Filter by search term
+      // Filter by search term while preserving sort order
       const filtered = assets.filter(asset =>
         asset.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
+      
+      // For addons, re-sort filtered results to maintain rarity order
+      if (type === 'addons') {
+        const RARITY_ORDER: Record<string, number> = {
+          'Iridescent': 0,
+          'Very Rare': 1,
+          'Rare': 2,
+          'Uncommon': 3,
+          'Common': 4
+        };
+        
+        filtered.sort((a, b) => {
+          const orderA = RARITY_ORDER[a.rarity || 'Common'];
+          const orderB = RARITY_ORDER[b.rarity || 'Common'];
+          
+          // If same rarity, sort alphabetically by name
+          if (orderA === orderB) {
+            return a.name.localeCompare(b.name);
+          }
+          
+          return orderA - orderB; // Most rare (0) comes first
+        });
+      }
       
       setFilteredAssets(filtered);
     } catch (error) {

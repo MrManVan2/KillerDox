@@ -9,12 +9,9 @@ const loadRarityMapping = async () => {
     const response = await fetch('/data/addonRarityMapping.json');
     if (response.ok) {
       rarityMapping = await response.json();
-      console.log('✅ Rarity mapping loaded successfully:', Object.keys(rarityMapping).length, 'entries');
-    } else {
-      console.error('❌ Failed to load rarity mapping, status:', response.status);
     }
   } catch (error) {
-    console.warn('❌ Could not load rarity mapping, falling back to default rarity detection:', error);
+    console.warn('Could not load rarity mapping, falling back to default rarity detection');
   }
 };
 
@@ -74,11 +71,7 @@ const RARITY_ORDER: Record<string, number> = {
 // Function to get rarity from the mapping or fallback to Common
 const getAddonRarity = (filename: string, killerFolder?: string): string => {
   const key = killerFolder ? `${killerFolder}/${filename}` : filename;
-  const rarity = rarityMapping[key]?.rarity || 'Common';
-  if (killerFolder === 'Gemini') {
-    console.log(`🔍 Rarity lookup for ${key}: ${rarity}`);
-  }
-  return rarity;
+  return rarityMapping[key]?.rarity || 'Common';
 };
 
 // Function to sort addons by rarity (most rare first)
@@ -95,10 +88,7 @@ const sortAddonsByRarity = (addons: Addon[]): Addon[] => {
     return orderA - orderB; // Most rare (0) comes first
   });
   
-  // Debug logging for Cenobite
-  if (addons.length > 0 && addons[0].killer === 'The Cenobite') {
-    console.log('🔸 Sorted Cenobite addons:', sorted.map(a => `${a.name} (${a.rarity})`));
-  }
+
   
   return sorted;
 };
@@ -229,7 +219,6 @@ export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[
   try {
     // Ensure rarity mapping is loaded before processing addons
     if (Object.keys(rarityMapping).length === 0) {
-      console.log('🔄 Rarity mapping not loaded yet, loading now...');
       await loadRarityMapping();
     }
     

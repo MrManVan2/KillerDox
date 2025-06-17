@@ -6,20 +6,50 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Rarity mapping based on dominant colors
+// Dead by Daylight rarity color mapping
 const RARITY_COLORS = {
-  PINK: 'Iridescent',      // Most rare - magenta/pink
-  PURPLE: 'Very Rare',     // Second most rare - purple  
-  BLUE: 'Rare',           // Third most rare - blue
-  YELLOW: 'Uncommon',      // Fourth most rare - yellow/gold
-  BROWN: 'Common'          // Least rare - brown/bronze
+  PINK: 'Iridescent',      // Most rare
+  PURPLE: 'Very Rare',
+  BLUE: 'Rare', 
+  YELLOW: 'Uncommon',
+  BROWN: 'Common'          // Least rare
 };
 
-// More precise color detection based on DBD's actual color scheme
+// Hybrid approach: filename-based detection for obvious cases
+function detectRarityFromFilename(filename) {
+  const lowerName = filename.toLowerCase();
+  
+  // Clear filename indicators
+  if (lowerName.includes('iridescent')) {
+    return 'PINK';
+  }
+  
+  // Some common "very rare" patterns
+  const veryRarePatterns = [
+    'tombstone', 'fragrant', 'memorial', 'twisted', 'scratched',
+    'compound', 'venomous', 'glowing', 'blighted'
+  ];
+  
+  if (veryRarePatterns.some(pattern => lowerName.includes(pattern))) {
+    return 'PURPLE';
+  }
+  
+  // Some common "rare" patterns
+  const rarePatterns = [
+    'bloodied', 'damaged', 'cracked', 'broken', 'torn', 'shattered'
+  ];
+  
+  if (rarePatterns.some(pattern => lowerName.includes(pattern))) {
+    return 'BLUE';
+  }
+  
+  return null; // Use color detection
+}
+
+// More relaxed color detection
 function detectRarityFromPixels(pixels) {
   if (pixels.length === 0) return 'BROWN';
   
-  // Count colors that match each rarity
   const colorCounts = {
     PINK: 0,
     PURPLE: 0, 
@@ -29,36 +59,40 @@ function detectRarityFromPixels(pixels) {
   };
   
   pixels.forEach(([r, g, b]) => {
-    // Skip very dark or very light pixels (likely main image content)
+    // Skip very dark pixels
     const brightness = (r + g + b) / 3;
-    if (brightness < 30 || brightness > 230) return;
+    if (brightness < 40) return;
     
     // Convert to HSV for better color detection
     const [h, s, v] = rgbToHsv(r, g, b);
     
-    // Skip very desaturated colors
-    if (s < 0.3) {
+    // More relaxed saturation threshold
+    if (s < 0.25 || v < 0.25) {
       colorCounts.BROWN++;
       return;
     }
     
-    // Pink/Magenta (Iridescent) - 280-340 hue range
-    if ((h >= 280 && h <= 340) && s >= 0.4 && v >= 0.3) {
+    // Pink/Magenta detection (Iridescent) - broader but still focused
+    if ((h >= 290 && h <= 340) || (h >= 0 && h <= 20)) {
       colorCounts.PINK++;
     }
-    // Purple (Very Rare) - 240-280 hue range  
-    else if ((h >= 240 && h <= 280) && s >= 0.4 && v >= 0.3) {
+    // Purple (Very Rare)
+    else if (h >= 240 && h <= 289) {
       colorCounts.PURPLE++;
     }
-    // Blue (Rare) - 180-240 hue range
-    else if ((h >= 180 && h <= 240) && s >= 0.4 && v >= 0.3) {
+    // Blue (Rare)
+    else if (h >= 180 && h <= 239) {
       colorCounts.BLUE++;
     }
-    // Yellow/Gold (Uncommon) - 40-70 hue range
-    else if ((h >= 40 && h <= 70) && s >= 0.4 && v >= 0.4) {
+    // Yellow/Gold (Uncommon)
+    else if (h >= 40 && h <= 80) {
       colorCounts.YELLOW++;
     }
-    // Brown/Orange (Common) - everything else or low saturation
+    // Brown/Orange (Common)
+    else if (h >= 15 && h <= 39) {
+      colorCounts.BROWN++;
+    }
+    // Everything else defaults to common
     else {
       colorCounts.BROWN++;
     }
@@ -75,12 +109,11 @@ function detectRarityFromPixels(pixels) {
     }
   });
   
-  // Require a minimum threshold for rare colors
+  // Lower threshold for rare colors - need at least 8% to be considered rare
   const totalPixels = pixels.length;
   const percentage = maxCount / totalPixels;
   
-  // If we don't have enough colored pixels, default to common
-  if (dominantColor !== 'BROWN' && percentage < 0.1) {
+  if (dominantColor !== 'BROWN' && percentage < 0.08) {
     return 'BROWN';
   }
   
@@ -115,11 +148,11 @@ function rgbToHsv(r, g, b) {
   return [h, s, v];
 }
 
-// Analyze image to get rarity-indicating colors from border/background
+// Image analysis as fallback
 async function analyzeImageColor(imagePath) {
   try {
     const { data, info } = await sharp(imagePath)
-      .resize(64, 64) // Resize for faster processing
+      .resize(64, 64)
       .raw()
       .ensureAlpha()
       .toBuffer({ resolveWithObject: true });
@@ -129,23 +162,19 @@ async function analyzeImageColor(imagePath) {
     const width = 64;
     const height = 64;
     
-    // Sample pixels from border areas and corners where rarity colors are typically found
+    // Sample from border areas
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
-        // Focus on border pixels and corner areas
         const isBorder = x < 8 || x >= width - 8 || y < 8 || y >= height - 8;
-        const isCorner = (x < 16 && y < 16) || (x >= width - 16 && y < 16) || 
-                        (x < 16 && y >= height - 16) || (x >= width - 16 && y >= height - 16);
         
-        if (isBorder || isCorner) {
+        if (isBorder) {
           const pixelIndex = (y * width + x) * channels;
           const r = data[pixelIndex];
           const g = data[pixelIndex + 1];
           const b = data[pixelIndex + 2];
           const a = data[pixelIndex + 3] || 255;
           
-          // Skip transparent pixels
-          if (a > 128) {
+          if (a > 150) {
             pixels.push([r, g, b]);
           }
         }
@@ -153,14 +182,14 @@ async function analyzeImageColor(imagePath) {
     }
 
     if (pixels.length === 0) {
-      return 'BROWN'; // Default if no valid pixels
+      return 'BROWN';
     }
 
     const colorCategory = detectRarityFromPixels(pixels);
     return colorCategory;
   } catch (error) {
     console.error(`Error analyzing ${imagePath}:`, error.message);
-    return 'BROWN'; // Default on error
+    return 'BROWN';
   }
 }
 
@@ -169,7 +198,7 @@ async function generateAddonRarityMapping() {
   const addonMapping = {};
   const addonsDir = path.join(process.cwd(), 'public/assets/addons');
   
-  console.log('🎨 Analyzing addon colors to determine rarity...\n');
+  console.log('🎨 Analyzing addon colors to determine rarity (hybrid approach)...\n');
   
   // Process general addons
   const generalAddons = fs.readdirSync(addonsDir)
@@ -178,16 +207,27 @@ async function generateAddonRarityMapping() {
   console.log('📁 Processing general addons...');
   for (const filename of generalAddons) {
     const filePath = path.join(addonsDir, filename);
-    const colorCategory = await analyzeImageColor(filePath);
+    
+    // Try filename detection first
+    let colorCategory = detectRarityFromFilename(filename);
+    let detectionMethod = 'filename';
+    
+    // Fall back to color analysis if filename doesn't match
+    if (!colorCategory) {
+      colorCategory = await analyzeImageColor(filePath);
+      detectionMethod = 'color';
+    }
+    
     const rarity = RARITY_COLORS[colorCategory];
     
     addonMapping[filename] = {
       rarity,
       colorCategory,
-      path: `/assets/addons/${filename}`
+      path: `/assets/addons/${filename}`,
+      detectionMethod
     };
     
-    console.log(`  ${filename} → ${rarity} (${colorCategory})`);
+    console.log(`  ${filename} → ${rarity} (${colorCategory}) [${detectionMethod}]`);
   }
   
   // Process killer-specific addons
@@ -205,17 +245,28 @@ async function generateAddonRarityMapping() {
       
       for (const filename of addonFiles) {
         const filePath = path.join(folderPath, filename);
-        const colorCategory = await analyzeImageColor(filePath);
+        
+        // Try filename detection first
+        let colorCategory = detectRarityFromFilename(filename);
+        let detectionMethod = 'filename';
+        
+        // Fall back to color analysis if filename doesn't match
+        if (!colorCategory) {
+          colorCategory = await analyzeImageColor(filePath);
+          detectionMethod = 'color';
+        }
+        
         const rarity = RARITY_COLORS[colorCategory];
         
         const key = `${folder}/${filename}`;
         addonMapping[key] = {
           rarity,
           colorCategory,
-          path: `/assets/addons/${folder}/${filename}`
+          path: `/assets/addons/${folder}/${filename}`,
+          detectionMethod
         };
         
-        console.log(`  ${filename} → ${rarity} (${colorCategory})`);
+        console.log(`  ${filename} → ${rarity} (${colorCategory}) [${detectionMethod}]`);
       }
     }
   }
@@ -229,8 +280,10 @@ async function generateAddonRarityMapping() {
   
   // Print summary
   const rarityCount = {};
+  const methodCount = {};
   Object.values(addonMapping).forEach(addon => {
     rarityCount[addon.rarity] = (rarityCount[addon.rarity] || 0) + 1;
+    methodCount[addon.detectionMethod] = (methodCount[addon.detectionMethod] || 0) + 1;
   });
   
   console.log('\n📈 Rarity Distribution:');
@@ -239,12 +292,18 @@ async function generateAddonRarityMapping() {
     .forEach(([rarity, count]) => {
       console.log(`  ${rarity}: ${count} addons`);
     });
+  
+  console.log('\n🔍 Detection Method Distribution:');
+  Object.entries(methodCount).forEach(([method, count]) => {
+    console.log(`  ${method}: ${count} addons`);
+  });
+  
+  console.log('\n🎉 Hybrid analysis complete!');
 }
 
 // Run the analysis
 generateAddonRarityMapping()
   .then(() => {
-    console.log('\n🎉 Color analysis complete!');
     process.exit(0);
   })
   .catch(error => {
