@@ -207,11 +207,11 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                       src={asset.img}
                       alt={asset.name}
                       className="w-full h-full object-cover rounded"
-                                             onError={(e) => {
-                         // Fallback to placeholder if image fails to load
-                         const target = e.target as HTMLImageElement;
-                         target.src = `/src/assets/Templates/Blank ${type.slice(0, -1).charAt(0).toUpperCase() + type.slice(1, -1)}.png`;
-                       }}
+                      onError={(e) => {
+                        // Fallback to placeholder if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/src/assets/Templates/Blank ${type.slice(0, -1).charAt(0).toUpperCase() + type.slice(1, -1)}.png`;
+                      }}
                     />
                   </div>
                   <div className="text-sm text-white text-center leading-tight min-h-[2.5rem] flex flex-col items-center justify-center">
@@ -224,31 +224,31 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                       <span>{asset.name}</span>
                     )}
                   </div>
-                                     {type === 'addons' && (
-                     <div className="text-xs text-center">
-                       {asset.rarity && (
-                         <p className={`break-words font-medium leading-tight ${
-                           asset.rarity === 'Iridescent' ? 'text-pink-400' :
-                           asset.rarity === 'Very Rare' ? 'text-purple-400' :
-                           asset.rarity === 'Rare' ? 'text-blue-400' :
-                           asset.rarity === 'Uncommon' ? 'text-yellow-400' :
-                           'text-amber-600'
-                         }`}>
-                           {asset.rarity}
-                         </p>
-                       )}
-                       {asset.killer && (
-                         <p className="text-gray-500 break-words text-xs leading-tight">
-                           {asset.killer}
-                         </p>
-                       )}
-                     </div>
-                   )}
-                   {asset.rarity && type !== 'addons' && (
-                     <p className="text-xs text-gray-400 text-center break-words leading-tight">
-                       {asset.rarity}
-                     </p>
-                   )}
+                  {type === 'addons' && (
+                    <div className="text-xs text-center">
+                      {asset.rarity && (
+                        <p className={`break-words font-medium leading-tight ${
+                          asset.rarity === 'Iridescent' ? 'text-pink-400' :
+                          asset.rarity === 'Very Rare' ? 'text-purple-400' :
+                          asset.rarity === 'Rare' ? 'text-blue-400' :
+                          asset.rarity === 'Uncommon' ? 'text-yellow-400' :
+                          'text-amber-600'
+                        }`}>
+                          {asset.rarity}
+                        </p>
+                      )}
+                      {asset.killer && (
+                        <p className="text-gray-500 break-words text-xs leading-tight">
+                          {asset.killer}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                  {asset.rarity && type !== 'addons' && (
+                    <p className="text-xs text-gray-400 text-center break-words leading-tight">
+                      {asset.rarity}
+                    </p>
+                  )}
                   {isSelected(asset.id) && (
                     <div className="absolute top-1 right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
                       <span className="text-white text-xs">✓</span>
