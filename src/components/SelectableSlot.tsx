@@ -9,6 +9,7 @@ interface SelectableSlotProps {
   asset?: any;
   placeholderImg: string;
   className?: string;
+  style?: React.CSSProperties;
   borderColorHover?: string;
   onSelect: (asset: any) => void;
   selectedItems?: any[];
@@ -20,6 +21,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
   asset,
   placeholderImg,
   className = "w-20 h-20",
+  style,
   borderColorHover = "border-blue-500",
   onSelect,
   selectedItems = []
@@ -50,6 +52,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
     <>
       <div
         className={`${className} flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-all duration-200 relative hover:scale-105 active:scale-95 touch-manipulation select-none`}
+        style={style}
         onClick={handleClick}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
