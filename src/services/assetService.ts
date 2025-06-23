@@ -95,14 +95,14 @@ const KILLER_NAME_TO_FOLDER = {
 export interface AddonAsset {
   id: string;
   name: string;
-  rarity: 'Visceral' | 'Very Rare' | 'Rare' | 'Uncommon' | 'Common';
+  rarity: 'Iridescent' | 'Very Rare' | 'Rare' | 'Uncommon' | 'Common';
   img: string;
   killer?: string;
 }
 
 // Rarity order for sorting (most rare first)
 const RARITY_ORDER: Record<string, number> = {
-  'Visceral': 0,
+  'Iridescent': 0,
   'Very Rare': 1,
   'Rare': 2,
   'Uncommon': 3,

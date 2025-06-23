@@ -87,7 +87,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     // For addons, re-sort filtered results to maintain rarity order
     if (type === 'addons') {
       const RARITY_ORDER: Record<string, number> = {
-        'Visceral': 0,
+        'Iridescent': 0,
         'Very Rare': 1,
         'Rare': 2,
         'Uncommon': 3,
@@ -178,7 +178,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
       
       {/* Modal */}
       <div 
-        className={`relative backdrop-blur-sm rounded-lg w-full max-w-sm sm:max-w-2xl md:max-w-4xl mx-2 sm:mx-4 max-h-[85vh] sm:max-h-[80vh] flex flex-col border border-gray-600 transform transition-all duration-300 ${
+        className={`relative backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[80vh] flex flex-col border border-gray-600 transform transition-all duration-300 ${
           isReady ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         style={{
@@ -238,7 +238,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
               <div className="text-gray-400">No {type} found</div>
             </div>
           ) : (
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-4">
               {filteredAssets.map((asset, index) => (
                 <div
                   key={asset.id}
@@ -276,17 +276,17 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                   </div>
                   {type === 'addons' && (
                     <div className="text-xs text-center">
-                      {asset.rarity && (
-                        <p className={`break-words font-medium leading-tight`} style={{
-                          color: asset.rarity === 'Visceral' ? '#d41b50' :     // Pink for Visceral (most rare)
-                                 asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
-                                 asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
-                                 asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
-                                 '#674f3d'                                      // Brown for Common
-                        }}>
-                          {asset.rarity}
-                        </p>
-                      )}
+                                              {asset.rarity && (
+                          <p className={`break-words font-medium leading-tight`} style={{
+                            color: asset.rarity === 'Iridescent' ? '#d41b50' :   // Pink for Iridescent (most rare)
+                                   asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
+                                   asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
+                                   asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
+                                   '#674f3d'                                      // Brown for Common
+                          }}>
+                            {asset.rarity === 'Iridescent' ? 'Visceral Rarity' : asset.rarity}
+                          </p>
+                        )}
 
                       {asset.killer === 'Event' && (
                         <p className="text-orange-400 break-words text-xs leading-tight font-medium">
@@ -296,14 +296,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                     </div>
                   )}
                   {asset.rarity && type !== 'addons' && (
-                    <p className={`text-xs text-center break-words leading-tight font-medium`} style={{
-                      color: asset.rarity === 'Visceral' ? '#d41b50' :     // Pink for Visceral (most rare)
-                             asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
-                             asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
-                             asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
-                             asset.rarity === 'Event' ? '#ff8c00' :        // Orange for Event
-                             '#674f3d'                                      // Brown for Common
-                    }}>
+                    <p className="text-xs text-gray-400 text-center break-words leading-tight">
                       {asset.rarity}
                     </p>
                   )}
