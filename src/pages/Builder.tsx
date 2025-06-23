@@ -73,7 +73,7 @@ const Builder: React.FC = () => {
               type="platforms"
               limit={1}
               asset={selectedPlatform}
-              placeholderImg="/src/assets/Platforms/Steam.png"
+              placeholderImg="/assets/Templates/Blank Platform.png"
               className="w-16 h-16 sm:w-18 sm:h-18 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 2xl:w-44 2xl:h-44"
               borderColorHover="border-green-500"
               onSelect={setPlatform}
