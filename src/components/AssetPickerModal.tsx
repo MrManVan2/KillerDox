@@ -288,7 +288,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                                  asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
                                  '#674f3d'                                      // Brown for Common
                         }}>
-                          {asset.rarity === 'Iridescent' ? 'Visceral Rarity' : asset.rarity}
+                          {asset.rarity === 'Iridescent' ? 'Visceral' : asset.rarity}
                         </p>
                       )}
                     </div>
