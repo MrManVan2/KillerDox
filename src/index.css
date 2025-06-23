@@ -106,3 +106,42 @@ body {
     font-size: 16px;
   }
 }
+
+/* Mobile landscape optimizations - 30% smaller elements */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Mobile landscape offering - 30% smaller */
+  .mobile-offering {
+    width: 3.5rem !important; /* 14 * 0.25rem = 3.5rem (from 5rem/w-20) */
+    height: 3.5rem !important;
+  }
+  
+  /* Mobile landscape killer - 30% smaller */
+  .mobile-killer {
+    width: 5.5rem !important; /* 22 * 0.25rem = 5.5rem (from 8rem/w-32) */
+    height: 5.5rem !important;
+  }
+  
+  /* Mobile landscape platform - 30% smaller */
+  .mobile-platform {
+    width: 2.75rem !important; /* 11 * 0.25rem = 2.75rem (from 4rem/w-16) */
+    height: 2.75rem !important;
+  }
+  
+  /* Mobile landscape addons - 30% smaller */
+  .mobile-addon {
+    width: 2.75rem !important; /* 11 * 0.25rem = 2.75rem (from 4rem/w-16) */
+    height: 2.75rem !important;
+  }
+  
+  /* Mobile landscape perks - 30% smaller */
+  .mobile-perk {
+    width: 3.5rem !important; /* 14 * 0.25rem = 3.5rem (from 5rem/w-20) */
+    height: 3.5rem !important;
+  }
+  
+  /* Reduce padding in landscape */
+  .mobile-container-landscape {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
