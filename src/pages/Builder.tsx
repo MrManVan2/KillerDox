@@ -132,7 +132,7 @@ const Builder: React.FC = () => {
 
       {/* Reset Button - Trash Icon Bottom Right */}
       <button
-        onClick={reset}
+        onClick={() => reset()}
         className="fixed bottom-4 right-4 md:bottom-8 md:right-8 text-white hover:text-gray-300 transition-all duration-200 hover:scale-110"
         title="Reset Build"
       >
