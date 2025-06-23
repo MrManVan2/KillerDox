@@ -44,40 +44,46 @@ const Builder: React.FC = () => {
       <div className="w-full h-full flex flex-col">
         {/* Main Content - Responsive Vertical Layout */}
         <div className="flex-1 flex flex-col justify-between py-8 md:py-10 lg:py-14 xl:py-20 px-8 md:px-16 lg:px-24 xl:px-32 max-w-screen-2xl mx-auto w-full min-h-0">
-          {/* Top Row - Full Width Distribution */}
-          <div className="flex justify-between items-center w-full">
-            {/* Offering Slot - Far Left */}
-            <SelectableSlot
-              type="offerings"
-              limit={1}
-              asset={selectedOffering}
-              placeholderImg="/assets/Templates/Blank Offering.png"
-              className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44"
-              borderColorHover="border-yellow-500"
-              onSelect={setOffering}
-            />
+          {/* Top Row - True Center with Side Elements */}
+          <div className="relative flex items-center w-full">
+            {/* Offering Slot - Absolute Left */}
+            <div className="absolute left-0">
+              <SelectableSlot
+                type="offerings"
+                limit={1}
+                asset={selectedOffering}
+                placeholderImg="/assets/Templates/Blank Offering.png"
+                className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44"
+                borderColorHover="border-yellow-500"
+                onSelect={setOffering}
+              />
+            </div>
             
-            {/* Killer Portrait - Center */}
-            <SelectableSlot
-              type="killers"
-              limit={1}
-              asset={selectedKiller}
-              placeholderImg="/assets/Templates/Blank Killer.png"
-              className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
-              borderColorHover="border-red-500"
-              onSelect={setKiller}
-            />
+            {/* Killer Portrait - True Center */}
+            <div className="flex-1 flex justify-center">
+              <SelectableSlot
+                type="killers"
+                limit={1}
+                asset={selectedKiller}
+                placeholderImg="/assets/Templates/Blank Killer.png"
+                className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
+                borderColorHover="border-red-500"
+                onSelect={setKiller}
+              />
+            </div>
             
-            {/* Platform Slot - Far Right */}
-            <SelectableSlot
-              type="platforms"
-              limit={1}
-              asset={selectedPlatform}
-              placeholderImg="/assets/Templates/Blank Platform.png"
-              className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36"
-              borderColorHover="border-green-500"
-              onSelect={setPlatform}
-            />
+            {/* Platform Slot - Absolute Right */}
+            <div className="absolute right-0">
+              <SelectableSlot
+                type="platforms"
+                limit={1}
+                asset={selectedPlatform}
+                placeholderImg="/assets/Templates/Blank Platform.png"
+                className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36"
+                borderColorHover="border-green-500"
+                onSelect={setPlatform}
+              />
+            </div>
           </div>
 
           {/* Addon Row - Wide Spread */}
