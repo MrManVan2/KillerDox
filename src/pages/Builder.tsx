@@ -51,7 +51,7 @@ const Builder: React.FC = () => {
               type="offerings"
               limit={1}
               asset={selectedOffering}
-              placeholderImg="/src/assets/Templates/Blank Offering.png"
+              placeholderImg="/assets/Templates/Blank Offering.png"
               className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 2xl:w-56 2xl:h-56"
               borderColorHover="border-yellow-500"
               onSelect={setOffering}
@@ -62,7 +62,7 @@ const Builder: React.FC = () => {
               type="killers"
               limit={1}
               asset={selectedKiller}
-              placeholderImg="/src/assets/Templates/Blank Killer.png"
+              placeholderImg="/assets/Templates/Blank Killer.png"
               className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96"
               borderColorHover="border-red-500"
               onSelect={setKiller}
@@ -86,7 +86,7 @@ const Builder: React.FC = () => {
               type="addons"
               limit={2}
               asset={selectedAddons[0]}
-              placeholderImg="/src/assets/Templates/Blank Addon.png"
+              placeholderImg="/assets/Templates/Blank Addon.png"
               className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-36 2xl:h-36"
               borderColorHover="border-purple-500"
               onSelect={addAddon}
@@ -96,7 +96,7 @@ const Builder: React.FC = () => {
               type="addons"
               limit={2}
               asset={selectedAddons[1]}
-              placeholderImg="/src/assets/Templates/Blank Addon.png"
+              placeholderImg="/assets/Templates/Blank Addon.png"
               className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-36 2xl:h-36"
               borderColorHover="border-purple-500"
               onSelect={addAddon}
@@ -112,7 +112,7 @@ const Builder: React.FC = () => {
                 type="perks"
                 limit={4}
                 asset={selectedPerks[index]}
-                placeholderImg="/src/assets/Templates/Blank Perk.png"
+                placeholderImg="/assets/Templates/Blank Perk.png"
                 className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52 2xl:w-60 2xl:h-60"
                 borderColorHover="border-green-500"
                 onSelect={addPerk}
