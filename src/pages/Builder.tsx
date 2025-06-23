@@ -105,7 +105,7 @@ const Builder: React.FC = () => {
           </div>
 
           {/* Perk Row - Bottom with responsive spacing */}
-          <div className="flex justify-between items-center w-full max-w-4xl mx-auto">
+          <div className="flex justify-between items-center w-full max-w-5xl mx-auto mb-4">
             {Array.from({ length: 4 }, (_, index) => (
               <SelectableSlot
                 key={index}
