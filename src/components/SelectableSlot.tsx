@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import type { AssetType } from '../types';
 import AssetPickerModal from './AssetPickerModal';
 import { useBuildStore } from '../store/buildStore';
@@ -29,14 +29,6 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const { selectedKiller } = useBuildStore();
-
-  // Easter egg: 10% chance to show red Cannibal image (stable per asset)
-  const assetImage = useMemo(() => {
-    if (asset && asset.name === 'The Cannibal' && Math.random() < 0.1) {
-      return '/assets/killers/The_Cannibal_Bubba_Sawyer_red.png';
-    }
-    return asset?.img;
-  }, [asset?.id, asset?.name]); // Only recalculate when asset changes
 
   const handleClick = () => {
     // For addons, require a killer to be selected first
@@ -77,7 +69,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
         }}
       >
         <img
-          src={asset ? assetImage : placeholderImg}
+          src={asset ? asset.img : placeholderImg}
           alt={asset ? asset.name : `${type.slice(0, -1)} placeholder`}
           className={`w-full h-full object-cover ${
             asset ? 'opacity-100' : 'opacity-70'

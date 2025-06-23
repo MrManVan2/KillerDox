@@ -28,6 +28,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
   const [isReady, setIsReady] = useState(false);
   const { selectedKiller } = useBuildStore();
   const clearingSearchRef = useRef(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Debounce search term
   useEffect(() => {
@@ -163,6 +164,13 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     setSearchTerm('');
     setDebouncedSearchTerm('');
     
+    // Auto-focus the search input for the next search (if modal stays open)
+    if (selectedItems.length + 1 < limit) {
+      setTimeout(() => {
+        searchInputRef.current?.focus();
+      }, 0);
+    }
+    
     // Auto-close modal when limit is reached
     if (selectedItems.length + 1 >= limit) {
       onClose();
@@ -220,6 +228,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
           <div className="relative">
             <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
+              ref={searchInputRef}
               type="text"
               placeholder={`Search ${type}...`}
               value={searchTerm}
