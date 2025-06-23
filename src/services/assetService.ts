@@ -331,7 +331,25 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
             .map((file: string) => {
               const addonName = file.replace('.png', '');
               const addonKey = `${killerFolder}/${addonName}`;
-              const addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
+              
+              // Normalize Unicode characters to handle different representations of ō
+              const normalizedKey = addonKey.normalize('NFD');
+              let addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
+              
+              // If not found with original key, try with normalized key
+              if (!addonData) {
+                addonData = rarityMapping[normalizedKey as keyof typeof rarityMapping];
+              }
+              
+              // If still not found, try finding a key that matches when both are normalized
+              if (!addonData) {
+                const matchingKey = Object.keys(rarityMapping).find(key => 
+                  key.normalize('NFD') === normalizedKey || key.normalize('NFC') === addonKey.normalize('NFC')
+                );
+                if (matchingKey) {
+                  addonData = rarityMapping[matchingKey as keyof typeof rarityMapping];
+                }
+              }
               
               // Debug logging for The Onryō specifically
               if (killerFolder.includes('Onryō')) {
