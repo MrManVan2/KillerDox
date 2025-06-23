@@ -351,12 +351,14 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
                 }
               }
               
-              // Debug logging for The Onryō specifically
-              if (killerFolder.includes('Onryō')) {
+              // Debug logging for The Onryō and The Executioner specifically
+              if (killerFolder.includes('Onryō') || killerFolder.includes('Executioner')) {
+                console.log(`🐛 DEBUG: Killer: ${killerFolder}`);
                 console.log(`🐛 DEBUG: Addon "${addonName}"`);
                 console.log(`🐛 DEBUG: Key "${addonKey}"`);
                 console.log(`🐛 DEBUG: Found mapping: ${addonData ? 'YES' : 'NO'}`);
                 if (addonData) {
+                  console.log(`🐛 DEBUG: Display Name: "${addonData.name}"`);
                   console.log(`🐛 DEBUG: Rarity: ${addonData.rarity}`);
                 }
               }
