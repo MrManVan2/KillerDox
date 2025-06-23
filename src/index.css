@@ -107,36 +107,51 @@ body {
   }
 }
 
-/* Mobile landscape optimizations - VERY SIMPLE APPROACH */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  /* Force all images in mobile to be smaller in landscape */
-  .md\\:hidden img {
-    width: 70% !important;
-    height: 70% !important;
-    max-width: 70% !important;
-    max-height: 70% !important;
+/* Mobile landscape optimizations - iPhone 16 Pro Max has 1320px width! */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  /* First test - add red border to ANY mobile layout to verify CSS is working */
+  .md\\:block {
+    border: 3px solid red !important;
   }
   
-  /* Scale down all SelectableSlot containers */
-  .md\\:hidden div[role="button"] {
+  .md\\:hidden {
+    border: 3px solid blue !important;
+  }
+  
+  /* Force all images to be smaller in landscape */
+  img {
     transform: scale(0.7) !important;
     transform-origin: center !important;
   }
   
-  /* Reduce all gaps and spacing */
-  .md\\:hidden .gap-2 { gap: 0.125rem !important; }
-  .md\\:hidden .gap-4 { gap: 0.25rem !important; }
-  .md\\:hidden .gap-8 { gap: 1rem !important; }
-  .md\\:hidden .gap-12 { gap: 1.5rem !important; }
-  
-  /* Reduce container padding dramatically */
-  .md\\:hidden div[class*="h-full"] {
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
+  /* Scale down all SelectableSlot containers */
+  div[role="button"] {
+    transform: scale(0.7) !important;
+    transform-origin: center !important;
   }
   
-  /* Test selector - add red border to verify CSS is working */
-  .md\\:hidden {
-    border: 2px solid red !important;
+  /* Reduce all gaps and spacing globally */
+  .gap-2 { gap: 0.125rem !important; }
+  .gap-4 { gap: 0.25rem !important; }
+  .gap-8 { gap: 1rem !important; }
+  .gap-12 { gap: 1.5rem !important; }
+  
+  /* Reduce all padding dramatically */
+  div[class*="padding"] {
+    padding: 1vh !important;
+  }
+}
+
+/* Alternative approach - target by screen height in landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  /* This should catch landscape phones regardless of width */
+  body {
+    border: 5px solid green !important;
+  }
+  
+  /* Scale everything down */
+  * {
+    transform: scale(0.8) !important;
+    transform-origin: center !important;
   }
 }
