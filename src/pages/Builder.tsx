@@ -46,7 +46,7 @@ const Builder: React.FC = () => {
         
         {/* Mobile Layout (md and below) */}
         <div className="flex-1 flex flex-col justify-between py-4 px-2 max-w-screen-2xl mx-auto w-full h-full md:hidden">
-          <div className="h-full flex flex-col justify-between" style={{ paddingTop: '4vh', paddingBottom: '4vh' }}>
+          <div className="h-full flex flex-col justify-between" style={{ paddingTop: '12vh', paddingBottom: '12vh' }}>
             {/* Top Section - Mobile: Row layout like desktop */}
             <div className="relative flex items-center w-full">
               {/* Mobile: Offering at left */}
