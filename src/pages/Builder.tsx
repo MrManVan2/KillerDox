@@ -45,8 +45,8 @@ const Builder: React.FC = () => {
       <div className="w-full h-full flex flex-col">
         
         {/* Mobile Layout (md and below) */}
-        <div className="flex-1 flex flex-col justify-between py-4 px-2 max-w-screen-2xl mx-auto w-full min-h-0 md:hidden">
-          <div className="flex flex-col space-y-6">
+        <div className="flex-1 flex flex-col justify-between py-4 px-2 max-w-screen-2xl mx-auto w-full h-full md:hidden">
+          <div className="h-full flex flex-col justify-between" style={{ paddingTop: '4vh', paddingBottom: '4vh' }}>
             {/* Top Section - Mobile: Row layout like desktop */}
             <div className="relative flex items-center w-full">
               {/* Mobile: Offering at left */}
@@ -89,8 +89,8 @@ const Builder: React.FC = () => {
               </div>
             </div>
 
-            {/* Addon Row */}
-            <div className="flex justify-center gap-8 sm:gap-12 pt-4">
+            {/* Addon Row - Mobile centered */}
+            <div className="flex justify-center gap-8 sm:gap-12">
               <SelectableSlot
                 type="addons"
                 limit={2}
@@ -114,7 +114,7 @@ const Builder: React.FC = () => {
             </div>
 
             {/* Perk Row - Mobile: Single row of 4 */}
-            <div className="pt-6">
+            <div className="flex-shrink-0">
               <div className="flex justify-center items-center gap-2 sm:gap-4">
                 {Array.from({ length: 4 }, (_, index) => (
                   <SelectableSlot
