@@ -3,6 +3,14 @@ import type { AssetType } from '../types';
 import AssetPickerModal from './AssetPickerModal';
 import { useBuildStore } from '../store/buildStore';
 
+// Easter egg: 10% chance to show red Cannibal image
+const getAssetImage = (asset: any): string => {
+  if (asset.name === 'The Cannibal' && Math.random() < 0.1) {
+    return '/assets/killers/The_Cannibal_Bubba_Sawyer_red.png';
+  }
+  return asset.img;
+};
+
 interface SelectableSlotProps {
   type: AssetType;
   limit: number;
@@ -69,7 +77,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
         }}
       >
         <img
-          src={asset ? asset.img : placeholderImg}
+          src={asset ? getAssetImage(asset) : placeholderImg}
           alt={asset ? asset.name : `${type.slice(0, -1)} placeholder`}
           className={`w-full h-full object-cover ${
             asset ? 'opacity-100' : 'opacity-70'
