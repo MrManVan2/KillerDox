@@ -249,7 +249,7 @@ export const loadPerks = async (): Promise<Perk[]> => {
           id: name.toLowerCase().replace(/\s+/g, '-'),
           name: displayName,
           img: `/assets/perks/${filename}`,
-          searchName: name // Keep original name for search indexing
+          searchName: displayName // Use corrected name for search indexing
         };
       });
     }
@@ -267,7 +267,7 @@ export const loadPerks = async (): Promise<Perk[]> => {
         id: name.toLowerCase().replace(/\s+/g, '-'),
         name: displayName,
         img: `/assets/perks/${filename}`,
-        searchName: name // Keep original name for search indexing
+        searchName: displayName // Use corrected name for search indexing
       };
     });
   } catch (error) {
