@@ -245,11 +245,17 @@ export const loadPerks = async (): Promise<Perk[]> => {
           .replace(/^Scourge - /, 'Scourge: ')
           .replace(/^Thatanophobia$/, 'Thanatophobia'); // Fix typo
         
+        // Add search aliases for common abbreviations
+        let searchName = displayName;
+        if (displayName === 'Barbecue & Chili') {
+          searchName = `${displayName} BBQ`; // Include BBQ as search term
+        }
+        
         return {
           id: name.toLowerCase().replace(/\s+/g, '-'),
           name: displayName,
           img: `/assets/perks/${filename}`,
-          searchName: displayName // Use corrected name for search indexing
+          searchName: searchName
         };
       });
     }
@@ -263,11 +269,17 @@ export const loadPerks = async (): Promise<Perk[]> => {
         .replace(/^Scourge - /, 'Scourge: ')
         .replace(/^Thatanophobia$/, 'Thanatophobia'); // Fix typo
       
+      // Add search aliases for common abbreviations
+      let searchName = displayName;
+      if (displayName === 'Barbecue & Chili') {
+        searchName = `${displayName} BBQ`; // Include BBQ as search term
+      }
+      
       return {
         id: name.toLowerCase().replace(/\s+/g, '-'),
         name: displayName,
         img: `/assets/perks/${filename}`,
-        searchName: displayName // Use corrected name for search indexing
+        searchName: searchName
       };
     });
   } catch (error) {
