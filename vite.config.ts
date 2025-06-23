@@ -23,55 +23,64 @@ export default defineConfig({
           }
         }
 
-        // API endpoints for asset listings
-        server.middlewares.use('/api/assets/killers', (req, res) => {
+        // API middleware - must be early in the chain
+        server.middlewares.use('/api', (req, res, next) => {
+          // Set CORS and JSON headers
           res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify(readDirectory('assets/killers')))
-        })
-
-        server.middlewares.use('/api/assets/perks', (req, res) => {
-          res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify(readDirectory('assets/perks')))
-        })
-
-        server.middlewares.use((req, res, next) => {
-          if (req.url?.startsWith('/api/assets/addons/')) {
-            const url = new URL(req.url, `http://${req.headers.host}`)
-            const pathSegments = url.pathname.split('/')
-            
-            if (pathSegments.length > 4 && pathSegments[4]) {
-              // Request for specific addon folder (e.g., /api/assets/addons/Applepie)
-              const addonFolder = pathSegments[4]
-              res.setHeader('Content-Type', 'application/json')
-              res.end(JSON.stringify(readDirectory(`assets/addons/${addonFolder}`)))
-              return
-            }
-          } else if (req.url === '/api/assets/addons') {
-            // Request for general addons (files directly in addons folder)
-            res.setHeader('Content-Type', 'application/json')
-            const files = readDirectory('assets/addons').filter(item => item.endsWith('.png'))
+          res.setHeader('Access-Control-Allow-Origin', '*')
+          res.setHeader('Access-Control-Allow-Methods', 'GET')
+          
+          const url = req.url || ''
+          console.log(`API request: ${url}`) // Debug logging
+          
+          // Handle different API endpoints
+          if (url === '/killers') {
+            const files = readDirectory('assets/killers')
+            console.log(`Killers found: ${files.length}`)
             res.end(JSON.stringify(files))
             return
           }
-          next()
-        })
 
-        server.middlewares.use((req, res, next) => {
-          if (req.url?.startsWith('/api/assets/offerings/')) {
-            const url = new URL(req.url, `http://${req.headers.host}`)
-            const pathSegments = url.pathname.split('/')
-            const rarity = decodeURIComponent(pathSegments[4]) // Decode URL-encoded spaces
-            
-            res.setHeader('Content-Type', 'application/json')
-            res.end(JSON.stringify(readDirectory(`assets/offerings/${rarity}`)))
+          if (url === '/perks') {
+            res.end(JSON.stringify(readDirectory('assets/perks')))
             return
           }
-          next()
-        })
 
-        server.middlewares.use('/api/assets/platforms', (req, res) => {
-          res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify(readDirectory('assets/platforms')))
+          if (url === '/offerings') {
+            res.end(JSON.stringify(readDirectory('assets/offerings')))
+            return
+          }
+
+          if (url === '/platforms') {
+            res.end(JSON.stringify(readDirectory('assets/platforms')))
+            return
+          }
+
+          // Handle addon requests
+          if (url.startsWith('/addons/')) {
+            const pathSegments = url.split('/')
+            if (pathSegments.length > 2 && pathSegments[2]) {
+              const addonFolder = decodeURIComponent(pathSegments[2])
+              console.log(`Loading addons for: ${addonFolder}`)
+              res.end(JSON.stringify(readDirectory(`assets/Icons/Addons/${addonFolder}`)))
+              return
+            }
+          }
+
+          // Handle offering rarity requests (legacy)
+          if (url.startsWith('/assets/offerings/')) {
+            const pathSegments = url.split('/')
+            if (pathSegments.length > 3) {
+              const rarity = decodeURIComponent(pathSegments[3])
+              res.end(JSON.stringify(readDirectory(`assets/offerings/${rarity}`)))
+              return
+            }
+          }
+
+          // If no API route matched, return 404
+          console.log(`API route not found: ${url}`)
+          res.statusCode = 404
+          res.end(JSON.stringify({ error: 'API endpoint not found', url }))
         })
       }
     }

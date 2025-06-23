@@ -109,7 +109,7 @@ async function analyzeImageForExactColors(imagePath) {
 // Generate rarity mapping using exact color detection
 async function generateExactColorRarityMapping() {
   const addonMapping = {};
-  const addonsDir = path.join(process.cwd(), 'public/assets/addons');
+  const addonsDir = path.join(process.cwd(), '..', 'public', 'assets', 'Icons', 'Addons');
   
   console.log('🎯 Analyzing addon colors using EXACT hex color codes...\n');
   console.log('Target colors:');
@@ -125,34 +125,9 @@ async function generateExactColorRarityMapping() {
     'error_fallback': 0
   };
   
-  // Process general addons (if any exist)
-  const generalAddons = fs.readdirSync(addonsDir)
-    .filter(file => file.endsWith('.png'));
-  
-  if (generalAddons.length > 0) {
-    console.log('📁 Processing general addons...');
-    for (const filename of generalAddons) {
-      const imagePath = path.join(addonsDir, filename);
-      const analysis = await analyzeImageForExactColors(imagePath);
-      
-      addonMapping[filename] = {
-        rarity: analysis.rarity,
-        path: `/assets/addons/${filename}`,
-        source: 'exact_color_detection',
-        confidence: analysis.confidence,
-        method: analysis.method
-      };
-      
-      detectionStats[analysis.method]++;
-      processedCount++;
-      
-      console.log(`  ${filename} → ${analysis.rarity} [${analysis.confidence.toFixed(1)}% confidence]`);
-    }
-  }
-  
-  // Process killer-specific addons
+  // Process killer-specific addon folders (including Event)
   const killerFolders = fs.readdirSync(addonsDir, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
+    .filter(dirent => dirent.isDirectory() && dirent.name !== '.DS_Store')
     .map(dirent => dirent.name);
   
   for (const folder of killerFolders) {
@@ -167,10 +142,14 @@ async function generateExactColorRarityMapping() {
         const imagePath = path.join(folderPath, filename);
         const analysis = await analyzeImageForExactColors(imagePath);
         
-        const key = `${folder}/${filename}`;
+        const addonName = path.basename(filename, '.png');
+        const key = `${folder}/${addonName}`;
+        
         addonMapping[key] = {
+          name: addonName,
           rarity: analysis.rarity,
-          path: `/assets/addons/${folder}/${filename}`,
+          image: `/assets/Icons/Addons/${folder}/${filename}`,
+          killer: folder,
           source: 'exact_color_detection',
           confidence: analysis.confidence,
           method: analysis.method
@@ -185,8 +164,8 @@ async function generateExactColorRarityMapping() {
   }
   
   // Save the mapping to JSON files
-  const srcOutputPath = path.join(process.cwd(), 'src/data/addonRarityMapping.json');
-  const publicOutputPath = path.join(process.cwd(), 'public/data/addonRarityMapping.json');
+  const srcOutputPath = path.join(process.cwd(), '..', 'src', 'data', 'addonRarityMapping.json');
+  const publicOutputPath = path.join(process.cwd(), '..', 'public', 'data', 'addonRarityMapping.json');
   
   fs.writeFileSync(srcOutputPath, JSON.stringify(addonMapping, null, 2));
   fs.writeFileSync(publicOutputPath, JSON.stringify(addonMapping, null, 2));

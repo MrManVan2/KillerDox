@@ -1,69 +1,105 @@
 import type { Killer, Perk, Addon, Offering, Platform } from '../types';
+import rarityMapping from '../data/addonRarityMapping.json';
 
-// Import the generated rarity mapping
-let rarityMapping: Record<string, { rarity: string; colorCategory: string; path: string }> = {};
-
-// Load the rarity mapping on module initialization
-const loadRarityMapping = async () => {
-  try {
-    const response = await fetch('/data/addonRarityMapping.json');
-    if (response.ok) {
-      rarityMapping = await response.json();
-    }
-  } catch (error) {
-    console.warn('Could not load rarity mapping, falling back to default rarity detection');
-  }
-};
-
-// Initialize the mapping
-loadRarityMapping();
-
-// Mapping of addon folder codenames to killer names (with full names including parenthetical info)
-const KILLER_ADDON_MAPPING: Record<string, string> = {
+// Killer codename to display name mapping
+const KILLER_ADDON_MAPPING = {
   'Applepie': 'The Unknown',
   'Aurora': 'The Twins',
-  'Cannibal': 'The Cannibal (Bubba Sawyer)',
-  'Churros': 'The Lich (Vecna)',
+  'Cannibal': 'The Cannibal',
+  'Churros': 'The Lich',
   'Comet': 'The Trickster',
-  'Crooked': 'The Hillbilly',
-  'DLC2': 'The Shape (Michael Myers)',
+  'DLC2': 'The Shape',
   'DLC3': 'The Hag',
   'DLC4': 'The Doctor',
   'DLC5': 'The Huntress',
-  'Eclair': 'The Dark Lord (Dracula)',
+  'Donut': null, // Survivor DLC only
+  'Eclair': 'The Dark Lord',
   'Eclipse': 'The Nemesis',
-  'England': 'The Nightmare (Freddy Krueger)',
-  'Finland': 'The Pig (Amanda Young)',
+  'England': 'The Nightmare',
+  'Finland': 'The Pig',
   'Gelato': 'The Houndmaster',
-  'Gemini': 'The Cenobite (Pinhead)',
+  'Gemini': 'The Cenobite',
   'Guam': 'The Clown',
   'Haiti': 'The Spirit',
-  'Icecream': 'The Ghoul (Ken Kaneki)',
+  'Hubble': null, // Mikaela cosmetic patch
+  'Icecream': 'The Ghoul',
   'Ion': 'The Artist',
-  'Ketchup': 'The Animatronic (Springtrap)',
+  'Ketchup': 'The Animatronic',
   'Kenya': 'The Legion',
-  'Kepler': 'The Onryō (Sadako Yamamura)',
+  'Kepler': 'The Onryō',
   'Mali': 'The Plague',
   'Meteor': 'The Dredge',
-  'Nurse': 'The Nurse',
-  'Oman': 'The Ghost Face',
-  'Orion': 'The Mastermind (Albert Wesker)',
+  'Oman': 'The Ghostface',
+  'Orion': 'The Mastermind',
   'Qatar': 'The Demogorgon',
   'Quantum': 'The Knight',
   'Saturn': 'The Skull Merchant',
   'Sweden': 'The Oni',
-  'Trapper': 'The Trapper',
   'Ukraine': 'The Deathslinger',
   'Umbra': 'The Singularity',
-  'Wales': 'The Executioner (Pyramid Head)',
+  'Wales': 'The Executioner',
   'Wormhole': 'The Xenomorph',
-  'Wraith': 'The Wraith',
+  'Xipre': null, // Technical folder
   'Yemen': 'The Blight',
-  'Yerkes': 'The Good Guy (Chucky)',
-  'Zambia': 'The Unknown', // Fallback for mid-patch
+  'Yerkes': 'The Good Guy',
+  'Zambia': null, // Mid-patch
+  'Zodiac': null // Alan Wake Survivor only
 };
 
-// Rarity order for sorting (0 = most rare, 4 = least rare)
+// Reverse mapping for killer display names to proper folder names
+const KILLER_NAME_TO_FOLDER = {
+  'The Unknown': 'The Unknown',
+  'The Twins': 'The Twins',
+  'The Cannibal': 'The Cannibal',
+  'The Lich': 'The Lich',
+  'The Trickster': 'The Trickster',
+  'The Shape': 'The Shape',
+  'The Hag': 'The Hag',
+  'The Doctor': 'The Doctor',
+  'The Huntress': 'The Huntress',
+  'The Dark Lord': 'The Dark Lord',
+  'The Nemesis': 'The Nemesis',
+  'The Nightmare': 'The Nightmare',
+  'The Pig': 'The Pig',
+  'The Houndmaster': 'The Houndmaster',
+  'The Cenobite': 'The Cenobite',
+  'The Clown': 'The Clown',
+  'The Spirit': 'The Spirit',
+  'The Ghoul': 'The Ghoul',
+  'The Artist': 'The Artist',
+  'The Animatronic': 'The Animatronic',
+  'The Legion': 'The Legion',
+  'The Onryō': 'The Onryō',
+  'The Onryō (Sadako Yamamura)': 'The Onryō', // Full name with parenthetical
+  'The Plague': 'The Plague',
+  'The Dredge': 'The Dredge',
+  'The Ghostface': 'The Ghostface',
+  'The Ghost Face': 'The Ghostface', // Alternative spelling
+  'The Mastermind': 'The Mastermind',
+  'The Demogorgon': 'The Demogorgon',
+  'The Knight': 'The Knight',
+  'The Skull Merchant': 'The Skull Merchant',
+  'The Oni': 'The Oni',
+  'The Deathslinger': 'The Deathslinger',
+  'The Singularity': 'The Singularity',
+  'The Executioner': 'The Executioner',
+  'The Xenomorph': 'The Xenomorph',
+  'The Blight': 'The Blight',
+  'The Good Guy': 'The Good Guy',
+  'The Nurse': 'The Nurse',
+  'The Hillbilly': 'The Hillbilly',
+  'The Wraith': 'The Wraith',
+  'The Trapper': 'The Trapper',
+};
+
+export interface AddonAsset {
+  name: string;
+  rarity: 'Iridescent' | 'Very Rare' | 'Rare' | 'Uncommon' | 'Common';
+  image: string;
+  killer?: string;
+}
+
+// Rarity order for sorting (most rare first)
 const RARITY_ORDER: Record<string, number> = {
   'Iridescent': 0,
   'Very Rare': 1,
@@ -75,7 +111,7 @@ const RARITY_ORDER: Record<string, number> = {
 // Function to get rarity from the mapping or fallback to Common
 const getAddonRarity = (filename: string, killerFolder?: string): string => {
   const key = killerFolder ? `${killerFolder}/${filename}` : filename;
-  return rarityMapping[key]?.rarity || 'Common';
+  return (rarityMapping as any)[key]?.rarity || 'Common';
 };
 
 // Function to sort addons by rarity (most rare first)
@@ -108,7 +144,7 @@ const extractKillerName = (filename: string): string => {
 export const loadKillers = async (): Promise<Killer[]> => {
   try {
     // Get list of killer image files
-    const response = await fetch('/api/assets/killers');
+    const response = await fetch('/api/killers');
     if (!response.ok) {
       // Fallback: create killers based on known files
       const killerFiles = [
@@ -125,7 +161,7 @@ export const loadKillers = async (): Promise<Killer[]> => {
         'The Dredge.png',
         'The Executioner (Pyramid Head).png',
         'The Ghoul (Ken Kaneki).png',
-        'The Ghost Face.png',
+        'The Ghostface.png',
         'The Good Guy (Chucky).png',
         'The Hag.png',
         'The Hillbilly.png',
@@ -182,7 +218,7 @@ export const loadKillers = async (): Promise<Killer[]> => {
 // Load perks from file system
 export const loadPerks = async (): Promise<Perk[]> => {
   try {
-    const response = await fetch('/api/assets/perks');
+    const response = await fetch('/api/perks');
     if (!response.ok) {
       // Fallback to known perks
       const perkFiles = [
@@ -217,110 +253,94 @@ export const loadPerks = async (): Promise<Perk[]> => {
   }
 };
 
-// Load addons from file system with killer-specific filtering and rarity sorting
-export const loadAddons = async (selectedKiller?: Killer | null): Promise<Addon[]> => {
+// Load addons from API endpoint
+export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
   try {
-    // Ensure rarity mapping is loaded before processing addons
-    if (Object.keys(rarityMapping).length === 0) {
-      await loadRarityMapping();
+    // Get the killer folder name
+    const killerFolder = killerName ? (KILLER_NAME_TO_FOLDER as any)[killerName] : null;
+    
+    if (killerName && !killerFolder) {
+      console.warn(`No addon folder found for killer: ${killerName}`);
+      return [];
     }
-    
-    const allAddons: Addon[] = [];
-    
-    // Load general addons (files directly in addons folder)
+
+    const allAddons: AddonAsset[] = [];
+
+    // Always include Event addons for all killers
     try {
-      const response = await fetch('/api/assets/addons');
-      if (response.ok) {
-        const generalFiles = await response.json();
-        const generalAddons = generalFiles
-          .filter((filename: string) => filename.endsWith('.png'))
-          .map((filename: string) => {
-            const name = filename.replace('iconAddon_', '').replace('.png', '');
-            // Convert camelCase to Title Case
-            const displayName = name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-            const rarity = getAddonRarity(filename);
+      const eventResponse = await fetch('/api/addons/Event');
+      if (eventResponse.ok) {
+        const eventFiles = await eventResponse.json();
+        const eventAddons = eventFiles
+          .filter((file: string) => file.endsWith('.png'))
+          .map((file: string) => {
+            const addonName = file.replace('.png', '');
+            const addonKey = `Event/${addonName}`;
+            const addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
+            
             return {
-              id: filename.replace('.png', ''),
-              name: displayName,
-              img: `/assets/addons/${filename}`,
-              killer: null, // General addon
-              rarity
+              name: addonName,
+              rarity: (addonData?.rarity || 'Common') as AddonAsset['rarity'],
+              image: `/assets/Icons/Addons/Event/${file}`,
+              killer: 'Event'
             };
           });
-        allAddons.push(...generalAddons);
+        allAddons.push(...eventAddons);
       }
     } catch (error) {
-      console.error('Error loading general addons:', error);
+      console.warn('Failed to load Event addons:', error);
     }
-    
-    // Load killer-specific addons if a killer is selected
-    if (selectedKiller) {
-      // Find the corresponding addon folder for this killer
-      const addonFolderCode = Object.keys(KILLER_ADDON_MAPPING).find(
-        code => KILLER_ADDON_MAPPING[code] === selectedKiller.name
-      );
+
+    // Load killer-specific addons if a killer is specified
+    if (killerFolder) {
+      try {
+        const killerResponse = await fetch(`/api/addons/${killerFolder}`);
+        if (killerResponse.ok) {
+          const killerFiles = await killerResponse.json();
+          const killerAddons = killerFiles
+            .filter((file: string) => file.endsWith('.png'))
+            .map((file: string) => {
+              const addonName = file.replace('.png', '');
+              const addonKey = `${killerFolder}/${addonName}`;
+              const addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
+              
+              return {
+                name: addonName,
+                rarity: (addonData?.rarity || 'Common') as AddonAsset['rarity'],
+                image: `/assets/Icons/Addons/${killerFolder}/${file}`,
+                killer: killerFolder
+              };
+            });
+          allAddons.push(...killerAddons);
+        }
+      } catch (error) {
+        console.warn(`Failed to load addons for killer ${killerFolder}:`, error);
+      }
+    }
+
+    // Sort by rarity (most rare first) then alphabetically by name
+    // Event addons should come last
+    return allAddons.sort((a, b) => {
+      // Event addons always come last
+      if (a.killer === 'Event' && b.killer !== 'Event') return 1;
+      if (b.killer === 'Event' && a.killer !== 'Event') return -1;
       
-      if (addonFolderCode) {
-        try {
-          const response = await fetch(`/api/assets/addons/${addonFolderCode}`);
-          if (response.ok) {
-            const killerFiles = await response.json();
-            const killerAddons = killerFiles
-              .filter((filename: string) => filename.endsWith('.png'))
-              .map((filename: string) => {
-                const name = filename.replace('iconAddon_', '').replace('T_UI_iconAddon_', '').replace('.png', '');
-                const displayName = name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                const rarity = getAddonRarity(filename, addonFolderCode);
-                return {
-                  id: `${addonFolderCode}_${filename.replace('.png', '')}`,
-                  name: displayName,
-                  img: `/assets/addons/${addonFolderCode}/${filename}`,
-                  killer: selectedKiller.name,
-                  rarity
-                };
-              });
-            allAddons.push(...killerAddons);
-          }
-        } catch (error) {
-          console.error(`Error loading addons for ${selectedKiller.name}:`, error);
-        }
+      // If both are Event addons, sort alphabetically
+      if (a.killer === 'Event' && b.killer === 'Event') {
+        return a.name.localeCompare(b.name);
       }
-    } else {
-      // If no killer selected, load all killer-specific addons
-      for (const [addonFolderCode, killerName] of Object.entries(KILLER_ADDON_MAPPING)) {
-        try {
-          const response = await fetch(`/api/assets/addons/${addonFolderCode}`);
-          if (response.ok) {
-            const killerFiles = await response.json();
-            const killerAddons = killerFiles
-              .filter((filename: string) => filename.endsWith('.png'))
-              .map((filename: string) => {
-                const name = filename.replace('iconAddon_', '').replace('T_UI_iconAddon_', '').replace('.png', '');
-                const displayName = name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                const rarity = getAddonRarity(filename, addonFolderCode);
-                return {
-                  id: `${addonFolderCode}_${filename.replace('.png', '')}`,
-                  name: displayName,
-                  img: `/assets/addons/${addonFolderCode}/${filename}`,
-                  killer: killerName,
-                  rarity
-                };
-              });
-            allAddons.push(...killerAddons);
-          }
-        } catch (error) {
-          console.error(`Error loading addons for ${killerName}:`, error);
-        }
-      }
-    }
-    
-    // Sort addons by rarity (most rare first)
-    return sortAddonsByRarity(allAddons);
+      
+      // For non-Event addons, sort by rarity first
+      const rarityDiff = RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity];
+      if (rarityDiff !== 0) return rarityDiff;
+      return a.name.localeCompare(b.name);
+    });
+
   } catch (error) {
     console.error('Error loading addons:', error);
     return [];
   }
-};
+}
 
 // Load offerings from file system, sorted by rarity (most rare to common)
 export const loadOfferings = async (): Promise<Offering[]> => {
@@ -365,7 +385,7 @@ export const loadOfferings = async (): Promise<Offering[]> => {
 // Load platforms from file system
 export const loadPlatforms = async (): Promise<Platform[]> => {
   try {
-    const response = await fetch('/api/assets/platforms');
+    const response = await fetch('/api/platforms');
     if (!response.ok) {
       // Fallback to known platforms
       const platformFiles = [

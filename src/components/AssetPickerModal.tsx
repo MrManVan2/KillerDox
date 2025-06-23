@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import type { AssetType, Killer } from '../types';
-import { loadKillers, loadPerks, loadAddons, loadOfferings, loadPlatforms } from '../services/assetService';
+import { loadKillers, loadPerks, loadAddons, loadOfferings, loadPlatforms, type AddonAsset } from '../services/assetService';
 import { useBuildStore } from '../store/buildStore';
 
 interface AssetPickerModalProps {
@@ -41,7 +41,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
           break;
         case 'addons':
           // Pass selected killer to filter addons appropriately
-          assets = await loadAddons(selectedKiller);
+          assets = await loadAddons(selectedKiller?.name);
           break;
         case 'offerings':
           assets = await loadOfferings();
@@ -69,6 +69,16 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
         };
         
         filtered.sort((a, b) => {
+          // Event addons always come last
+          if (a.killer === 'Event' && b.killer !== 'Event') return 1;
+          if (b.killer === 'Event' && a.killer !== 'Event') return -1;
+          
+          // If both are Event addons, sort alphabetically
+          if (a.killer === 'Event' && b.killer === 'Event') {
+            return a.name.localeCompare(b.name);
+          }
+          
+          // For non-Event addons, sort by rarity first
           const orderA = RARITY_ORDER[a.rarity || 'Common'];
           const orderB = RARITY_ORDER[b.rarity || 'Common'];
           
@@ -204,7 +214,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                 >
                   <div className="aspect-square mb-2">
                     <img
-                      src={asset.img}
+                      src={asset.img || asset.image}
                       alt={asset.name}
                       className="w-full h-full object-cover rounded"
                       onError={(e) => {
@@ -228,18 +238,23 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                     <div className="text-xs text-center">
                       {asset.rarity && (
                         <p className={`break-words font-medium leading-tight ${
-                          asset.rarity === 'Iridescent' ? 'text-pink-400' :
-                          asset.rarity === 'Very Rare' ? 'text-purple-400' :
-                          asset.rarity === 'Rare' ? 'text-blue-400' :
-                          asset.rarity === 'Uncommon' ? 'text-yellow-400' :
-                          'text-amber-600'
+                          asset.rarity === 'Iridescent' ? 'text-purple-400' :  // Purple for Iridescent (most rare)
+                          asset.rarity === 'Very Rare' ? 'text-pink-400' :     // Pink for Very Rare
+                          asset.rarity === 'Rare' ? 'text-green-400' :         // Green for Rare
+                          asset.rarity === 'Uncommon' ? 'text-yellow-400' :    // Yellow for Uncommon
+                          'text-gray-400'                                       // Gray for Common
                         }`}>
                           {asset.rarity}
                         </p>
                       )}
-                      {asset.killer && (
+                      {asset.killer && asset.killer !== 'Event' && (
                         <p className="text-gray-500 break-words text-xs leading-tight">
                           {asset.killer}
+                        </p>
+                      )}
+                      {asset.killer === 'Event' && (
+                        <p className="text-orange-400 break-words text-xs leading-tight font-medium">
+                          Event
                         </p>
                       )}
                     </div>

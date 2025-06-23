@@ -6,309 +6,187 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Dead by Daylight rarity color mapping
+// Updated color thresholds and mappings for better detection
 const RARITY_COLORS = {
-  PINK: 'Iridescent',      // Most rare
-  PURPLE: 'Very Rare',
-  BLUE: 'Rare', 
-  YELLOW: 'Uncommon',
-  BROWN: 'Common'          // Least rare
+  'Iridescent': { hue: [300, 360], saturation: [0.3, 1.0], value: [0.3, 1.0] }, // Pink/Magenta
+  'Very Rare': { hue: [240, 300], saturation: [0.3, 1.0], value: [0.3, 1.0] }, // Purple  
+  'Rare': { hue: [180, 240], saturation: [0.3, 1.0], value: [0.3, 1.0] }, // Blue
+  'Uncommon': { hue: [45, 75], saturation: [0.3, 1.0], value: [0.3, 1.0] }, // Yellow
+  'Common': { hue: [15, 45], saturation: [0.2, 1.0], value: [0.2, 0.8] }, // Brown/Orange
 };
 
-// Hybrid approach: filename-based detection for obvious cases
-function detectRarityFromFilename(filename) {
-  const lowerName = filename.toLowerCase();
-  
-  // Clear filename indicators
-  if (lowerName.includes('iridescent')) {
-    return 'PINK';
-  }
-  
-  // Some common "very rare" patterns
-  const veryRarePatterns = [
-    'tombstone', 'fragrant', 'memorial', 'twisted', 'scratched',
-    'compound', 'venomous', 'glowing', 'blighted'
-  ];
-  
-  if (veryRarePatterns.some(pattern => lowerName.includes(pattern))) {
-    return 'PURPLE';
-  }
-  
-  // Some common "rare" patterns
-  const rarePatterns = [
-    'bloodied', 'damaged', 'cracked', 'broken', 'torn', 'shattered'
-  ];
-  
-  if (rarePatterns.some(pattern => lowerName.includes(pattern))) {
-    return 'BLUE';
-  }
-  
-  return null; // Use color detection
-}
-
-// More relaxed color detection
-function detectRarityFromPixels(pixels) {
-  if (pixels.length === 0) return 'BROWN';
-  
-  const colorCounts = {
-    PINK: 0,
-    PURPLE: 0, 
-    BLUE: 0,
-    YELLOW: 0,
-    BROWN: 0
-  };
-  
-  pixels.forEach(([r, g, b]) => {
-    // Skip very dark pixels
-    const brightness = (r + g + b) / 3;
-    if (brightness < 40) return;
-    
-    // Convert to HSV for better color detection
-    const [h, s, v] = rgbToHsv(r, g, b);
-    
-    // More relaxed saturation threshold
-    if (s < 0.25 || v < 0.25) {
-      colorCounts.BROWN++;
-      return;
-    }
-    
-    // Pink/Magenta detection (Iridescent) - broader but still focused
-    if ((h >= 290 && h <= 340) || (h >= 0 && h <= 20)) {
-      colorCounts.PINK++;
-    }
-    // Purple (Very Rare)
-    else if (h >= 240 && h <= 289) {
-      colorCounts.PURPLE++;
-    }
-    // Blue (Rare)
-    else if (h >= 180 && h <= 239) {
-      colorCounts.BLUE++;
-    }
-    // Yellow/Gold (Uncommon)
-    else if (h >= 40 && h <= 80) {
-      colorCounts.YELLOW++;
-    }
-    // Brown/Orange (Common)
-    else if (h >= 15 && h <= 39) {
-      colorCounts.BROWN++;
-    }
-    // Everything else defaults to common
-    else {
-      colorCounts.BROWN++;
-    }
-  });
-  
-  // Find the color with the highest count
-  let maxCount = 0;
-  let dominantColor = 'BROWN';
-  
-  Object.entries(colorCounts).forEach(([color, count]) => {
-    if (count > maxCount) {
-      maxCount = count;
-      dominantColor = color;
-    }
-  });
-  
-  // Lower threshold for rare colors - need at least 8% to be considered rare
-  const totalPixels = pixels.length;
-  const percentage = maxCount / totalPixels;
-  
-  if (dominantColor !== 'BROWN' && percentage < 0.08) {
-    return 'BROWN';
-  }
-  
-  return dominantColor;
-}
-
-// Convert RGB to HSV
 function rgbToHsv(r, g, b) {
   r /= 255;
   g /= 255;
   b /= 255;
-
+  
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
-  const diff = max - min;
+  const delta = max - min;
   
   let h = 0;
-  let s = max === 0 ? 0 : diff / max;
-  let v = max;
-
-  if (diff !== 0) {
-    switch (max) {
-      case r: h = ((g - b) / diff) % 6; break;
-      case g: h = (b - r) / diff + 2; break;
-      case b: h = (r - g) / diff + 4; break;
-    }
+  const s = max === 0 ? 0 : delta / max;
+  const v = max;
+  
+  if (delta !== 0) {
+    if (max === r) h = ((g - b) / delta) % 6;
+    else if (max === g) h = (b - r) / delta + 2;
+    else h = (r - g) / delta + 4;
   }
   
-  h = h * 60;
+  h = Math.round(h * 60);
   if (h < 0) h += 360;
   
   return [h, s, v];
 }
 
-// Image analysis as fallback
-async function analyzeImageColor(imagePath) {
-  try {
-    const { data, info } = await sharp(imagePath)
-      .resize(64, 64)
-      .raw()
-      .ensureAlpha()
-      .toBuffer({ resolveWithObject: true });
-
-    const pixels = [];
-    const channels = info.channels;
-    const width = 64;
-    const height = 64;
+function matchColorToRarity(r, g, b) {
+  const [h, s, v] = rgbToHsv(r, g, b);
+  
+  // Check if the color matches any rarity range
+  for (const [rarity, ranges] of Object.entries(RARITY_COLORS)) {
+    const hueInRange = (h >= ranges.hue[0] && h <= ranges.hue[1]) || 
+                       (ranges.hue[0] > ranges.hue[1] && (h >= ranges.hue[0] || h <= ranges.hue[1]));
+    const satInRange = s >= ranges.saturation[0] && s <= ranges.saturation[1];
+    const valInRange = v >= ranges.value[0] && v <= ranges.value[1];
     
-    // Sample from border areas
-    for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
-        const isBorder = x < 8 || x >= width - 8 || y < 8 || y >= height - 8;
-        
-        if (isBorder) {
-          const pixelIndex = (y * width + x) * channels;
-          const r = data[pixelIndex];
-          const g = data[pixelIndex + 1];
-          const b = data[pixelIndex + 2];
-          const a = data[pixelIndex + 3] || 255;
-          
-          if (a > 150) {
-            pixels.push([r, g, b]);
-          }
-        }
+    if (hueInRange && satInRange && valInRange) {
+      return rarity;
+    }
+  }
+  
+  return 'Common'; // Default fallback
+}
+
+async function analyzeAddonImage(imagePath) {
+  try {
+    const image = sharp(imagePath);
+    const { data, info } = await image.raw().toBuffer({ resolveWithObject: true });
+    
+    const { width, height, channels } = info;
+    const pixelData = [];
+    
+    // Sample border pixels (top, bottom, left, right edges)
+    const samplePositions = [
+      // Top edge
+      ...Array.from({ length: Math.min(width, 20) }, (_, i) => ({ x: i, y: 0 })),
+      // Bottom edge  
+      ...Array.from({ length: Math.min(width, 20) }, (_, i) => ({ x: i, y: height - 1 })),
+      // Left edge
+      ...Array.from({ length: Math.min(height, 20) }, (_, i) => ({ x: 0, y: i })),
+      // Right edge
+      ...Array.from({ length: Math.min(height, 20) }, (_, i) => ({ x: width - 1, y: i })),
+      // Corner samples for better detection
+      ...Array.from({ length: 5 }, (_, i) => ({ x: i, y: i })),
+      ...Array.from({ length: 5 }, (_, i) => ({ x: width - 1 - i, y: i })),
+    ];
+    
+    for (const pos of samplePositions) {
+      const pixelIndex = (pos.y * width + pos.x) * channels;
+      if (pixelIndex + 2 < data.length) {
+        const r = data[pixelIndex];
+        const g = data[pixelIndex + 1];
+        const b = data[pixelIndex + 2];
+        pixelData.push({ r, g, b });
       }
     }
-
-    if (pixels.length === 0) {
-      return 'BROWN';
+    
+    // Analyze colors and find the most common rarity
+    const rarityVotes = {};
+    for (const pixel of pixelData) {
+      const rarity = matchColorToRarity(pixel.r, pixel.g, pixel.b);
+      rarityVotes[rarity] = (rarityVotes[rarity] || 0) + 1;
     }
-
-    const colorCategory = detectRarityFromPixels(pixels);
-    return colorCategory;
+    
+    // Return the rarity with the most votes (excluding Common unless it's the only one)
+    const nonCommonRarities = Object.entries(rarityVotes).filter(([rarity]) => rarity !== 'Common');
+    if (nonCommonRarities.length > 0) {
+      return nonCommonRarities.reduce((a, b) => a[1] > b[1] ? a : b)[0];
+    }
+    
+    return 'Common';
   } catch (error) {
     console.error(`Error analyzing ${imagePath}:`, error.message);
-    return 'BROWN';
+    return 'Common';
   }
 }
 
-// Process all addon files and generate a mapping
-async function generateAddonRarityMapping() {
-  const addonMapping = {};
-  const addonsDir = path.join(process.cwd(), 'public/assets/addons');
+async function processAddonFolder(folderPath, killerName) {
+  console.log(`\nProcessing ${killerName}...`);
   
-  console.log('🎨 Analyzing addon colors to determine rarity (hybrid approach)...\n');
-  
-  // Process general addons
-  const generalAddons = fs.readdirSync(addonsDir)
-    .filter(file => file.endsWith('.png'));
-  
-  console.log('📁 Processing general addons...');
-  for (const filename of generalAddons) {
-    const filePath = path.join(addonsDir, filename);
+  try {
+    const files = await fs.promises.readdir(folderPath);
+    const addonData = {};
     
-    // Try filename detection first
-    let colorCategory = detectRarityFromFilename(filename);
-    let detectionMethod = 'filename';
-    
-    // Fall back to color analysis if filename doesn't match
-    if (!colorCategory) {
-      colorCategory = await analyzeImageColor(filePath);
-      detectionMethod = 'color';
-    }
-    
-    const rarity = RARITY_COLORS[colorCategory];
-    
-    addonMapping[filename] = {
-      rarity,
-      colorCategory,
-      path: `/assets/addons/${filename}`,
-      detectionMethod
-    };
-    
-    console.log(`  ${filename} → ${rarity} (${colorCategory}) [${detectionMethod}]`);
-  }
-  
-  // Process killer-specific addons
-  const killerFolders = fs.readdirSync(addonsDir, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name);
-  
-  for (const folder of killerFolders) {
-    const folderPath = path.join(addonsDir, folder);
-    const addonFiles = fs.readdirSync(folderPath)
-      .filter(file => file.endsWith('.png'));
-    
-    if (addonFiles.length > 0) {
-      console.log(`\n📁 Processing ${folder} addons...`);
-      
-      for (const filename of addonFiles) {
-        const filePath = path.join(folderPath, filename);
+    for (const file of files) {
+      if (file.toLowerCase().endsWith('.png')) {
+        const filePath = path.join(folderPath, file);
+        const addonName = path.basename(file, '.png');
+        const rarity = await analyzeAddonImage(filePath);
         
-        // Try filename detection first
-        let colorCategory = detectRarityFromFilename(filename);
-        let detectionMethod = 'filename';
-        
-        // Fall back to color analysis if filename doesn't match
-        if (!colorCategory) {
-          colorCategory = await analyzeImageColor(filePath);
-          detectionMethod = 'color';
-        }
-        
-        const rarity = RARITY_COLORS[colorCategory];
-        
-        const key = `${folder}/${filename}`;
-        addonMapping[key] = {
-          rarity,
-          colorCategory,
-          path: `/assets/addons/${folder}/${filename}`,
-          detectionMethod
+        addonData[addonName] = {
+          name: addonName,
+          rarity: rarity,
+          image: `/assets/Icons/Addons/${killerName}/${file}`,
+          killer: killerName
         };
         
-        console.log(`  ${filename} → ${rarity} (${colorCategory}) [${detectionMethod}]`);
+        console.log(`  ${addonName}: ${rarity}`);
       }
     }
+    
+    return addonData;
+  } catch (error) {
+    console.error(`Error processing ${killerName}:`, error.message);
+    return {};
   }
-  
-  // Save the mapping to a JSON file
-  const outputPath = path.join(process.cwd(), 'src/data/addonRarityMapping.json');
-  fs.writeFileSync(outputPath, JSON.stringify(addonMapping, null, 2));
-  
-  console.log(`\n✅ Rarity mapping saved to ${outputPath}`);
-  console.log(`📊 Processed ${Object.keys(addonMapping).length} addon files`);
-  
-  // Print summary
-  const rarityCount = {};
-  const methodCount = {};
-  Object.values(addonMapping).forEach(addon => {
-    rarityCount[addon.rarity] = (rarityCount[addon.rarity] || 0) + 1;
-    methodCount[addon.detectionMethod] = (methodCount[addon.detectionMethod] || 0) + 1;
-  });
-  
-  console.log('\n📈 Rarity Distribution:');
-  Object.entries(rarityCount)
-    .sort(([,a], [,b]) => b - a)
-    .forEach(([rarity, count]) => {
-      console.log(`  ${rarity}: ${count} addons`);
-    });
-  
-  console.log('\n🔍 Detection Method Distribution:');
-  Object.entries(methodCount).forEach(([method, count]) => {
-    console.log(`  ${method}: ${count} addons`);
-  });
-  
-  console.log('\n🎉 Hybrid analysis complete!');
 }
 
-// Run the analysis
-generateAddonRarityMapping()
-  .then(() => {
-    process.exit(0);
-  })
-  .catch(error => {
-    console.error('❌ Error during analysis:', error);
-    process.exit(1);
-  });
+async function generateRarityMapping() {
+  const addonsBasePath = path.join(process.cwd(), '..', 'public', 'assets', 'Icons', 'Addons');
+  const allAddonData = {};
+  const rarityStats = {};
+  
+  try {
+    const folders = await fs.promises.readdir(addonsBasePath);
+    
+    for (const folder of folders) {
+      if (folder === '.DS_Store') continue;
+      
+      const folderPath = path.join(addonsBasePath, folder);
+      const stat = await fs.promises.stat(folderPath);
+      
+      if (stat.isDirectory()) {
+        const addonData = await processAddonFolder(folderPath, folder);
+        
+        // Merge addon data
+        Object.assign(allAddonData, addonData);
+        
+        // Count rarities
+        for (const addon of Object.values(addonData)) {
+          rarityStats[addon.rarity] = (rarityStats[addon.rarity] || 0) + 1;
+        }
+      }
+    }
+    
+    // Save the mapping
+    const outputPath = path.join(process.cwd(), '..', 'src', 'data', 'addonRarityMapping.json');
+    await fs.promises.writeFile(outputPath, JSON.stringify(allAddonData, null, 2));
+    
+    console.log('\n=== ANALYSIS COMPLETE ===');
+    console.log(`Total addons processed: ${Object.keys(allAddonData).length}`);
+    console.log('\nRarity distribution:');
+    Object.entries(rarityStats)
+      .sort(([,a], [,b]) => b - a)
+      .forEach(([rarity, count]) => {
+        console.log(`  ${rarity}: ${count}`);
+      });
+    
+    console.log(`\nRarity mapping saved to: ${outputPath}`);
+    
+  } catch (error) {
+    console.error('Error generating rarity mapping:', error);
+  }
+}
 
-export { generateAddonRarityMapping, analyzeImageColor, RARITY_COLORS }; 
+generateRarityMapping(); 
