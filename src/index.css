@@ -145,13 +145,30 @@ body {
 /* Alternative approach - target by screen height in landscape */
 @media screen and (max-height: 500px) and (orientation: landscape) {
   /* This should catch landscape phones regardless of width */
-  body {
-    border: 5px solid green !important;
-  }
   
-  /* Scale everything down */
-  * {
-    transform: scale(0.8) !important;
+  /* Only scale down the SelectableSlot components, not everything */
+  div[role="button"] {
+    transform: scale(0.75) !important;
     transform-origin: center !important;
   }
+  
+  /* Reduce gaps specifically */
+  .gap-2 { gap: 0.25rem !important; }
+  .gap-4 { gap: 0.5rem !important; }
+  .gap-8 { gap: 1rem !important; }
+  .gap-12 { gap: 1.5rem !important; }
+  
+  /* Reduce padding on main containers */
+  div[style*="paddingTop"] {
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
+  }
+  
+  /* If mobile layout, make elements smaller */
+  .w-16 { width: 3rem !important; height: 3rem !important; }
+  .h-16 { width: 3rem !important; height: 3rem !important; }
+  .w-20 { width: 4rem !important; height: 4rem !important; }
+  .h-20 { width: 4rem !important; height: 4rem !important; }
+  .w-32 { width: 6rem !important; height: 6rem !important; }
+  .h-32 { width: 6rem !important; height: 6rem !important; }
 }
