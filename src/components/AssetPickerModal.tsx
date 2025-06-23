@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import type { AssetType } from '../types';
 import { loadKillers, loadPerks, loadAddons, loadOfferings, loadPlatforms } from '../services/assetService';
@@ -27,11 +27,15 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
   const [loading, setLoading] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const { selectedKiller } = useBuildStore();
+  const clearingSearchRef = useRef(false);
 
   // Debounce search term
   useEffect(() => {
     const timer = setTimeout(() => {
-      setDebouncedSearchTerm(searchTerm);
+      if (!clearingSearchRef.current) {
+        setDebouncedSearchTerm(searchTerm);
+      }
+      clearingSearchRef.current = false;
     }, 150); // 150ms debounce
 
     return () => clearTimeout(timer);
@@ -155,6 +159,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     onSelect(asset);
     
     // Clear search term immediately when an item is selected
+    clearingSearchRef.current = true;
     setSearchTerm('');
     setDebouncedSearchTerm('');
     
