@@ -239,10 +239,11 @@ export const loadPerks = async (): Promise<Perk[]> => {
       
       return perkFiles.map((filename) => {
         const name = filename.replace('.png', '');
-        // Format display name for Hex and Scourge perks
+        // Format display name for Hex and Scourge perks, and fix typos
         const displayName = name
           .replace(/^Hex - /, 'Hex: ')
-          .replace(/^Scourge - /, 'Scourge: ');
+          .replace(/^Scourge - /, 'Scourge: ')
+          .replace(/^Thatanophobia$/, 'Thanatophobia'); // Fix typo
         
         return {
           id: name.toLowerCase().replace(/\s+/g, '-'),
@@ -256,10 +257,11 @@ export const loadPerks = async (): Promise<Perk[]> => {
     const files = await response.json();
     return files.map((filename: string) => {
       const name = filename.replace('.png', '');
-      // Format display name for Hex and Scourge perks
-      const displayName = name
+      // Format display name for Hex and Scourge perks, and fix typos
+      let displayName = name
         .replace(/^Hex - /, 'Hex: ')
-        .replace(/^Scourge - /, 'Scourge: ');
+        .replace(/^Scourge - /, 'Scourge: ')
+        .replace(/^Thatanophobia$/, 'Thanatophobia'); // Fix typo
       
       return {
         id: name.toLowerCase().replace(/\s+/g, '-'),
