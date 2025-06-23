@@ -31,16 +31,16 @@ const AuthGate: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8" style={{
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8 mobile-safe" style={{
       backgroundImage: 'url(/assets/Templates/Backdrop.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
     }}>
-      <div className="w-full max-w-2xl space-y-8 -mt-16">
+      <div className="w-full max-w-2xl space-y-6 sm:space-y-8 -mt-8 sm:-mt-16">
         {/* Killer Icon Logo */}
         <div className="flex justify-center">
-          <div className="w-64 h-64 flex items-center justify-center">
+          <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center">
             <img 
               src="/assets/Templates/Killer Icon.png" 
               alt="KillerDox Logo"
@@ -54,13 +54,13 @@ const AuthGate: React.FC = () => {
           <img 
             src="/assets/Templates/Enter Password.png" 
             alt="Enter Password"
-            className="object-contain drop-shadow-lg"
+            className="object-contain drop-shadow-lg max-w-full h-auto"
           />
         </div>
 
         {/* Password Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="relative w-full h-24">
+          <div className="relative w-full h-20 sm:h-24">
             {/* Text Box Background Image */}
             <img 
               src="/assets/Templates/Text Box.png" 
@@ -73,7 +73,7 @@ const AuthGate: React.FC = () => {
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder=""
-              className="absolute inset-0 w-full h-full bg-transparent text-white focus:outline-none text-center font-medium text-4xl border-none"
+              className="absolute inset-0 w-full h-full bg-transparent text-white focus:outline-none text-center font-medium text-2xl sm:text-3xl md:text-4xl border-none"
               style={{
                 textShadow: '0 2px 4px rgba(0,0,0,0.8)'
               }}
@@ -82,7 +82,7 @@ const AuthGate: React.FC = () => {
           </div>
           
           {error && (
-            <div className="text-red-400 text-lg text-center font-medium drop-shadow-md">{error}</div>
+            <div className="text-red-400 text-base sm:text-lg text-center font-medium drop-shadow-md">{error}</div>
           )}
         </form>
       </div>

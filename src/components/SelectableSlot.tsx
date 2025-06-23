@@ -49,10 +49,12 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
   return (
     <>
       <div
-        className={`${className} flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-all duration-200 relative hover:scale-105 active:scale-95`}
+        className={`${className} flex items-center justify-center hover:${borderColorHover} cursor-pointer transition-all duration-200 relative hover:scale-105 active:scale-95 touch-manipulation select-none`}
         onClick={handleClick}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
+        onTouchStart={() => setShowTooltip(true)}
+        onTouchEnd={() => setTimeout(() => setShowTooltip(false), 2000)}
         role="button"
         aria-label={asset ? `Selected ${asset.name}` : `Select ${type.slice(0, -1)}`}
         tabIndex={0}
@@ -73,7 +75,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
 
         {/* Tooltip */}
         {showTooltip && asset && (
-          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-sm md:text-base rounded-lg whitespace-nowrap z-10 shadow-lg">
+          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black bg-opacity-90 text-white text-xs sm:text-sm md:text-base rounded-lg whitespace-nowrap z-10 shadow-lg backdrop-blur-sm max-w-48 sm:max-w-none text-center">
             {asset.name}
           </div>
         )}
