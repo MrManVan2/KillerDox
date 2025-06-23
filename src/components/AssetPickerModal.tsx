@@ -214,10 +214,10 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                 <div
                   key={asset.id}
                   onClick={() => handleSelect(asset)}
-                  className={`relative p-3 rounded-lg cursor-pointer transition-colors flex flex-col ${
+                  className={`relative p-3 rounded-lg cursor-pointer transition-all duration-200 flex flex-col hover:scale-105 ${
                     isSelected(asset.id)
                       ? 'bg-blue-600 border-2 border-blue-400'
-                      : 'hover:bg-white hover:bg-opacity-10 border-2 border-transparent'
+                      : 'border-2 border-transparent'
                   }`}
                 >
                   <div className="aspect-square mb-2">
