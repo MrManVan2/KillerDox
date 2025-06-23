@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { AssetType } from '../types';
 import AssetPickerModal from './AssetPickerModal';
+import { useBuildStore } from '../store/buildStore';
 
 interface SelectableSlotProps {
   type: AssetType;
@@ -25,14 +26,25 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const { selectedKiller } = useBuildStore();
 
   const handleClick = () => {
+    // For addons, require a killer to be selected first
+    if (type === 'addons' && !selectedKiller) {
+      // Could add a toast notification here if desired
+      console.log('Please select a killer first before choosing addons');
+      return;
+    }
+    
     setIsModalOpen(true);
   };
 
   const handleSelect = (selectedAsset: any) => {
     onSelect(selectedAsset);
   };
+
+  // Check if this slot should be disabled (addons without killer)
+  const isDisabled = type === 'addons' && !selectedKiller;
 
   return (
     <>
