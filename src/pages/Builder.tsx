@@ -46,7 +46,7 @@ const Builder: React.FC = () => {
         
         {/* Mobile Layout (md and below) */}
         <div className="flex-1 flex flex-col justify-between py-4 px-2 max-w-screen-2xl mx-auto w-full h-full md:hidden">
-          <div className="h-full flex flex-col justify-between" style={{ paddingTop: '12vh', paddingBottom: '12vh' }}>
+          <div className="h-full flex flex-col justify-between" style={{ paddingTop: '18vh', paddingBottom: '18vh' }}>
             {/* Top Section - Mobile: Row layout like desktop */}
             <div className="relative flex items-center w-full">
               {/* Mobile: Offering at left */}
@@ -56,7 +56,7 @@ const Builder: React.FC = () => {
                   limit={1}
                   asset={selectedOffering}
                   placeholderImg="/assets/Templates/Blank Offering.png"
-                  className="w-16 h-16 sm:w-20 sm:h-20"
+                  className="w-20 h-20 sm:w-26 sm:h-26"
                   borderColorHover="border-yellow-500"
                   onSelect={setOffering}
                 />
@@ -82,7 +82,7 @@ const Builder: React.FC = () => {
                   limit={1}
                   asset={selectedPlatform}
                   placeholderImg="/assets/Templates/Blank Platform.png"
-                  className="w-12 h-12 sm:w-16 sm:h-16"
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                   borderColorHover="border-green-500"
                   onSelect={setPlatform}
                 />
@@ -123,7 +123,7 @@ const Builder: React.FC = () => {
                     limit={4}
                     asset={selectedPerks[index]}
                     placeholderImg="/assets/Templates/Blank Perk.png"
-                    className="w-16 h-16 sm:w-20 sm:h-20"
+                    className="w-20 h-20 sm:w-26 sm:h-26"
                     borderColorHover="border-green-500"
                     onSelect={addPerk}
                     selectedItems={selectedPerks}
