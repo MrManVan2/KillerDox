@@ -2151,7 +2151,7 @@
     "method": "exact_color_match"
   },
   "The Executioner/iconAddon_iridescentSeal": {
-    "name": "iconAddon_iridescentSeal",
+    "name": "Iridescent Seal",
     "rarity": "Iridescent",
     "image": "/assets/Icons/Addons/The Executioner/iconAddon_iridescentSeal.png",
     "killer": "The Executioner",
@@ -2160,7 +2160,7 @@
     "method": "exact_color_match"
   },
   "The Executioner/iconAddon_obsidianGoblet": {
-    "name": "iconAddon_obsidianGoblet",
+    "name": "Obsidian Goblet",
     "rarity": "Iridescent",
     "image": "/assets/Icons/Addons/The Executioner/iconAddon_obsidianGoblet.png",
     "killer": "The Executioner",
