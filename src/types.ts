@@ -21,7 +21,7 @@ export interface Addon {
   id: string;
   name: string;
   img: string;
-  rarity?: 'Common' | 'Uncommon' | 'Rare' | 'Very Rare' | 'Iridescent';
+  rarity?: 'Common' | 'Uncommon' | 'Rare' | 'Very Rare' | 'Visceral';
   killer?: string;
   description?: string;
 }
