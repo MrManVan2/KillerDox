@@ -146,35 +146,35 @@ body {
 @media screen and (max-height: 500px) and (orientation: landscape) {
   /* This should catch landscape phones regardless of width */
   
-  /* DON'T scale down the SelectableSlot components - keep them normal size */
-  /* div[role="button"] {
-    transform: scale(0.75) !important;
-    transform-origin: center !important;
-  } */
+  /* Reduce gaps much more to prevent cutoff */
+  .gap-2 { gap: 0.125rem !important; }
+  .gap-4 { gap: 0.25rem !important; }
+  .gap-8 { gap: 0.5rem !important; }
+  .gap-12 { gap: 0.75rem !important; }
   
-  /* Reduce gaps specifically */
-  .gap-2 { gap: 0.25rem !important; }
-  .gap-4 { gap: 0.5rem !important; }
-  .gap-8 { gap: 1rem !important; }
-  .gap-12 { gap: 1.5rem !important; }
-  
-  /* Reduce padding on main containers */
+  /* Reduce padding on main containers more */
   div[style*="paddingTop"] {
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
+    padding-top: 1vh !important;
+    padding-bottom: 1vh !important;
   }
   
-  /* If mobile layout, make elements BIGGER instead of smaller (2x bigger) */
-  .w-16 { width: 8rem !important; height: 8rem !important; }
-  .h-16 { width: 8rem !important; height: 8rem !important; }
-  .w-20 { width: 10rem !important; height: 10rem !important; }
-  .h-20 { width: 10rem !important; height: 10rem !important; }
-  .w-32 { width: 16rem !important; height: 16rem !important; }
-  .h-32 { width: 16rem !important; height: 16rem !important; }
+  /* Make elements 1.5x bigger instead of 2x to prevent cutoff */
+  .w-16 { width: 6rem !important; height: 6rem !important; }
+  .h-16 { width: 6rem !important; height: 6rem !important; }
+  .w-20 { width: 7.5rem !important; height: 7.5rem !important; }
+  .h-20 { width: 7.5rem !important; height: 7.5rem !important; }
+  .w-32 { width: 12rem !important; height: 12rem !important; }
+  .h-32 { width: 12rem !important; height: 12rem !important; }
   
   /* Also target the sm: responsive variants for mobile */
-  .sm\\:w-20 { width: 10rem !important; height: 10rem !important; }
-  .sm\\:h-20 { width: 10rem !important; height: 10rem !important; }
-  .sm\\:w-26 { width: 13rem !important; height: 13rem !important; }
-  .sm\\:h-26 { width: 13rem !important; height: 13rem !important; }
+  .sm\\:w-20 { width: 7.5rem !important; height: 7.5rem !important; }
+  .sm\\:h-20 { width: 7.5rem !important; height: 7.5rem !important; }
+  .sm\\:w-26 { width: 9.75rem !important; height: 9.75rem !important; }
+  .sm\\:h-26 { width: 9.75rem !important; height: 9.75rem !important; }
+  
+  /* Reduce any margin on the containers to maximize space */
+  .md\\:hidden div[class*="h-full"] {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 }
