@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import type { Killer, Perk, Addon, Offering, Platform, Build } from '../types';
-import { socketService } from './socketService';
+import { realtimeService } from './realtimeService';
 
 interface BuildState {
   selectedKiller: Killer | null;
@@ -18,7 +18,7 @@ interface BuildState {
   setOffering: (offering: Offering | null) => void;
   setPlatform: (platform: Platform | null) => void;
   reset: () => void;
-  initializeSocket: () => void;
+  initializeRealtime: () => void;
   syncBuild: () => void;
 }
 
@@ -36,18 +36,21 @@ export const useBuildStore = create<BuildState>((set, get) => ({
   setKiller: (killer) => {
     // Clear selected addons when killer changes since addons are killer-specific
     set({ selectedKiller: killer, selectedAddons: [] });
+    get().syncBuild();
   },
 
   addPerk: (perk) => {
     const { selectedPerks } = get();
     if (selectedPerks.length < 4 && !selectedPerks.find(p => p.id === perk.id)) {
       set({ selectedPerks: [...selectedPerks, perk] });
+      get().syncBuild();
     }
   },
 
   removePerk: (perkId) => {
     const { selectedPerks } = get();
     set({ selectedPerks: selectedPerks.filter(p => p.id !== perkId) });
+    get().syncBuild();
   },
 
   addAddon: (addon) => {
@@ -58,27 +61,35 @@ export const useBuildStore = create<BuildState>((set, get) => ({
     }
     if (selectedAddons.length < 2 && !selectedAddons.find(a => a.id === addon.id)) {
       set({ selectedAddons: [...selectedAddons, addon] });
+      get().syncBuild();
     }
   },
 
   removeAddon: (addonId) => {
     const { selectedAddons } = get();
     set({ selectedAddons: selectedAddons.filter(a => a.id !== addonId) });
+    get().syncBuild();
   },
 
-  setOffering: (offering) => set({ selectedOffering: offering }),
+  setOffering: (offering) => {
+    set({ selectedOffering: offering });
+    get().syncBuild();
+  },
 
-  setPlatform: (platform) => set({ selectedPlatform: platform }),
+  setPlatform: (platform) => {
+    set({ selectedPlatform: platform });
+    get().syncBuild();
+  },
 
   reset: () => {
     set(initialState);
-    socketService.emitBuildReset();
+    realtimeService.broadcastBuildReset();
   },
 
-  initializeSocket: () => {
-    socketService.connect();
+  initializeRealtime: () => {
+    realtimeService.connect();
     
-    socketService.onBuildUpdate((build: Build) => {
+    realtimeService.onBuildUpdate((build: Build) => {
       set({
         selectedKiller: build.killer,
         selectedPerks: build.perks,
@@ -88,7 +99,7 @@ export const useBuildStore = create<BuildState>((set, get) => ({
       });
     });
 
-    socketService.onBuildReset(() => {
+    realtimeService.onBuildReset(() => {
       set(initialState);
     });
   },
@@ -102,6 +113,6 @@ export const useBuildStore = create<BuildState>((set, get) => ({
       offering: state.selectedOffering,
       platform: state.selectedPlatform,
     };
-    socketService.emitBuildUpdate(build);
+    realtimeService.broadcastBuildUpdate(build);
   },
 })); 

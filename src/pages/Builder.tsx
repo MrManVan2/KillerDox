@@ -3,6 +3,8 @@ import { useBuildStore } from '../store/buildStore';
 import { TrashIcon } from '@heroicons/react/24/outline';
 
 import SelectableSlot from '../components/SelectableSlot';
+import ConnectionStatus from '../components/ConnectionStatus';
+import RealtimeNotifications from '../components/RealtimeNotifications';
 
 const Builder: React.FC = () => {
   const {
@@ -17,18 +19,15 @@ const Builder: React.FC = () => {
     setOffering,
     setPlatform,
     reset,
-    initializeSocket,
-    syncBuild
+    initializeRealtime
   } = useBuildStore();
 
   useEffect(() => {
-    initializeSocket();
-  }, [initializeSocket]);
+    initializeRealtime();
+  }, [initializeRealtime]);
 
-  // Sync build whenever state changes
-  useEffect(() => {
-    syncBuild();
-  }, [selectedKiller, selectedPerks, selectedAddons, selectedOffering, selectedPlatform, syncBuild]);
+  // Remove automatic sync to prevent infinite loops - 
+  // sync is now handled by individual actions in the store
 
   // const handleResetBuild = () => {
   //   reset();
@@ -128,6 +127,12 @@ const Builder: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Connection Status - Top Right */}
+      <ConnectionStatus />
+
+      {/* Real-time Notifications */}
+      <RealtimeNotifications />
 
       {/* Reset Button - Trash Icon Bottom Right */}
       <button
