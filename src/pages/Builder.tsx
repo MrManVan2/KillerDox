@@ -63,7 +63,7 @@ const Builder: React.FC = () => {
               limit={1}
               asset={selectedKiller}
               placeholderImg="/assets/Templates/Blank Killer.png"
-              className="w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80"
+              className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
               borderColorHover="border-red-500"
               onSelect={setKiller}
             />
@@ -105,7 +105,7 @@ const Builder: React.FC = () => {
           </div>
 
           {/* Perk Row - Bottom with responsive spacing */}
-          <div className="flex justify-between items-center w-full max-w-5xl mx-auto mb-4">
+          <div className="flex justify-between items-center w-full max-w-5xl mx-auto">
             {Array.from({ length: 4 }, (_, index) => (
               <SelectableSlot
                 key={index}
