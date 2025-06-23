@@ -34,3 +34,26 @@ body {
   animation: fade-in 0.4s ease-out forwards;
   opacity: 0;
 }
+
+/* Ultrawide and responsive support */
+@media (min-width: 1920px) {
+  /* Ensure proper spacing on ultrawide monitors */
+  .max-w-screen-2xl {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 2560px) {
+  /* Ultra ultrawide support */
+  .max-w-screen-2xl {
+    max-width: 2200px;
+  }
+}
+
+/* Prevent layout issues on very tall screens */
+@media (min-height: 1080px) {
+  /* Increase vertical spacing for tall screens */
+  .min-h-screen {
+    min-height: 100vh;
+  }
+}

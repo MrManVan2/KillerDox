@@ -42,10 +42,10 @@ const Builder: React.FC = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       <div className="w-full h-full flex flex-col">
-        {/* Main Content - Spread Wide Layout */}
-        <div className="flex-1 flex flex-col justify-center min-h-0 px-8 md:px-16 lg:px-24">
+        {/* Main Content - Responsive Vertical Layout */}
+        <div className="flex-1 flex flex-col justify-between py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-24 max-w-screen-2xl mx-auto w-full min-h-0">
           {/* Top Row - Full Width Distribution */}
-          <div className="flex justify-between items-center w-full mb-12 md:mb-16 lg:mb-20">
+          <div className="flex justify-between items-center w-full">
             {/* Offering Slot - Far Left */}
             <SelectableSlot
               type="offerings"
@@ -81,7 +81,7 @@ const Builder: React.FC = () => {
           </div>
 
           {/* Addon Row - Wide Spread */}
-          <div className="flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-48 2xl:gap-56 mb-12 md:mb-16 lg:mb-20">
+          <div className="flex justify-center gap-12 sm:gap-16 md:gap-24 lg:gap-32 xl:gap-40 2xl:gap-48">
             <SelectableSlot
               type="addons"
               limit={2}
@@ -104,8 +104,8 @@ const Builder: React.FC = () => {
             />
           </div>
 
-          {/* Perk Row - Bottom with more spacing */}
-          <div className="flex justify-between items-center w-full max-w-6xl mx-auto mt-16 md:mt-20 lg:mt-24">
+          {/* Perk Row - Bottom with responsive spacing */}
+          <div className="flex justify-between items-center w-full max-w-6xl mx-auto">
             {Array.from({ length: 4 }, (_, index) => (
               <SelectableSlot
                 key={index}
@@ -126,7 +126,7 @@ const Builder: React.FC = () => {
       {/* Reset Button - Trash Icon Bottom Right */}
       <button
         onClick={reset}
-        className="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-gray-600 hover:bg-gray-500 text-gray-300 hover:text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+        className="fixed bottom-4 right-4 md:bottom-8 md:right-8 text-white hover:text-gray-300 transition-all duration-200 hover:scale-110"
         title="Reset Build"
       >
         <TrashIcon className="w-6 h-6 md:w-8 md:h-8" />
