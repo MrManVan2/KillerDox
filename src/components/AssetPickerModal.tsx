@@ -3,7 +3,6 @@ import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import type { AssetType } from '../types';
 import { loadKillers, loadPerks, loadAddons, loadOfferings, loadPlatforms } from '../services/assetService';
 import { useBuildStore } from '../store/buildStore';
-import { realtimeService } from '../store/realtimeService';
 
 interface AssetPickerModalProps {
   isOpen: boolean;
@@ -154,9 +153,6 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
 
   const handleSelect = (asset: any) => {
     onSelect(asset);
-    
-    // Broadcast asset selection to other users
-    realtimeService.broadcastAssetUpdate(type, asset);
     
     // Auto-close modal when limit is reached
     if (selectedItems.length + 1 >= limit) {

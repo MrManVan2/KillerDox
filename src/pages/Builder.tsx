@@ -3,8 +3,6 @@ import { useBuildStore } from '../store/buildStore';
 import { TrashIcon } from '@heroicons/react/24/outline';
 
 import SelectableSlot from '../components/SelectableSlot';
-import ConnectionStatus from '../components/ConnectionStatus';
-import RealtimeNotifications from '../components/RealtimeNotifications';
 
 const Builder: React.FC = () => {
   const {
@@ -128,11 +126,9 @@ const Builder: React.FC = () => {
         </div>
       </div>
 
-      {/* Connection Status - Top Right */}
-      <ConnectionStatus />
 
-      {/* Real-time Notifications */}
-      <RealtimeNotifications />
+
+
 
       {/* Reset Button - Trash Icon Bottom Right */}
       <button
