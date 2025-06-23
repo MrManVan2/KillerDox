@@ -137,13 +137,13 @@ const Builder: React.FC = () => {
 
         {/* Desktop Layout (md and above) - Dynamic Vertical Spacing */}
         <div className="hidden md:block w-full h-full">
-          <div 
-            className="h-full flex flex-col justify-between px-8 md:px-16 lg:px-24 xl:px-32 max-w-screen-2xl mx-auto"
-            style={{
-              paddingTop: 'clamp(2vh, 4vh, 8vh)',
-              paddingBottom: 'clamp(2vh, 4vh, 8vh)'
-            }}
-          >
+                     <div 
+             className="h-full flex flex-col justify-between px-8 md:px-16 lg:px-24 xl:px-32 max-w-screen-2xl mx-auto"
+             style={{
+               paddingTop: 'clamp(6vh, 8vh, 12vh)',
+               paddingBottom: 'clamp(1vh, 2vh, 4vh)'
+             }}
+           >
             {/* Top Row - Consistent proportional sizing */}
             <div className="relative flex items-center w-full flex-shrink-0">
               {/* Offering Slot - Absolute Left */}
@@ -235,7 +235,7 @@ const Builder: React.FC = () => {
                className="flex justify-center items-center w-full flex-shrink-0"
                style={{
                  gap: 'clamp(40px, 5vw, 120px)',
-                 marginBottom: '15vh'
+                 marginBottom: '8vh'
                }}
              >
               {Array.from({ length: 4 }, (_, index) => (
