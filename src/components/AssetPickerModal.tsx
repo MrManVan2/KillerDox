@@ -151,12 +151,20 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-75"
+        className="absolute inset-0"
         onClick={onClose}
       />
       
       {/* Modal */}
-      <div className="relative bg-black bg-opacity-80 backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[80vh] flex flex-col border border-gray-600">
+      <div 
+        className="relative backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[80vh] flex flex-col border border-gray-600"
+        style={{
+          backgroundImage: 'url(/assets/Templates/Backdrop.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-600">
           <h2 className="text-xl font-bold text-white capitalize">
@@ -209,7 +217,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                   className={`relative p-3 rounded-lg cursor-pointer transition-colors flex flex-col ${
                     isSelected(asset.id)
                       ? 'bg-blue-600 border-2 border-blue-400'
-                      : 'bg-black bg-opacity-40 hover:bg-black hover:bg-opacity-60 border-2 border-transparent'
+                      : 'hover:bg-white hover:bg-opacity-10 border-2 border-transparent'
                   }`}
                 >
                   <div className="aspect-square mb-2">
@@ -237,21 +245,17 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                   {type === 'addons' && (
                     <div className="text-xs text-center">
                       {asset.rarity && (
-                        <p className={`break-words font-medium leading-tight ${
-                          asset.rarity === 'Iridescent' ? 'text-purple-400' :  // Purple for Iridescent (most rare)
-                          asset.rarity === 'Very Rare' ? 'text-pink-400' :     // Pink for Very Rare
-                          asset.rarity === 'Rare' ? 'text-green-400' :         // Green for Rare
-                          asset.rarity === 'Uncommon' ? 'text-yellow-400' :    // Yellow for Uncommon
-                          'text-gray-400'                                       // Gray for Common
-                        }`}>
+                        <p className={`break-words font-medium leading-tight`} style={{
+                          color: asset.rarity === 'Iridescent' ? '#d41b50' :   // Pink for Iridescent (most rare)
+                                 asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
+                                 asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
+                                 asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
+                                 '#674f3d'                                      // Brown for Common
+                        }}>
                           {asset.rarity}
                         </p>
                       )}
-                      {asset.killer && asset.killer !== 'Event' && (
-                        <p className="text-gray-500 break-words text-xs leading-tight">
-                          {asset.killer}
-                        </p>
-                      )}
+
                       {asset.killer === 'Event' && (
                         <p className="text-orange-400 break-words text-xs leading-tight font-medium">
                           Event
