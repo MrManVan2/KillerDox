@@ -301,7 +301,7 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
             
             return {
               id: `event_${addonName.toLowerCase().replace(/\s+/g, '-')}`,
-              name: addonName,
+              name: addonData?.name || addonName,
               rarity: (addonData?.rarity || 'Common') as AddonAsset['rarity'],
               img: `/assets/Icons/Addons/Event/${file}`,
               killer: 'Event'
@@ -365,7 +365,7 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
               
               return {
                 id: `${killerFolder.toLowerCase().replace(/\s+/g, '-')}_${addonName.toLowerCase().replace(/\s+/g, '-')}`,
-                name: addonName,
+                name: addonData?.name || addonName,
                 rarity: (addonData?.rarity || 'Common') as AddonAsset['rarity'],
                 img: `/assets/Icons/Addons/${killerFolder}/${file}`,
                 killer: killerFolder
