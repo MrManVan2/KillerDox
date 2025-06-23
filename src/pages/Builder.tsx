@@ -262,7 +262,7 @@ const Builder: React.FC = () => {
       {/* Reset Button */}
       <button
         onClick={() => reset()}
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 text-white hover:text-gray-300 transition-all duration-200 hover:scale-110 bg-black bg-opacity-50 rounded-full p-2 md:p-3 backdrop-blur-sm"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 text-white hover:text-gray-300 transition-all duration-200 hover:scale-110 p-2 md:p-3"
         title="Reset Build"
       >
         <TrashIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" />
