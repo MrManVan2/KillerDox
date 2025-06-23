@@ -319,12 +319,29 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
         const killerResponse = await fetch(`/api/addons/${killerFolder}`);
         if (killerResponse.ok) {
           const killerFiles = await killerResponse.json();
+          
+          // Debug logging for The Onryō specifically
+          if (killerFolder.includes('Onryō')) {
+            console.log('🐛 DEBUG: Loading addons for', killerFolder);
+            console.log('🐛 DEBUG: Found files:', killerFiles.length);
+          }
+          
           const killerAddons = killerFiles
             .filter((file: string) => file.endsWith('.png'))
             .map((file: string) => {
               const addonName = file.replace('.png', '');
               const addonKey = `${killerFolder}/${addonName}`;
               const addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
+              
+              // Debug logging for The Onryō specifically
+              if (killerFolder.includes('Onryō')) {
+                console.log(`🐛 DEBUG: Addon "${addonName}"`);
+                console.log(`🐛 DEBUG: Key "${addonKey}"`);
+                console.log(`🐛 DEBUG: Found mapping: ${addonData ? 'YES' : 'NO'}`);
+                if (addonData) {
+                  console.log(`🐛 DEBUG: Rarity: ${addonData.rarity}`);
+                }
+              }
               
               return {
                 id: `${killerFolder.toLowerCase().replace(/\s+/g, '-')}_${addonName.toLowerCase().replace(/\s+/g, '-')}`,
