@@ -276,28 +276,27 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                   </div>
                   {type === 'addons' && (
                     <div className="text-xs text-center">
-                                              {asset.rarity && (
-                          <p className={`break-words font-medium leading-tight`} style={{
-                            color: asset.rarity === 'Iridescent' ? '#d41b50' :   // Pink for Iridescent (most rare)
-                                   asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
-                                   asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
-                                   asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
-                                   '#674f3d'                                      // Brown for Common
-                          }}>
-                            {asset.rarity === 'Iridescent' ? 'Visceral Rarity' : asset.rarity}
-                          </p>
-                        )}
-
-                      {asset.killer === 'Event' && (
+                      {asset.killer === 'Event' ? (
                         <p className="text-orange-400 break-words text-xs leading-tight font-medium">
                           Event
+                        </p>
+                      ) : asset.rarity && (
+                        <p className={`break-words font-medium leading-tight`} style={{
+                          color: asset.rarity === 'Iridescent' ? '#d41b50' :   // Pink for Iridescent (most rare)
+                                 asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
+                                 asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
+                                 asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
+                                 '#674f3d'                                      // Brown for Common
+                        }}>
+                          {asset.rarity === 'Iridescent' ? 'Visceral Rarity' : asset.rarity}
                         </p>
                       )}
                     </div>
                   )}
                   {asset.rarity && type !== 'addons' && (
                     <p className={`text-xs text-center break-words leading-tight font-medium`} style={{
-                      color: asset.rarity === 'Iridescent' || asset.rarity === 'Visceral' || asset.rarity === 'Event' ? '#d41b50' :   // Pink for Iridescent/Visceral/Event (most rare)
+                      color: asset.rarity === 'Event' ? '#fb923c' :         // Orange for Event
+                             asset.rarity === 'Iridescent' || asset.rarity === 'Visceral' ? '#d41b50' :   // Pink for Iridescent/Visceral (most rare)
                              asset.rarity === 'Very Rare' ? '#77378c' :    // Purple for Very Rare
                              asset.rarity === 'Rare' ? '#3b66a4' :         // Blue for Rare
                              asset.rarity === 'Uncommon' ? '#408830' :     // Green for Uncommon
