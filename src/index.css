@@ -146,11 +146,11 @@ body {
 @media screen and (max-height: 500px) and (orientation: landscape) {
   /* This should catch landscape phones regardless of width */
   
-  /* Only scale down the SelectableSlot components, not everything */
-  div[role="button"] {
+  /* DON'T scale down the SelectableSlot components - keep them normal size */
+  /* div[role="button"] {
     transform: scale(0.75) !important;
     transform-origin: center !important;
-  }
+  } */
   
   /* Reduce gaps specifically */
   .gap-2 { gap: 0.25rem !important; }
@@ -164,11 +164,17 @@ body {
     padding-bottom: 2vh !important;
   }
   
-  /* If mobile layout, make elements smaller */
-  .w-16 { width: 3rem !important; height: 3rem !important; }
-  .h-16 { width: 3rem !important; height: 3rem !important; }
-  .w-20 { width: 4rem !important; height: 4rem !important; }
-  .h-20 { width: 4rem !important; height: 4rem !important; }
-  .w-32 { width: 6rem !important; height: 6rem !important; }
-  .h-32 { width: 6rem !important; height: 6rem !important; }
+  /* If mobile layout, make elements BIGGER instead of smaller (2x bigger) */
+  .w-16 { width: 8rem !important; height: 8rem !important; }
+  .h-16 { width: 8rem !important; height: 8rem !important; }
+  .w-20 { width: 10rem !important; height: 10rem !important; }
+  .h-20 { width: 10rem !important; height: 10rem !important; }
+  .w-32 { width: 16rem !important; height: 16rem !important; }
+  .h-32 { width: 16rem !important; height: 16rem !important; }
+  
+  /* Also target the sm: responsive variants for mobile */
+  .sm\\:w-20 { width: 10rem !important; height: 10rem !important; }
+  .sm\\:h-20 { width: 10rem !important; height: 10rem !important; }
+  .sm\\:w-26 { width: 13rem !important; height: 13rem !important; }
+  .sm\\:h-26 { width: 13rem !important; height: 13rem !important; }
 }
