@@ -43,7 +43,7 @@ const Builder: React.FC = () => {
     }}>
       <div className="w-full h-full flex flex-col">
         {/* Main Content - Responsive Vertical Layout */}
-        <div className="flex-1 flex flex-col justify-between py-8 md:py-12 lg:py-16 xl:py-20 px-8 md:px-16 lg:px-24 xl:px-32 max-w-screen-2xl mx-auto w-full min-h-0">
+        <div className="flex-1 flex flex-col justify-between py-6 md:py-8 lg:py-12 xl:py-16 px-6 md:px-12 lg:px-18 xl:px-24 max-w-screen-2xl mx-auto w-full min-h-0">
           {/* Top Row - Full Width Distribution */}
           <div className="flex justify-between items-center w-full">
             {/* Offering Slot - Far Left */}
@@ -52,7 +52,7 @@ const Builder: React.FC = () => {
               limit={1}
               asset={selectedOffering}
               placeholderImg="/assets/Templates/Blank Offering.png"
-              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
+              className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36"
               borderColorHover="border-yellow-500"
               onSelect={setOffering}
             />
@@ -63,7 +63,7 @@ const Builder: React.FC = () => {
               limit={1}
               asset={selectedKiller}
               placeholderImg="/assets/Templates/Blank Killer.png"
-              className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96"
+              className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64"
               borderColorHover="border-red-500"
               onSelect={setKiller}
             />
@@ -74,20 +74,20 @@ const Builder: React.FC = () => {
               limit={1}
               asset={selectedPlatform}
               placeholderImg="/assets/Templates/Blank Platform.png"
-              className="w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44"
+              className="w-18 h-18 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28"
               borderColorHover="border-green-500"
               onSelect={setPlatform}
             />
           </div>
 
           {/* Addon Row - Wide Spread */}
-          <div className="flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-48">
+          <div className="flex justify-center gap-16 md:gap-20 lg:gap-24 xl:gap-28">
             <SelectableSlot
               type="addons"
               limit={2}
               asset={selectedAddons[0]}
               placeholderImg="/assets/Templates/Blank Addon.png"
-              className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32"
+              className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 xl:w-22 xl:h-22"
               borderColorHover="border-purple-500"
               onSelect={addAddon}
               selectedItems={selectedAddons}
@@ -97,7 +97,7 @@ const Builder: React.FC = () => {
               limit={2}
               asset={selectedAddons[1]}
               placeholderImg="/assets/Templates/Blank Addon.png"
-              className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32"
+              className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 xl:w-22 xl:h-22"
               borderColorHover="border-purple-500"
               onSelect={addAddon}
               selectedItems={selectedAddons}
@@ -113,7 +113,7 @@ const Builder: React.FC = () => {
                 limit={4}
                 asset={selectedPerks[index]}
                 placeholderImg="/assets/Templates/Blank Perk.png"
-                className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-60 xl:h-60"
+                className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40"
                 borderColorHover="border-green-500"
                 onSelect={addPerk}
                 selectedItems={selectedPerks}
