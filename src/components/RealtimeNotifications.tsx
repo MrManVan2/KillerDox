@@ -15,7 +15,7 @@ const RealtimeNotifications: React.FC = () => {
 
   useEffect(() => {
     // Subscribe to build updates from other users
-    const unsubscribeBuildUpdate = realtimeService.onBuildUpdate((build) => {
+    const unsubscribeBuildUpdate = realtimeService.onBuildUpdate((_build) => {
       const newNotification: Notification = {
         id: `build-${Date.now()}-${Math.random()}`,
         type: 'build',
