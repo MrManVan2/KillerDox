@@ -24,6 +24,12 @@ const AuthGate: React.FC = () => {
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSubmit(e as any);
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{
       backgroundImage: 'url(/assets/Templates/Backdrop.png)',
@@ -46,29 +52,24 @@ const AuthGate: React.FC = () => {
         {/* Title */}
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-2 drop-shadow-lg">KillerDox</h1>
-          <p className="text-gray-300 drop-shadow-md">Enter the realm of the Entity</p>
         </div>
 
         {/* Password Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="relative">
-            {/* Text Box Background */}
-            <div 
-              className="absolute inset-0 w-full h-full"
-              style={{
-                backgroundImage: 'url(/assets/Templates/Text Box.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                opacity: 0.8
-              }}
+          <div className="relative w-full h-16">
+            {/* Text Box Background Image */}
+            <img 
+              src="/assets/Templates/Text Box.png" 
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyPress={handleKeyPress}
               placeholder="Enter password..."
-              className="relative w-full px-6 py-4 bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 text-center font-medium text-lg"
+              className="absolute inset-0 w-full h-full bg-transparent text-white placeholder-gray-300 focus:outline-none text-center font-medium text-lg border-none"
               style={{
                 textShadow: '0 2px 4px rgba(0,0,0,0.8)'
               }}
@@ -79,13 +80,6 @@ const AuthGate: React.FC = () => {
           {error && (
             <div className="text-red-400 text-sm text-center font-medium drop-shadow-md">{error}</div>
           )}
-          
-          <button
-            type="submit"
-            className="w-full py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900 hover:scale-105 active:scale-95 drop-shadow-lg"
-          >
-            Enter the Fog
-          </button>
         </form>
       </div>
     </div>
