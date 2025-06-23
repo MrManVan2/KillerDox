@@ -154,6 +154,10 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
   const handleSelect = (asset: any) => {
     onSelect(asset);
     
+    // Clear search term immediately when an item is selected
+    setSearchTerm('');
+    setDebouncedSearchTerm('');
+    
     // Auto-close modal when limit is reached
     if (selectedItems.length + 1 >= limit) {
       onClose();
