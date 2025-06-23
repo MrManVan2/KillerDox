@@ -93,9 +93,10 @@ const KILLER_NAME_TO_FOLDER = {
 };
 
 export interface AddonAsset {
+  id: string;
   name: string;
   rarity: 'Iridescent' | 'Very Rare' | 'Rare' | 'Uncommon' | 'Common';
-  image: string;
+  img: string;
   killer?: string;
 }
 
@@ -191,22 +192,30 @@ export const loadKillers = async (): Promise<Killer[]> => {
       ];
       
       return killerFiles.map((filename) => {
-        const name = extractKillerName(filename);
+        const fullName = extractKillerName(filename);
+        // Extract display name (remove parenthetical part) but keep full name for search
+        const displayName = fullName.includes('(') ? fullName.split('(')[0].trim() : fullName;
+        
         return {
-          id: name.toLowerCase().replace(/\s+/g, '-'),
-          name,
-          img: `/assets/killers/${filename}`
+          id: fullName.toLowerCase().replace(/\s+/g, '-'),
+          name: displayName,
+          img: `/assets/killers/${filename}`,
+          searchName: fullName // Keep full name for search indexing
         };
       });
     }
     
     const files = await response.json();
     return files.map((filename: string) => {
-      const name = extractKillerName(filename);
+      const fullName = extractKillerName(filename);
+      // Extract display name (remove parenthetical part) but keep full name for search
+      const displayName = fullName.includes('(') ? fullName.split('(')[0].trim() : fullName;
+      
       return {
-        id: name.toLowerCase().replace(/\s+/g, '-'),
-        name,
-        img: `/assets/killers/${filename}`
+        id: fullName.toLowerCase().replace(/\s+/g, '-'),
+        name: displayName,
+        img: `/assets/killers/${filename}`,
+        searchName: fullName // Keep full name for search indexing
       };
     });
   } catch (error) {
@@ -230,10 +239,16 @@ export const loadPerks = async (): Promise<Perk[]> => {
       
       return perkFiles.map((filename) => {
         const name = filename.replace('.png', '');
+        // Format display name for Hex and Scourge perks
+        const displayName = name
+          .replace(/^Hex - /, 'Hex: ')
+          .replace(/^Scourge - /, 'Scourge: ');
+        
         return {
           id: name.toLowerCase().replace(/\s+/g, '-'),
-          name,
-          img: `/assets/perks/${filename}`
+          name: displayName,
+          img: `/assets/perks/${filename}`,
+          searchName: name // Keep original name for search indexing
         };
       });
     }
@@ -241,10 +256,16 @@ export const loadPerks = async (): Promise<Perk[]> => {
     const files = await response.json();
     return files.map((filename: string) => {
       const name = filename.replace('.png', '');
+      // Format display name for Hex and Scourge perks
+      const displayName = name
+        .replace(/^Hex - /, 'Hex: ')
+        .replace(/^Scourge - /, 'Scourge: ');
+      
       return {
         id: name.toLowerCase().replace(/\s+/g, '-'),
-        name,
-        img: `/assets/perks/${filename}`
+        name: displayName,
+        img: `/assets/perks/${filename}`,
+        searchName: name // Keep original name for search indexing
       };
     });
   } catch (error) {
@@ -279,9 +300,10 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
             const addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
             
             return {
+              id: `event_${addonName.toLowerCase().replace(/\s+/g, '-')}`,
               name: addonName,
               rarity: (addonData?.rarity || 'Common') as AddonAsset['rarity'],
-              image: `/assets/Icons/Addons/Event/${file}`,
+              img: `/assets/Icons/Addons/Event/${file}`,
               killer: 'Event'
             };
           });
@@ -305,9 +327,10 @@ export async function loadAddons(killerName?: string): Promise<AddonAsset[]> {
               const addonData = rarityMapping[addonKey as keyof typeof rarityMapping];
               
               return {
+                id: `${killerFolder.toLowerCase().replace(/\s+/g, '-')}_${addonName.toLowerCase().replace(/\s+/g, '-')}`,
                 name: addonName,
                 rarity: (addonData?.rarity || 'Common') as AddonAsset['rarity'],
-                image: `/assets/Icons/Addons/${killerFolder}/${file}`,
+                img: `/assets/Icons/Addons/${killerFolder}/${file}`,
                 killer: killerFolder
               };
             });
