@@ -154,8 +154,8 @@ const Builder: React.FC = () => {
                   asset={selectedOffering}
                   placeholderImg="/assets/Templates/Blank Offering.png"
                   style={{
-                    width: 'clamp(100px, 6vw, 180px)',
-                    height: 'clamp(100px, 6vw, 180px)'
+                    width: 'clamp(120px, 7.2vw, 216px)',
+                    height: 'clamp(120px, 7.2vw, 216px)'
                   }}
                   borderColorHover="border-yellow-500"
                   onSelect={setOffering}
@@ -170,8 +170,8 @@ const Builder: React.FC = () => {
                   asset={selectedKiller}
                   placeholderImg="/assets/Templates/Blank Killer.png"
                   style={{
-                    width: 'clamp(250px, 15vw, 450px)',
-                    height: 'clamp(250px, 15vw, 450px)'
+                    width: 'clamp(200px, 12vw, 360px)',
+                    height: 'clamp(200px, 12vw, 360px)'
                   }}
                   borderColorHover="border-red-500"
                   onSelect={setKiller}
@@ -186,8 +186,8 @@ const Builder: React.FC = () => {
                   asset={selectedPlatform}
                   placeholderImg="/assets/Templates/Blank Platform.png"
                   style={{
-                    width: 'clamp(75px, 4.5vw, 135px)',
-                    height: 'clamp(75px, 4.5vw, 135px)'
+                    width: 'clamp(90px, 5.4vw, 162px)',
+                    height: 'clamp(90px, 5.4vw, 162px)'
                   }}
                   borderColorHover="border-green-500"
                   onSelect={setPlatform}
@@ -202,41 +202,42 @@ const Builder: React.FC = () => {
                 gap: 'clamp(120px, 10vw, 300px)'
               }}
             >
-              <SelectableSlot
-                type="addons"
-                limit={2}
-                asset={selectedAddons[0]}
-                placeholderImg="/assets/Templates/Blank Addon.png"
-                style={{
-                  width: 'clamp(100px, 6vw, 180px)',
-                  height: 'clamp(100px, 6vw, 180px)'
-                }}
+                             <SelectableSlot
+                 type="addons"
+                 limit={2}
+                 asset={selectedAddons[0]}
+                 placeholderImg="/assets/Templates/Blank Addon.png"
+                 style={{
+                   width: 'clamp(80px, 4.8vw, 144px)',
+                   height: 'clamp(80px, 4.8vw, 144px)'
+                 }}
                 borderColorHover="border-purple-500"
                 onSelect={addAddon}
                 selectedItems={selectedAddons}
               />
-              <SelectableSlot
-                type="addons"
-                limit={2}
-                asset={selectedAddons[1]}
-                placeholderImg="/assets/Templates/Blank Addon.png"
-                style={{
-                  width: 'clamp(100px, 6vw, 180px)',
-                  height: 'clamp(100px, 6vw, 180px)'
-                }}
+                             <SelectableSlot
+                 type="addons"
+                 limit={2}
+                 asset={selectedAddons[1]}
+                 placeholderImg="/assets/Templates/Blank Addon.png"
+                 style={{
+                   width: 'clamp(80px, 4.8vw, 144px)',
+                   height: 'clamp(80px, 4.8vw, 144px)'
+                 }}
                 borderColorHover="border-purple-500"
                 onSelect={addAddon}
                 selectedItems={selectedAddons}
               />
             </div>
 
-            {/* Perk Row - Bottom with responsive spacing that fills available space */}
-            <div 
-              className="flex justify-center items-center w-full flex-shrink-0"
-              style={{
-                gap: 'clamp(40px, 5vw, 120px)'
-              }}
-            >
+                         {/* Perk Row - Bottom with responsive spacing that fills available space */}
+             <div 
+               className="flex justify-center items-center w-full flex-shrink-0"
+               style={{
+                 gap: 'clamp(40px, 5vw, 120px)',
+                 marginBottom: '15vh'
+               }}
+             >
               {Array.from({ length: 4 }, (_, index) => (
                 <SelectableSlot
                   key={index}
