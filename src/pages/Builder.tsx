@@ -47,23 +47,23 @@ const Builder: React.FC = () => {
         {/* Mobile Layout (md and below) */}
         <div className="flex-1 flex flex-col justify-between py-4 px-2 max-w-screen-2xl mx-auto w-full min-h-0 md:hidden">
           <div className="flex flex-col space-y-6">
-            {/* Top Section - Mobile: Column layout */}
-            <div className="flex flex-col space-y-4">
-              {/* Mobile: Offering at top */}
-              <div className="flex justify-center">
+            {/* Top Section - Mobile: Row layout like desktop */}
+            <div className="relative flex items-center w-full">
+              {/* Mobile: Offering at left */}
+              <div className="absolute left-0">
                 <SelectableSlot
                   type="offerings"
                   limit={1}
                   asset={selectedOffering}
                   placeholderImg="/assets/Templates/Blank Offering.png"
-                  className="w-20 h-20 sm:w-24 sm:h-24"
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                   borderColorHover="border-yellow-500"
                   onSelect={setOffering}
                 />
               </div>
               
               {/* Killer Portrait - Center */}
-              <div className="flex justify-center">
+              <div className="flex-1 flex justify-center">
                 <SelectableSlot
                   type="killers"
                   limit={1}
@@ -75,14 +75,14 @@ const Builder: React.FC = () => {
                 />
               </div>
               
-              {/* Mobile: Platform below killer */}
-              <div className="flex justify-center">
+              {/* Mobile: Platform at right */}
+              <div className="absolute right-0">
                 <SelectableSlot
                   type="platforms"
                   limit={1}
                   asset={selectedPlatform}
                   placeholderImg="/assets/Templates/Blank Platform.png"
-                  className="w-16 h-16 sm:w-20 sm:h-20"
+                  className="w-12 h-12 sm:w-16 sm:h-16"
                   borderColorHover="border-green-500"
                   onSelect={setPlatform}
                 />
@@ -113,22 +113,21 @@ const Builder: React.FC = () => {
               />
             </div>
 
-            {/* Perk Row - Mobile: 2x2 Grid */}
+            {/* Perk Row - Mobile: Single row of 4 */}
             <div className="pt-6">
-              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="flex justify-center items-center gap-2 sm:gap-4">
                 {Array.from({ length: 4 }, (_, index) => (
-                  <div key={index} className="flex justify-center">
-                    <SelectableSlot
-                      type="perks"
-                      limit={4}
-                      asset={selectedPerks[index]}
-                      placeholderImg="/assets/Templates/Blank Perk.png"
-                      className="w-24 h-24 sm:w-28 sm:h-28"
-                      borderColorHover="border-green-500"
-                      onSelect={addPerk}
-                      selectedItems={selectedPerks}
-                    />
-                  </div>
+                  <SelectableSlot
+                    key={index}
+                    type="perks"
+                    limit={4}
+                    asset={selectedPerks[index]}
+                    placeholderImg="/assets/Templates/Blank Perk.png"
+                    className="w-16 h-16 sm:w-20 sm:h-20"
+                    borderColorHover="border-green-500"
+                    onSelect={addPerk}
+                    selectedItems={selectedPerks}
+                  />
                 ))}
               </div>
             </div>
