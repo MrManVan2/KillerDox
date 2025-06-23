@@ -46,7 +46,7 @@ const Builder: React.FC = () => {
         
         {/* Mobile Layout (md and below) */}
         <div className="flex-1 flex flex-col justify-between py-4 px-2 max-w-screen-2xl mx-auto w-full h-full md:hidden">
-          <div className="h-full flex flex-col justify-between mobile-container-landscape" style={{ paddingTop: '18vh', paddingBottom: '18vh' }}>
+          <div className="h-full flex flex-col justify-between" style={{ paddingTop: '18vh', paddingBottom: '18vh' }}>
             {/* Top Section - Mobile: Row layout like desktop */}
             <div className="relative flex items-center w-full">
               {/* Mobile: Offering at left */}
@@ -56,7 +56,7 @@ const Builder: React.FC = () => {
                   limit={1}
                   asset={selectedOffering}
                   placeholderImg="/assets/Templates/Blank Offering.png"
-                  className="w-20 h-20 sm:w-26 sm:h-26 mobile-offering"
+                  className="w-20 h-20 sm:w-26 sm:h-26"
                   borderColorHover="border-yellow-500"
                   onSelect={setOffering}
                 />
@@ -69,7 +69,7 @@ const Builder: React.FC = () => {
                   limit={1}
                   asset={selectedKiller}
                   placeholderImg="/assets/Templates/Blank Killer.png"
-                  className="w-32 h-32 sm:w-40 sm:h-40 mobile-killer"
+                  className="w-32 h-32 sm:w-40 sm:h-40"
                   borderColorHover="border-red-500"
                   onSelect={setKiller}
                 />
@@ -82,7 +82,7 @@ const Builder: React.FC = () => {
                   limit={1}
                   asset={selectedPlatform}
                   placeholderImg="/assets/Templates/Blank Platform.png"
-                  className="w-16 h-16 sm:w-20 sm:h-20 mobile-platform"
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                   borderColorHover="border-green-500"
                   onSelect={setPlatform}
                 />
@@ -96,7 +96,7 @@ const Builder: React.FC = () => {
                 limit={2}
                 asset={selectedAddons[0]}
                 placeholderImg="/assets/Templates/Blank Addon.png"
-                className="w-16 h-16 sm:w-20 sm:h-20 mobile-addon"
+                className="w-16 h-16 sm:w-20 sm:h-20"
                 borderColorHover="border-purple-500"
                 onSelect={addAddon}
                 selectedItems={selectedAddons}
@@ -106,7 +106,7 @@ const Builder: React.FC = () => {
                 limit={2}
                 asset={selectedAddons[1]}
                 placeholderImg="/assets/Templates/Blank Addon.png"
-                className="w-16 h-16 sm:w-20 sm:h-20 mobile-addon"
+                className="w-16 h-16 sm:w-20 sm:h-20"
                 borderColorHover="border-purple-500"
                 onSelect={addAddon}
                 selectedItems={selectedAddons}
@@ -123,7 +123,7 @@ const Builder: React.FC = () => {
                     limit={4}
                     asset={selectedPerks[index]}
                     placeholderImg="/assets/Templates/Blank Perk.png"
-                    className="w-20 h-20 sm:w-26 sm:h-26 mobile-perk"
+                    className="w-20 h-20 sm:w-26 sm:h-26"
                     borderColorHover="border-green-500"
                     onSelect={addPerk}
                     selectedItems={selectedPerks}
