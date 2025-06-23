@@ -6,9 +6,15 @@ class SocketService {
   private isConnected = false;
 
   connect() {
+    // Only connect in development environment
+    if (import.meta.env.PROD) {
+      console.log('Socket.IO disabled in production');
+      return;
+    }
+    
     if (this.socket) return;
     
-    // Connect to localhost in development, adjust for production
+    // Connect to localhost in development only
     this.socket = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001');
     
     this.socket.on('connect', () => {
