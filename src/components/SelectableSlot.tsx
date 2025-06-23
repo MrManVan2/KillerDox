@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import type { AssetType } from '../types';
 import AssetPickerModal from './AssetPickerModal';
 import { useBuildStore } from '../store/buildStore';
