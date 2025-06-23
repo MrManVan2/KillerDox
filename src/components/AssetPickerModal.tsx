@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import type { AssetType, Killer } from '../types';
-import { loadKillers, loadPerks, loadAddons, loadOfferings, loadPlatforms, type AddonAsset } from '../services/assetService';
+import type { AssetType } from '../types';
+import { loadKillers, loadPerks, loadAddons, loadOfferings, loadPlatforms } from '../services/assetService';
 import { useBuildStore } from '../store/buildStore';
 
 interface AssetPickerModalProps {

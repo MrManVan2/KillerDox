@@ -30,9 +30,9 @@ const Builder: React.FC = () => {
     syncBuild();
   }, [selectedKiller, selectedPerks, selectedAddons, selectedOffering, selectedPlatform, syncBuild]);
 
-  const handleResetBuild = () => {
-    reset();
-  };
+  // const handleResetBuild = () => {
+  //   reset();
+  // };
 
   return (
     <div className="h-screen p-2 md:p-4 lg:p-6 overflow-hidden relative" style={{

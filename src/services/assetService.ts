@@ -1,50 +1,50 @@
-import type { Killer, Perk, Addon, Offering, Platform } from '../types';
+import type { Killer, Perk, Offering, Platform } from '../types';
 import rarityMapping from '../data/addonRarityMapping.json';
 
 // Killer codename to display name mapping
-const KILLER_ADDON_MAPPING = {
-  'Applepie': 'The Unknown',
-  'Aurora': 'The Twins',
-  'Cannibal': 'The Cannibal',
-  'Churros': 'The Lich',
-  'Comet': 'The Trickster',
-  'DLC2': 'The Shape',
-  'DLC3': 'The Hag',
-  'DLC4': 'The Doctor',
-  'DLC5': 'The Huntress',
-  'Donut': null, // Survivor DLC only
-  'Eclair': 'The Dark Lord',
-  'Eclipse': 'The Nemesis',
-  'England': 'The Nightmare',
-  'Finland': 'The Pig',
-  'Gelato': 'The Houndmaster',
-  'Gemini': 'The Cenobite',
-  'Guam': 'The Clown',
-  'Haiti': 'The Spirit',
-  'Hubble': null, // Mikaela cosmetic patch
-  'Icecream': 'The Ghoul',
-  'Ion': 'The Artist',
-  'Ketchup': 'The Animatronic',
-  'Kenya': 'The Legion',
-  'Kepler': 'The Onryō',
-  'Mali': 'The Plague',
-  'Meteor': 'The Dredge',
-  'Oman': 'The Ghostface',
-  'Orion': 'The Mastermind',
-  'Qatar': 'The Demogorgon',
-  'Quantum': 'The Knight',
-  'Saturn': 'The Skull Merchant',
-  'Sweden': 'The Oni',
-  'Ukraine': 'The Deathslinger',
-  'Umbra': 'The Singularity',
-  'Wales': 'The Executioner',
-  'Wormhole': 'The Xenomorph',
-  'Xipre': null, // Technical folder
-  'Yemen': 'The Blight',
-  'Yerkes': 'The Good Guy',
-  'Zambia': null, // Mid-patch
-  'Zodiac': null // Alan Wake Survivor only
-};
+// const KILLER_ADDON_MAPPING = {
+//   'Applepie': 'The Unknown',
+//   'Aurora': 'The Twins',
+//   'Cannibal': 'The Cannibal',
+//   'Churros': 'The Lich',
+//   'Comet': 'The Trickster',
+//   'DLC2': 'The Shape',
+//   'DLC3': 'The Hag',
+//   'DLC4': 'The Doctor',
+//   'DLC5': 'The Huntress',
+//   'Donut': null, // Survivor DLC only
+//   'Eclair': 'The Dark Lord',
+//   'Eclipse': 'The Nemesis',
+//   'England': 'The Nightmare',
+//   'Finland': 'The Pig',
+//   'Gelato': 'The Houndmaster',
+//   'Gemini': 'The Cenobite',
+//   'Guam': 'The Clown',
+//   'Haiti': 'The Spirit',
+//   'Hubble': null, // Mikaela cosmetic patch
+//   'Icecream': 'The Ghoul',
+//   'Ion': 'The Artist',
+//   'Ketchup': 'The Animatronic',
+//   'Kenya': 'The Legion',
+//   'Kepler': 'The Onryō',
+//   'Mali': 'The Plague',
+//   'Meteor': 'The Dredge',
+//   'Oman': 'The Ghostface',
+//   'Orion': 'The Mastermind',
+//   'Qatar': 'The Demogorgon',
+//   'Quantum': 'The Knight',
+//   'Saturn': 'The Skull Merchant',
+//   'Sweden': 'The Oni',
+//   'Ukraine': 'The Deathslinger',
+//   'Umbra': 'The Singularity',
+//   'Wales': 'The Executioner',
+//   'Wormhole': 'The Xenomorph',
+//   'Xipre': null, // Technical folder
+//   'Yemen': 'The Blight',
+//   'Yerkes': 'The Good Guy',
+//   'Zambia': null, // Mid-patch
+//   'Zodiac': null // Alan Wake Survivor only
+// };
 
 // Reverse mapping for killer display names to proper folder names
 const KILLER_NAME_TO_FOLDER = {
@@ -110,29 +110,29 @@ const RARITY_ORDER: Record<string, number> = {
 };
 
 // Function to get rarity from the mapping or fallback to Common
-const getAddonRarity = (filename: string, killerFolder?: string): string => {
-  const key = killerFolder ? `${killerFolder}/${filename}` : filename;
-  return (rarityMapping as any)[key]?.rarity || 'Common';
-};
+// const getAddonRarity = (filename: string, killerFolder?: string): string => {
+//   const key = killerFolder ? `${killerFolder}/${filename}` : filename;
+//   return (rarityMapping as any)[key]?.rarity || 'Common';
+// };
 
 // Function to sort addons by rarity (most rare first)
-const sortAddonsByRarity = (addons: Addon[]): Addon[] => {
-  const sorted = addons.sort((a, b) => {
-    const orderA = RARITY_ORDER[a.rarity || 'Common'];
-    const orderB = RARITY_ORDER[b.rarity || 'Common'];
-    
-    // If same rarity, sort alphabetically by name
-    if (orderA === orderB) {
-      return a.name.localeCompare(b.name);
-    }
-    
-    return orderA - orderB; // Most rare (0) comes first
-  });
-  
+// const sortAddonsByRarity = (addons: Addon[]): Addon[] => {
+//   const sorted = addons.sort((a, b) => {
+//     const orderA = RARITY_ORDER[a.rarity || 'Common'];
+//     const orderB = RARITY_ORDER[b.rarity || 'Common'];
+//     
+//     // If same rarity, sort alphabetically by name
+//     if (orderA === orderB) {
+//       return a.name.localeCompare(b.name);
+//     }
+//     
+//     return orderA - orderB; // Most rare (0) comes first
+//   });
+//   
 
-  
-  return sorted;
-};
+//   
+//   return sorted;
+// };
 
 // Function to extract killer name from filename, preserving parenthetical names
 const extractKillerName = (filename: string): string => {

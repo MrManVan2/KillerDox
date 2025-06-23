@@ -44,7 +44,7 @@ const SelectableSlot: React.FC<SelectableSlotProps> = ({
   };
 
   // Check if this slot should be disabled (addons without killer)
-  const isDisabled = type === 'addons' && !selectedKiller;
+  // const isDisabled = type === 'addons' && !selectedKiller;
 
   return (
     <>

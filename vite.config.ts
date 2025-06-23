@@ -24,7 +24,7 @@ export default defineConfig({
         }
 
         // API middleware - must be early in the chain
-        server.middlewares.use('/api', (req, res, next) => {
+        server.middlewares.use('/api', (req, res, _next) => {
           // Set CORS and JSON headers
           res.setHeader('Content-Type', 'application/json')
           res.setHeader('Access-Control-Allow-Origin', '*')
