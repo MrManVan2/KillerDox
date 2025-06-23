@@ -375,7 +375,7 @@ export const loadOfferings = async (): Promise<Offering[]> => {
     
     for (const rarity of rarities) {
       try {
-        const response = await fetch(`/api/assets/offerings/${encodeURIComponent(rarity)}`);
+        const response = await fetch(`/api/offerings/${encodeURIComponent(rarity)}`);
         if (response.ok) {
           const files = await response.json();
           const rarityOfferings = files
