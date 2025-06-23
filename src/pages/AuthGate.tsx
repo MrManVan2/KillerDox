@@ -31,16 +31,16 @@ const AuthGate: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8" style={{
       backgroundImage: 'url(/assets/Templates/Backdrop.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
     }}>
-      <div className="w-full max-w-md space-y-8">
+      <div className="w-full max-w-2xl space-y-8 -mt-16">
         {/* Killer Icon Logo */}
         <div className="flex justify-center">
-          <div className="w-32 h-32 flex items-center justify-center">
+          <div className="w-64 h-64 flex items-center justify-center">
             <img 
               src="/assets/Templates/Killer Icon.png" 
               alt="KillerDox Logo"
@@ -49,14 +49,18 @@ const AuthGate: React.FC = () => {
           </div>
         </div>
 
-        {/* Title */}
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-2 drop-shadow-lg">KillerDox</h1>
+        {/* Enter Password Text Image */}
+        <div className="flex justify-center">
+          <img 
+            src="/assets/Templates/Enter Password.png" 
+            alt="Enter Password"
+            className="object-contain drop-shadow-lg"
+          />
         </div>
 
         {/* Password Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="relative w-full h-16">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="relative w-full h-24">
             {/* Text Box Background Image */}
             <img 
               src="/assets/Templates/Text Box.png" 
@@ -68,8 +72,8 @@ const AuthGate: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Enter password..."
-              className="absolute inset-0 w-full h-full bg-transparent text-white placeholder-gray-300 focus:outline-none text-center font-medium text-lg border-none"
+              placeholder=""
+              className="absolute inset-0 w-full h-full bg-transparent text-white focus:outline-none text-center font-medium text-4xl border-none"
               style={{
                 textShadow: '0 2px 4px rgba(0,0,0,0.8)'
               }}
@@ -78,7 +82,7 @@ const AuthGate: React.FC = () => {
           </div>
           
           {error && (
-            <div className="text-red-400 text-sm text-center font-medium drop-shadow-md">{error}</div>
+            <div className="text-red-400 text-lg text-center font-medium drop-shadow-md">{error}</div>
           )}
         </form>
       </div>
