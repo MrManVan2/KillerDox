@@ -29,6 +29,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
   const { selectedKiller } = useBuildStore();
   const clearingSearchRef = useRef(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const [modalHeight, setModalHeight] = useState(600);
 
   // Debounce search term
   useEffect(() => {
@@ -125,6 +126,21 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     return filtered;
   }, [allAssets, debouncedSearchTerm, type]);
 
+  // Calculate modal height based on content
+  useEffect(() => {
+    if (!isReady) return;
+    
+    const itemCount = filteredAssets.length;
+    const baseHeight = 200; // Header + search + padding
+    const itemHeight = 140; // Approximate height per item including gaps
+    const itemsPerRow = 7; // Based on xl:grid-cols-7
+    const rows = Math.ceil(itemCount / itemsPerRow);
+    const contentHeight = Math.max(200, Math.min(rows * itemHeight, 500)); // Min 200px, max 500px
+    const newHeight = baseHeight + contentHeight;
+    
+    setModalHeight(newHeight);
+  }, [filteredAssets.length, isReady]);
+
   // Load assets when modal opens or type/killer changes
   useEffect(() => {
     if (isOpen) {
@@ -195,7 +211,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
       
       {/* Modal */}
       <div 
-        className={`relative backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[90vh] sm:max-h-[85vh] md:max-h-[80vh] flex flex-col border border-gray-600 transform ${
+        className={`relative backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 flex flex-col border border-gray-600 transform ${
           isReady ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         style={{
@@ -203,7 +219,9 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          transition: 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease-out, opacity 0.3s ease-out'
+          height: `${modalHeight}px`,
+          maxHeight: '90vh',
+          transition: 'height 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease-out, opacity 0.3s ease-out'
         }}
       >
         {/* Header */}
@@ -246,13 +264,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
         </div>
 
         {/* Asset Grid */}
-        <div 
-          className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 transition-all duration-250 ease-in-out"
-          style={{
-            minHeight: '200px',
-            maxHeight: '70vh'
-          }}
-        >
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6">
           {loading ? (
             <div className="flex flex-col items-center justify-center h-64 transition-all duration-300 ease-in-out">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mb-4"></div>
