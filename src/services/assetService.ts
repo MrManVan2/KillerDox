@@ -245,10 +245,19 @@ export const loadPerks = async (): Promise<Perk[]> => {
           .replace(/^Scourge - /, 'Scourge: ')
           .replace(/^Thatanophobia$/, 'Thanatophobia'); // Fix typo
         
-        // Add search aliases for common abbreviations
+        // Add search aliases for common abbreviations and formats
         let searchName = displayName;
         if (displayName === 'Barbecue & Chili') {
           searchName = `${displayName} BBQ`; // Include BBQ as search term
+        }
+        // Add space version for Hex and Scourge perks (e.g., "Hex: Ruin" also searchable as "Hex Ruin")
+        if (displayName.startsWith('Hex: ')) {
+          const spaceVersion = displayName.replace('Hex: ', 'Hex ');
+          searchName = `${displayName} ${spaceVersion}`;
+        }
+        if (displayName.startsWith('Scourge: ')) {
+          const spaceVersion = displayName.replace('Scourge: ', 'Scourge ');
+          searchName = `${displayName} ${spaceVersion}`;
         }
         
         return {
@@ -269,11 +278,20 @@ export const loadPerks = async (): Promise<Perk[]> => {
         .replace(/^Scourge - /, 'Scourge: ')
         .replace(/^Thatanophobia$/, 'Thanatophobia'); // Fix typo
       
-      // Add search aliases for common abbreviations
-      let searchName = displayName;
-      if (displayName === 'Barbecue & Chili') {
-        searchName = `${displayName} BBQ`; // Include BBQ as search term
-      }
+              // Add search aliases for common abbreviations and formats
+        let searchName = displayName;
+        if (displayName === 'Barbecue & Chili') {
+          searchName = `${displayName} BBQ`; // Include BBQ as search term
+        }
+        // Add space version for Hex and Scourge perks (e.g., "Hex: Ruin" also searchable as "Hex Ruin")
+        if (displayName.startsWith('Hex: ')) {
+          const spaceVersion = displayName.replace('Hex: ', 'Hex ');
+          searchName = `${displayName} ${spaceVersion}`;
+        }
+        if (displayName.startsWith('Scourge: ')) {
+          const spaceVersion = displayName.replace('Scourge: ', 'Scourge ');
+          searchName = `${displayName} ${spaceVersion}`;
+        }
       
       return {
         id: name.toLowerCase().replace(/\s+/g, '-'),
