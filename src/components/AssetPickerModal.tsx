@@ -245,29 +245,31 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
         </div>
 
         {/* Asset Grid */}
-        <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 transition-all duration-300 ease-in-out min-h-[400px]">
           {loading ? (
-            <div className="flex flex-col items-center justify-center h-64">
+            <div className="flex flex-col items-center justify-center h-64 transition-all duration-300 ease-in-out">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mb-4"></div>
               <div className="text-white text-lg">Loading {type}...</div>
             </div>
           ) : filteredAssets.length === 0 ? (
-            <div className="flex items-center justify-center h-32">
+            <div className="flex items-center justify-center h-32 transition-all duration-300 ease-in-out">
               <div className="text-gray-400">No {type} found</div>
             </div>
           ) : (
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3 md:gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3 md:gap-4 transition-all duration-300 ease-in-out">
               {filteredAssets.map((asset, index) => (
                 <div
                   key={asset.id}
                   onClick={() => handleSelect(asset)}
-                  className={`relative p-2 sm:p-3 rounded-lg cursor-pointer transition-all duration-200 flex flex-col hover:scale-105 active:scale-95 touch-manipulation ${
+                  className={`relative p-2 sm:p-3 rounded-lg cursor-pointer transition-all duration-300 ease-in-out flex flex-col hover:scale-105 active:scale-95 touch-manipulation ${
                     isSelected(asset.id)
                       ? 'bg-blue-600 border-2 border-blue-400'
                       : 'border-2 border-transparent'
                   } ${isReady ? 'animate-fade-in' : ''}`}
                   style={{
-                    animationDelay: `${index * 20}ms`
+                    animationDelay: `${index * 10}ms`,
+                    opacity: isReady ? 1 : 0,
+                    transform: isReady ? 'translateY(0)' : 'translateY(10px)'
                   }}
                 >
                   <div className="aspect-square mb-1 sm:mb-2">
