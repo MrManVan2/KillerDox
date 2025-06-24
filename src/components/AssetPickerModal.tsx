@@ -86,49 +86,144 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     }
   }, [type, selectedKiller?.name]);
 
-  // Filter and sort assets based on search term
-  const filteredAssets = useMemo(() => {
-    // Filter by search term while preserving sort order
-    // Use searchName if available (for killers with parenthetical names and perks with Hex/Scourge)
-    const filtered = allAssets.filter(asset => {
-      const searchText = asset.searchName || asset.name;
-      return searchText.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
-    });
+  // Calculate similarity between two strings (0 = no match, 1 = perfect match)
+  const calculateSimilarity = (str1: string, str2: string): number => {
+    const longer = str1.length > str2.length ? str1 : str2;
+    const shorter = str1.length > str2.length ? str2 : str1;
     
-    // For addons, re-sort filtered results to maintain rarity order
-    if (type === 'addons') {
-      const RARITY_ORDER: Record<string, number> = {
-        'Iridescent': 0,
-        'Very Rare': 1,
-        'Rare': 2,
-        'Uncommon': 3,
-        'Common': 4
-      };
-      
-      filtered.sort((a, b) => {
-        // Event addons always come last
-        if (a.killer === 'Event' && b.killer !== 'Event') return 1;
-        if (b.killer === 'Event' && a.killer !== 'Event') return -1;
-        
-        // If both are Event addons, sort alphabetically
-        if (a.killer === 'Event' && b.killer === 'Event') {
-          return a.name.localeCompare(b.name);
+    if (longer.length === 0) return 1.0;
+    
+    // Levenshtein distance
+    const editDistance = (s1: string, s2: string): number => {
+      const matrix = [];
+      for (let i = 0; i <= s2.length; i++) {
+        matrix[i] = [i];
+      }
+      for (let j = 0; j <= s1.length; j++) {
+        matrix[0][j] = j;
+      }
+      for (let i = 1; i <= s2.length; i++) {
+        for (let j = 1; j <= s1.length; j++) {
+          if (s2.charAt(i - 1) === s1.charAt(j - 1)) {
+            matrix[i][j] = matrix[i - 1][j - 1];
+          } else {
+            matrix[i][j] = Math.min(
+              matrix[i - 1][j - 1] + 1, // substitution
+              matrix[i][j - 1] + 1,     // insertion
+              matrix[i - 1][j] + 1      // deletion
+            );
+          }
         }
-        
-        // For non-Event addons, sort by rarity first
-        const orderA = RARITY_ORDER[a.rarity || 'Common'];
-        const orderB = RARITY_ORDER[b.rarity || 'Common'];
-        
-        // If same rarity, sort alphabetically by name
-        if (orderA === orderB) {
-          return a.name.localeCompare(b.name);
-        }
-        
-        return orderA - orderB; // Most rare (0) comes first
-      });
+      }
+      return matrix[s2.length][s1.length];
+    };
+    
+    const distance = editDistance(longer, shorter);
+    return (longer.length - distance) / longer.length;
+  };
+
+  // Filter and sort assets based on search term with fuzzy matching
+  const filteredAssets = useMemo(() => {
+    if (!debouncedSearchTerm.trim()) {
+      return allAssets;
     }
     
-    return filtered;
+    const searchTerm = debouncedSearchTerm.toLowerCase();
+    
+    // First, try exact matches (includes/contains)
+    const exactMatches = allAssets.filter(asset => {
+      const searchText = asset.searchName || asset.name;
+      return searchText.toLowerCase().includes(searchTerm);
+    });
+    
+    // If we have exact matches, return them
+    if (exactMatches.length > 0) {
+      const filtered = exactMatches;
+      
+      // For addons, re-sort filtered results to maintain rarity order
+      if (type === 'addons') {
+        const RARITY_ORDER: Record<string, number> = {
+          'Iridescent': 0,
+          'Very Rare': 1,
+          'Rare': 2,
+          'Uncommon': 3,
+          'Common': 4
+        };
+        
+        filtered.sort((a, b) => {
+          // Event addons always come last
+          if (a.killer === 'Event' && b.killer !== 'Event') return 1;
+          if (b.killer === 'Event' && a.killer !== 'Event') return -1;
+          
+          // If both are Event addons, sort alphabetically
+          if (a.killer === 'Event' && b.killer === 'Event') {
+            return a.name.localeCompare(b.name);
+          }
+          
+          // For non-Event addons, sort by rarity first
+          const orderA = RARITY_ORDER[a.rarity || 'Common'];
+          const orderB = RARITY_ORDER[b.rarity || 'Common'];
+          
+          // If same rarity, sort alphabetically by name
+          if (orderA === orderB) {
+            return a.name.localeCompare(b.name);
+          }
+          
+          return orderA - orderB; // Most rare (0) comes first
+        });
+      }
+      
+      return filtered;
+    }
+    
+    // No exact matches found, try fuzzy matching
+    const MIN_SIMILARITY = 0.3; // Minimum similarity threshold
+    const fuzzyMatches = allAssets
+      .map(asset => {
+        const searchText = (asset.searchName || asset.name).toLowerCase();
+        const similarity = calculateSimilarity(searchTerm, searchText);
+        
+        // Also check individual words for better matching
+        const words = searchText.split(/\s+/);
+        const wordSimilarities = words.map((word: string) => calculateSimilarity(searchTerm, word));
+        const maxWordSimilarity = Math.max(...wordSimilarities);
+        
+        // Use the best similarity score
+        const bestSimilarity = Math.max(similarity, maxWordSimilarity);
+        
+        return { asset, similarity: bestSimilarity };
+      })
+      .filter(item => item.similarity >= MIN_SIMILARITY)
+      .sort((a, b) => {
+        // Sort by similarity first (best matches first)
+        if (b.similarity !== a.similarity) {
+          return b.similarity - a.similarity;
+        }
+        
+        // For addons with same similarity, maintain rarity order
+        if (type === 'addons') {
+          const RARITY_ORDER: Record<string, number> = {
+            'Iridescent': 0,
+            'Very Rare': 1,
+            'Rare': 2,
+            'Uncommon': 3,
+            'Common': 4
+          };
+          
+          const orderA = RARITY_ORDER[a.asset.rarity || 'Common'];
+          const orderB = RARITY_ORDER[b.asset.rarity || 'Common'];
+          
+          if (orderA !== orderB) {
+            return orderA - orderB;
+          }
+        }
+        
+        // Finally sort alphabetically
+        return a.asset.name.localeCompare(b.asset.name);
+      })
+      .map(item => item.asset);
+    
+    return fuzzyMatches;
   }, [allAssets, debouncedSearchTerm, type]);
 
   // Calculate modal height based on content
