@@ -195,14 +195,15 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
       
       {/* Modal */}
       <div 
-        className={`relative backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[90vh] sm:max-h-[85vh] md:max-h-[80vh] flex flex-col border border-gray-600 transform transition-all duration-300 ${
+        className={`relative backdrop-blur-sm rounded-lg w-full max-w-4xl mx-2 sm:mx-4 max-h-[90vh] sm:max-h-[85vh] md:max-h-[80vh] flex flex-col border border-gray-600 transform transition-all duration-200 ease-out ${
           isReady ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         style={{
           backgroundImage: 'url(/assets/Templates/Backdrop.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          transition: 'all 0.2s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out'
         }}
       >
         {/* Header */}
