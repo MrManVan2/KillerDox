@@ -177,7 +177,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     }
     
     // No exact matches found, try fuzzy matching
-    const MIN_SIMILARITY = 0.3; // Minimum similarity threshold
+    const MIN_SIMILARITY = 0.7; // Minimum similarity threshold (70% confidence)
     const fuzzyMatches = allAssets
       .map(asset => {
         const searchText = (asset.searchName || asset.name).toLowerCase();
