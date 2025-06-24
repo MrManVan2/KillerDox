@@ -30,6 +30,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
   const clearingSearchRef = useRef(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [modalHeight, setModalHeight] = useState(600);
+  const [hasInitiallyLoaded, setHasInitiallyLoaded] = useState(false);
 
   // Debounce search term
   useEffect(() => {
@@ -78,6 +79,10 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     } finally {
       setLoading(false);
       setIsReady(true);
+      // Mark as initially loaded only once
+      if (!hasInitiallyLoaded) {
+        setHasInitiallyLoaded(true);
+      }
     }
   }, [type, selectedKiller?.name]);
 
@@ -151,6 +156,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
       setSearchTerm('');
       setDebouncedSearchTerm('');
       setAllAssets([]);
+      setHasInitiallyLoaded(false);
     }
   }, [isOpen, loadAssets]);
 
@@ -284,11 +290,11 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
                     isSelected(asset.id)
                       ? 'bg-blue-600 border-2 border-blue-400'
                       : 'border-2 border-transparent'
-                  } ${isReady ? 'animate-fade-in' : ''}`}
+                  } ${isReady && !hasInitiallyLoaded ? 'animate-fade-in' : ''}`}
                   style={{
-                    animationDelay: `${index * 10}ms`,
-                    opacity: isReady ? 1 : 0,
-                    transform: isReady ? 'translateY(0)' : 'translateY(10px)'
+                    animationDelay: !hasInitiallyLoaded ? `${index * 10}ms` : '0ms',
+                    opacity: 1,
+                    transform: 'translateY(0)'
                   }}
                 >
                   <div className="aspect-square mb-1 sm:mb-2">
