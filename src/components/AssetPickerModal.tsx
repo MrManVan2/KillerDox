@@ -93,7 +93,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     
     if (longer.length === 0) return 1.0;
     
-    // Levenshtein distance
+    // Enhanced similarity calculation that's more forgiving for typos
     const editDistance = (s1: string, s2: string): number => {
       const matrix = [];
       for (let i = 0; i <= s2.length; i++) {
@@ -118,8 +118,32 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
       return matrix[s2.length][s1.length];
     };
     
+    // Calculate basic edit distance similarity
     const distance = editDistance(longer, shorter);
-    return (longer.length - distance) / longer.length;
+    let similarity = (longer.length - distance) / longer.length;
+    
+    // Boost similarity for common patterns that indicate user intent
+    const searchLower = str1.toLowerCase();
+    const targetLower = str2.toLowerCase();
+    
+    // Boost if search starts with target or target starts with search
+    if (targetLower.startsWith(searchLower) || searchLower.startsWith(targetLower)) {
+      similarity = Math.max(similarity, 0.8);
+    }
+    
+    // Boost if most characters are present in order (subsequence matching)
+    let subsequenceLength = 0;
+    let targetIndex = 0;
+    for (let i = 0; i < searchLower.length && targetIndex < targetLower.length; i++) {
+      if (searchLower[i] === targetLower[targetIndex]) {
+        subsequenceLength++;
+        targetIndex++;
+      }
+    }
+    const subsequenceSimilarity = subsequenceLength / Math.max(searchLower.length, targetLower.length);
+    similarity = Math.max(similarity, subsequenceSimilarity);
+    
+    return similarity;
   };
 
   // Filter and sort assets based on search term with fuzzy matching
@@ -177,7 +201,7 @@ const AssetPickerModal: React.FC<AssetPickerModalProps> = ({
     }
     
     // No exact matches found, try fuzzy matching
-    const MIN_SIMILARITY = 0.7; // Minimum similarity threshold (70% confidence)
+    const MIN_SIMILARITY = 0.6; // Minimum similarity threshold (60% confidence with enhanced matching)
     const fuzzyMatches = allAssets
       .map(asset => {
         const searchText = (asset.searchName || asset.name).toLowerCase();
